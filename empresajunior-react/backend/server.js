@@ -8,8 +8,15 @@ const cors = require('cors');
 const app = express();
 const port = 5000;
 
-// Habilitar CORS para aceitar requisições do frontend
-app.use(cors());
+// Configuração do CORS para aceitar requisições apenas do domínio do frontend
+const corsOptions = {
+  origin: 'https://utfpr-ej.onrender.com',  // Coloque o domínio do seu frontend aqui
+  methods: 'GET,POST,PUT,DELETE',           // Métodos permitidos
+  allowedHeaders: 'Content-Type,Authorization',  // Cabeçalhos permitidos
+};
+
+// Habilitar CORS com as opções configuradas
+app.use(cors(corsOptions));
 
 // Middleware para parsing de JSON
 app.use(bodyParser.json());
@@ -39,7 +46,7 @@ app.post('/send-email', async (req, res) => {
       Necessidade: ${necessidade}
     `,
     replyTo: email // Quando responder, o email será enviado para o usuário
-};
+  };
 
   try {
     await transporter.sendMail(mailOptions);
