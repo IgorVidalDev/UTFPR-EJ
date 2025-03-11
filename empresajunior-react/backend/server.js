@@ -1,42 +1,56 @@
-require('dotenv').config(); // Carregar variáveis de ambiente do .env
-
+require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 5000; // Permitindo que a porta seja configurada via variável de ambiente
+const port = process.env.PORT || 5000;
 
-// Configuração do CORS para aceitar requisições apenas do domínio do frontend
+// Definir as origens permitidas de acordo com o ambiente
+let allowedOrigins = [];
+
+if (process.env.NODE_ENV === 'production') {
+  // Em produção, permitir somente o domínio do frontend hospedado no Render
+  allowedOrigins = ['https://utfpr-ej-1.onrender.com'];
+} else {
+  // Durante o desenvolvimento, permitir o localhost
+  allowedOrigins = ['http://localhost:3000'];
+}
+
 const corsOptions = {
-  origin: 'https://utfpr-ej.onrender.com',  // Coloque o domínio do seu frontend aqui
-  methods: 'GET,POST,PUT,DELETE',           // Métodos permitidos
-  allowedHeaders: 'Content-Type,Authorization',  // Cabeçalhos permitidos
+  origin: function (origin, callback) {
+    // Permite requisições sem origin (por exemplo, via Postman)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 };
 
-// Habilitar CORS com as opções configuradas
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // Suporte ao preflight do CORS
 
-// Middleware para parsing de JSON
 app.use(bodyParser.json());
 
-// Rota para enviar o formulário
 app.post('/send-email', async (req, res) => {
   const { nome, assunto, telefone, email, necessidade } = req.body;
 
-  // Configuração do transporte de e-mail usando o Nodemailer
   const transporter = nodemailer.createTransport({
-    service: 'gmail', // ou outro serviço de e-mail
+    service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER, // Agora usamos a variável de ambiente
-      pass: process.env.EMAIL_PASS, // Agora usamos a variável de ambiente
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
-  // Configuração do e-mail
   const mailOptions = {
-    from: `"${nome}" <${process.env.EMAIL_USER}>`, // O nome do remetente será o do usuário
+    from: `"${nome}" <${process.env.EMAIL_USER}>`,
     to: 'igor.vidaleufrazio@gmail.com',
     subject: `Novo contato: ${assunto}`,
     text: `
@@ -45,11 +59,10 @@ app.post('/send-email', async (req, res) => {
       Email: ${email}
       Necessidade: ${necessidade}
     `,
-    replyTo: email // Quando responder, o email será enviado para o usuário
+    replyTo: email,
   };
 
   try {
-    // Enviar o e-mail
     await transporter.sendMail(mailOptions);
     res.status(200).send({ message: 'Email enviado com sucesso!' });
   } catch (error) {
@@ -58,7 +71,6 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-// Iniciar o servidor
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
