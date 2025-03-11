@@ -19,23 +19,21 @@ function App() {
 
   // Função para tratar o envio do formulário
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Previne o recarregamento da página
+    e.preventDefault();
     try {
-      const response = await fetch('https://utfpr-ej-backend.onrender.com/send-email', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/send-email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
   
       if (!response.ok) {
-        // Verifica se a resposta não foi bem-sucedida
         const errorData = await response.json();
         throw new Error(errorData.message || 'Erro ao enviar o email.');
       }
   
       const result = await response.json();
-      alert(result.message); // Mensagem de sucesso
-      // Limpa o formulário apenas se a resposta for bem-sucedida
+      alert(result.message);
       setFormData({
         nome: '',
         assunto: '',
@@ -48,6 +46,9 @@ function App() {
       alert(error.message || 'Erro ao enviar o email.');
     }
   };
+  
+
+  
 
   return (
     <div>
@@ -514,7 +515,7 @@ function App() {
                     marginBottom: '5px',
                   }}
                 >
-                  Email *
+                  Email (Não Obrigátorio) 
                 </label>
                 <input
                   id="email"
