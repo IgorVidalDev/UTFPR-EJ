@@ -21,6 +21,17 @@ app.use(cors(corsOptions));
 // Middleware para parsing de JSON
 app.use(bodyParser.json());
 
+// Adicionando middleware para verificar o host da requisição
+app.use((req, res, next) => {
+  const allowedHosts = ['utfpr-ej.onrender.com'];  // Domínio do seu frontend
+  const host = req.get('Host');
+
+  if (!allowedHosts.includes(host)) {
+    return res.status(403).send('Forbidden: Invalid Host header');
+  }
+  next();
+});
+
 // Rota para enviar o formulário
 app.post('/send-email', async (req, res) => {
   const { nome, assunto, telefone, email, necessidade } = req.body;
