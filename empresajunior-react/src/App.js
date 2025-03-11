@@ -21,7 +21,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Previne o recarregamento da página
     try {
-      const response = await fetch('http://localhost:5000/send-email', {
+      const response = await fetch('https://utfpr-ej-backend.onrender.com/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
