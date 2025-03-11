@@ -26,23 +26,26 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-      const result = await response.json();
-      if (response.ok) {
-        alert(result.message); // Mensagem de sucesso
-        // Opcional: limpa o formulário
-        setFormData({
-          nome: '',
-          assunto: '',
-          telefone: '',
-          email: '',
-          necessidade: '',
-        });
-      } else {
-        alert(result.message || 'Erro ao enviar o email.');
+  
+      if (!response.ok) {
+        // Verifica se a resposta não foi bem-sucedida
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Erro ao enviar o email.');
       }
+  
+      const result = await response.json();
+      alert(result.message); // Mensagem de sucesso
+      // Limpa o formulário apenas se a resposta for bem-sucedida
+      setFormData({
+        nome: '',
+        assunto: '',
+        telefone: '',
+        email: '',
+        necessidade: '',
+      });
     } catch (error) {
       console.error(error);
-      alert('Erro ao enviar o email.');
+      alert(error.message || 'Erro ao enviar o email.');
     }
   };
 
