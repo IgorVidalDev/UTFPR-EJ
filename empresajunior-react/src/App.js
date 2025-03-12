@@ -521,7 +521,6 @@ function App() {
                   id="email"
                   type="email"
                   name="email"
-                  required
                   placeholder="Digite seu e-mail"
                   value={formData.email}
                   onChange={handleChange}
@@ -575,21 +574,7 @@ function App() {
             </div>
 
             {/* Botão de Enviar */}
-            <button
-              type="submit"
-              style={{
-                width: '100%',
-                backgroundColor: '#3f7652',
-                color: '#fff',
-                padding: '15px',
-                borderRadius: '5px',
-                border: 'none',
-                cursor: 'pointer',
-                fontSize: '16px',
-                fontWeight: 'bold',
-                boxSizing: 'border-box',
-              }}
-            >
+            <button className='button-enviar' type="submit">
               Enviar
             </button>
           </form>
