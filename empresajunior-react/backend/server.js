@@ -11,8 +11,8 @@ const port = process.env.PORT || 5000;
 let allowedOrigins = [];
 
 if (process.env.NODE_ENV === 'production') {
-  // Em produção, permitir somente o domínio do frontend hospedado no Render
-  allowedOrigins = ['https://utfpr-ej-1.onrender.com'];
+  // Em produção, permitir o domínio do frontend hospedado no Render e também localhost para testes
+  allowedOrigins = ['https://utfpr-ej-1.onrender.com', 'http://localhost:3000'];
 } else {
   // Durante o desenvolvimento, permitir o localhost
   allowedOrigins = ['http://localhost:3000'];
@@ -38,6 +38,12 @@ app.options('*', cors(corsOptions)); // Suporte ao preflight do CORS
 
 app.use(bodyParser.json());
 
+// Middleware para logar o header "Origin"
+app.use((req, res, next) => {
+  console.log('Origin:', req.headers.origin);
+  next();
+});
+
 app.post('/send-email', async (req, res) => {
   const { nome, assunto, telefone, email, necessidade } = req.body;
 
@@ -59,8 +65,11 @@ app.post('/send-email', async (req, res) => {
       Email: ${email}
       Necessidade: ${necessidade}
     `,
-    replyTo: email,
   };
+
+  if (email && email.trim() !== '') {
+    mailOptions.replyTo = email;
+  }
 
   try {
     await transporter.sendMail(mailOptions);
