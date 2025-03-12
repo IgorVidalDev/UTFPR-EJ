@@ -31,12 +31,10 @@ nav a {
   transition: color 0.3s;
   font-size: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
 }
 
 nav a:hover {
   color: #008136ce;
-  
 }
 
 .logo {
@@ -139,7 +137,6 @@ footer {
   text-align: center;
   width: "100%";
   height: "15vh";
-  /* 100% da altura da tela */
   flex-direction: "column";
 }
 
@@ -149,7 +146,6 @@ footer {
   font-size: 16px;
   font-weight: bold;
   padding: 10px 18px;
-  /* Botão mais fino */
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -201,22 +197,33 @@ footer {
   transform: scale(1.03);
 }
 
-
 /* Responsividade para dispositivos móveis */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  #home {
+    padding: 1em;
+  }
 
+  #home h1 {
+    font-size: 2em;
+  }
+
+  #home p {
+    font-size: 14px;
+  }
+}
+
+/* Responsividade para dispositivos pequenos (celulares e tablets pequenos) */
+@media screen and (max-width: 768px) {
   /* Formulário */
   .contact-section {
     padding: 1em 0.5em;
   }
 
-  /* Ajusta a seção de contato */
   #contact {
     padding: 0 1em;
-    text-align: left; /* Garante que o texto não fique centralizado */
+    text-align: left;
   }
 
-  /* Campo de nome e telefone em coluna */
   #contact form {
     width: 100%;
     display: flex;
@@ -225,19 +232,17 @@ footer {
   }
 
   #contact form > div {
-    display: block; /* Faz com que os campos fiquem em linha, um abaixo do outro */
+    display: block;
     width: 100%;
   }
 
-  /* Ajusta os inputs e textarea */
   input, textarea {
-    width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+    width: 100%;
     padding: 12px;
     margin-bottom: 10px;
     font-size: 16px;
   }
 
-  /* Ajuste no botão Enviar */
   button[type="submit"] {
     padding: 12px;
     font-size: 18px;
@@ -249,13 +254,11 @@ footer {
     transition: background-color 0.3s ease;
   }
 
-  /* Ajusta o texto do título no formulário */
   #contact h2 {
     font-size: 20px;
   }
 
-   /* Ajustes adicionais */
-   #contact label {
+  #contact label {
     font-size: 16px;
   }
 
@@ -327,8 +330,9 @@ footer {
   }
 }
 
-@media screen and (max-width: 1024px){
-  #home .text  {
+/* Responsividade para dispositivos médios (tablets grandes e laptops pequenos) */
+@media screen and (max-width: 1024px) {
+  #home .text {
     width: 100%;
     height: 50%;
     max-width: 350px;
@@ -344,29 +348,14 @@ footer {
     max-width: 420px;
     font-size: 12px;
     display: block;
-    margin: 0; /* Remove margens externas */
-    padding: 0; /* Remove espaçamento interno */
-    line-height: 1.1; /* Ajuste o espaçamento entre as linhas, se necessário */
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
     margin-top: 6vh;
   }
+
   #home section {
     display: block;
-  }
-
-}
-
-/* Responsividade para dispositivos pequenos (celulares) */
-@media screen and (max-width: 480px) {
-  #home {
-    padding: 1em;
-  }
-
-  #home h1 {
-    font-size: 2em;
-  }
-
-  #home p {
-    font-size: 14px;
   }
 }
 
