@@ -76,6 +76,10 @@ footer {
   max-width: 550px;
 }
 
+#home .text span {
+  font-weight: 800;
+}
+
 #home .image {
   margin-left: 4%;
   margin-right: -4.6%;
@@ -321,6 +325,34 @@ footer {
   section {
     flex: 1;
   }
+}
+
+@media screen and (max-width: 1024px){
+  #home .text  {
+    width: 100%;
+    height: 50%;
+    max-width: 350px;
+    font-size: 8px;
+    display: block;
+    margin-bottom: 30vh;
+    margin-top: -7vh;
+  }
+
+  #home .text p {
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    font-size: 12px;
+    display: block;
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove espaçamento interno */
+    line-height: 1.1; /* Ajuste o espaçamento entre as linhas, se necessário */
+    margin-top: 6vh;
+  }
+  #home section {
+    display: block;
+  }
+
 }
 
 /* Responsividade para dispositivos pequenos (celulares) */

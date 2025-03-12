@@ -79,8 +79,8 @@ function App() {
       <section id="home">
         <div className="text">
           <h1>
-            Equilíbrio entre <span style={{ fontWeight: 800 }}>conservar</span> e{' '}
-            <span style={{ fontWeight: 800 }}>produzir</span>
+            Equilíbrio entre <span>conservar</span> e{' '}
+            <span>produzir</span>
           </h1>
           <p>
             Os profissionais da UTFlorestal são altamente capacitados para oferecer
@@ -108,7 +108,7 @@ function App() {
       </section>
 
       {/* Seção com 3 divs coloridas */}
-      <section
+      <section className='divs'
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -219,6 +219,7 @@ function App() {
             alignItems: 'center',
             textAlign: 'center',
             minHeight: window.innerWidth <= 768 ? '200px' : '300px',
+            minHeight: window.innerWidth <= 1024 ? '445px' : '300px',
             width: '100%',
             flex: '1 1 33.33%',
           }}
