@@ -99,7 +99,7 @@ footer {
   font-size: 3em;
   max-width: 550px;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 #home p {
@@ -283,6 +283,7 @@ footer {
 
   #home h1 {
     font-size: 2.5em;
+    padding-top: 20px;
   }
 
   #home p {

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Carrosel from './carrossel';
 
 function App() {
-  // Mantemos o estado para atualizar os inputs
+  // Estado para os dados do formulário
   const [formData, setFormData] = useState({
     nome: '',
     assunto: '',
@@ -11,6 +11,18 @@ function App() {
     email: '',
     necessidade: '',
   });
+
+  // Estado para armazenar o hash atual (por exemplo, "#contact")
+  const [activeHash, setActiveHash] = useState(window.location.hash);
+
+  // Atualiza o estado quando o hash da URL muda
+  useEffect(() => {
+    const handleHashChange = () => {
+      setActiveHash(window.location.hash);
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,12 +38,12 @@ function App() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-  
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message || 'Erro ao enviar o email.');
       }
-  
+
       const result = await response.json();
       alert(result.message);
       setFormData({
@@ -46,45 +58,326 @@ function App() {
       alert(error.message || 'Erro ao enviar o email.');
     }
   };
-  
 
-  
+  // Função para renderizar a navbar (header)
+  const renderHeader = () => (
+    <header>
+      <img className="logo" src="/img/logo.png" alt="Logo" />
+      <nav>
+        <a
+          href="#home"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.hash = "#home";
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        >
+          Início
+        </a>
+        <a href="#about">Sobre nós</a>
+        <a href="#services">Serviços</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </header>
+  );
 
-  return (
-    <div>
-      {/* Header com Navbar */}
-      <header>
-        <img className="logo" src="/img/logo.png" alt="Logo" />
-        <nav>
-          <a
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Se o hash for "#contact", renderiza apenas o header e a seção de contato isolada
+  if (activeHash === "#contact") {
+    return (
+      <div>
+        {renderHeader()}
+        <section
+          id="contact"
+          className="contact-section"
+          style={{ backgroundColor: 'white', padding: '30px', margin: '40px 0' }}
+        >
+          <h2
+            style={{
+              color: '#3f7652',
+              fontFamily: 'Poppins, sans-serif',
+              fontWeight: '600',
+              textAlign: 'center',
+              marginBottom: '30px',
             }}
           >
-            Início
-          </a>
-          <a href="#about">Sobre nós</a>
-          <a href="#services">Serviços</a>
-          <a href="#noticias">Notícias</a>
-          <a href="#contact">Contato</a>
-        </nav>
-      </header>
+            Entre em contato e solicite um(a) análise/orçamento
+          </h2>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
+              gap: '20px',
+              maxWidth: '1200px',
+              margin: '0 auto',
+            }}
+          >
+            {/* Coluna Esquerda: Widget do Facebook */}
+<div
+  style={{
+    flex: '0 0 300px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  }}
+>
+  <div
+    className="fb-page"
+    data-href="https://www.facebook.com/utflorestal?ref=embed_page"
+    data-width="300"
+    data-height="580"
+    data-show-posts="true"
+    data-hide-cover="false"
+    data-show-facepile="true"
+  >
+    {/* O src foi configurado para um iframe com a URL do Facebook Page Plugin */}
+    <iframe
+      title="Facebook"
+      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Futflorestal&tabs=timeline&width=300&height=580&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+      width="300"
+      height="580"
+      style={{ border: 'none', overflow: 'hidden' }}
+      scrolling="no"
+      frameBorder="0"
+      allow="encrypted-media"
+    ></iframe>
+  </div>
+</div>
 
-      {/* Carrossel */}
+
+
+            {/* Coluna Direita: Formulário de Contato */}
+            <div
+              style={{
+                flex: '1',
+                padding: '20px',
+                backgroundColor: '#ececec',
+                borderRadius: '8px',
+                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+              }}
+            >
+              <form
+                onSubmit={handleSubmit}
+                style={{
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '15px',
+                }}
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="Novo contato via formulário" />
+
+                {/* Nome e Telefone */}
+                <div
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '30px',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <div style={{ flex: '1' }}>
+                    <label
+                      htmlFor="nome"
+                      style={{
+                        color: '#3f7652',
+                        display: 'block',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Nome Completo *
+                    </label>
+                    <input
+                      id="nome"
+                      type="text"
+                      name="nome"
+                      required
+                      placeholder="Digite seu nome completo"
+                      value={formData.nome}
+                      onChange={handleChange}
+                      style={{
+                        backgroundColor: '#e1e7e3',
+                        width: '100%',
+                        marginBottom: '15px',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                  </div>
+                  <div style={{ flex: '1' }}>
+                    <label
+                      htmlFor="telefone"
+                      style={{
+                        color: '#3f7652',
+                        display: 'block',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Telefone *
+                    </label>
+                    <input
+                      id="telefone"
+                      type="tel"
+                      name="telefone"
+                      required
+                      placeholder="Digite seu telefone"
+                      value={formData.telefone}
+                      onChange={handleChange}
+                      style={{
+                        backgroundColor: '#e1e7e3',
+                        width: '100%',
+                        marginBottom: '15px',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                  </div>
+                </div>
+
+                {/* Assunto e Email */}
+                <div
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '30px',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <div style={{ flex: '1' }}>
+                    <label
+                      htmlFor="assunto"
+                      style={{
+                        color: '#3f7652',
+                        display: 'block',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Assunto *
+                    </label>
+                    <input
+                      id="assunto"
+                      type="text"
+                      name="assunto"
+                      required
+                      placeholder="Qual o assunto do seu contato?"
+                      value={formData.assunto}
+                      onChange={handleChange}
+                      style={{
+                        backgroundColor: '#e1e7e3',
+                        width: '100%',
+                        marginBottom: '15px',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                  </div>
+                  <div style={{ flex: '1' }}>
+                    <label
+                      htmlFor="email"
+                      style={{
+                        color: '#3f7652',
+                        display: 'block',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Email (Não Obrigatório)
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="Digite seu e-mail"
+                      value={formData.email}
+                      onChange={handleChange}
+                      style={{
+                        backgroundColor: '#e1e7e3',
+                        width: '100%',
+                        marginBottom: '15px',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        boxSizing: 'border-box',
+                      }}
+                    />
+                  </div>
+                </div>
+
+                {/* Necessidade */}
+                <div style={{ width: '100%' }}>
+                  <label
+                    htmlFor="necessidade"
+                    style={{
+                      color: '#3f7652',
+                      display: 'block',
+                      marginBottom: '5px',
+                    }}
+                  >
+                    Descreva sua necessidade
+                  </label>
+                  <textarea
+                    id="necessidade"
+                    name="necessidade"
+                    rows="5"
+                    placeholder="Descreva sua necessidade detalhadamente"
+                    value={formData.necessidade}
+                    onChange={handleChange}
+                    style={{
+                      backgroundColor: '#e1e7e3',
+                      width: '100%',
+                      marginBottom: '15px',
+                      padding: '10px',
+                      borderRadius: '5px',
+                      border: '1px solid #ddd',
+                      boxSizing: 'border-box',
+                      resize: 'none',
+                      height: '150px',
+                    }}
+                  ></textarea>
+                </div>
+
+                {/* Botão de Enviar */}
+                <button
+                  className="button-enviar"
+                  type="submit"
+                  style={{
+                    padding: '10px 20px',
+                    backgroundColor: '#3f7652',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '5px',
+                    cursor: 'pointer',
+                  }}
+                >
+                  Enviar
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  // Se o hash não for "#contact", renderiza a página completa
+  return (
+    <div>
+      {renderHeader()}
       <Carrosel />
-
-      {/* Seções de conteúdo */}
       <section id="home">
         <div className="text">
           <h1>
-            Equilíbrio entre <span>conservar</span> e{' '}
-            <span>produzir</span>
+            Equilíbrio entre <span>conservar</span> e <span>produzir</span>
           </h1>
           <p>
             Os profissionais da UTFlorestal são altamente capacitados para oferecer
-            soluções vantajosas aos clientes e ao mesmo tempo, preservar o meio ambiente.
+            soluções vantajosas aos clientes e, ao mesmo tempo, preservar o meio ambiente.
             Quando se trata de conceber um projeto, é crucial considerar os impactos
             socioambientais envolvidos. Não se trata apenas de cumprir as obrigações
             legais, mas de assumir a responsabilidade pela preservação, manutenção e
@@ -92,8 +385,8 @@ function App() {
           </p>
           <p>
             Nosso trabalho é pautado em princípios éticos e sustentáveis, e buscamos
-            sempre ir além do que está previsto em lei. Acreditamos que ao cuidar do
-            meio ambiente estamos cuidando também do futuro das próximas gerações.
+            sempre ir além do que está previsto em lei. Acreditamos que, ao cuidar do
+            meio ambiente, estamos cuidando também do futuro das próximas gerações.
           </p>
           <p>
             Portanto, se você busca um parceiro para desenvolver projetos
@@ -106,9 +399,9 @@ function App() {
           <img src="/img/image3.png" alt="Imagem" />
         </div>
       </section>
-
-      {/* Seção com 3 divs coloridas */}
-      <section className='divs'
+      {/* Blocos adicionais (CONTATO INICIAL, PLANEJAMENTO, ENTREGA E EXECUÇÃO) */}
+      <section
+        className="divs"
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -137,7 +430,8 @@ function App() {
         >
           <span
             style={{
-              fontFamily: 'avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif',
+              fontFamily:
+                'avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif',
               fontSize: '24px',
               fontWeight: '300',
               color: '#303030',
@@ -184,7 +478,8 @@ function App() {
         >
           <span
             style={{
-              fontFamily: 'avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif',
+              fontFamily:
+                'avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif',
               fontSize: '24px',
               fontWeight: '300',
               color: '#303030',
@@ -226,7 +521,8 @@ function App() {
         >
           <span
             style={{
-              fontFamily: 'avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif',
+              fontFamily:
+                'avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif',
               fontSize: '24px',
               fontWeight: '300',
               color: '#303030',
@@ -248,18 +544,6 @@ function App() {
           </span>
         </div>
       </section>
-
-      {/* Linha verde escuro após o grid */}
-      <div
-        style={{
-          width: '100%',
-          height: '4px',
-          backgroundColor: '#006400',
-          marginTop: '0px',
-        }}
-      ></div>
-
-      {/* Outras seções e footer... */}
       <section id="services">
         <h1>
           <span style={{ fontWeight: 500 }}>Nossos </span>
@@ -270,7 +554,6 @@ function App() {
           aspectos, incluindo o meio ambiente, a economia e o bem-estar social.
         </p>
       </section>
-
       <section id="services" style={{ backgroundColor: '#ececec' }}>
         <h2>Licenciamento / Regularização Ambiental</h2>
         <p>
@@ -281,7 +564,6 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-
       <section id="services">
         <h2>Georreferenciamento</h2>
         <p>
@@ -293,7 +575,6 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-
       <section id="services" style={{ backgroundColor: '#ececec' }}>
         <h2>Inventário Florestal</h2>
         <p>
@@ -305,7 +586,6 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-
       <section id="services">
         <h2>Programa de Recuperação de Áreas Degradadas (PRAD)</h2>
         <p>
@@ -316,7 +596,6 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-
       <section id="services" style={{ backgroundColor: '#ececec' }}>
         <h2>Recuperação de Nascentes</h2>
         <p>
@@ -327,7 +606,6 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-
       <section id="services">
         <h2>Projetos Paisagísticos</h2>
         <p>
@@ -338,9 +616,7 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-
-      {/* Formulário de Contato */}
-      <section id="contact" className="contact-section">
+      <section id="contact" className="contact-section" style={{ backgroundColor: '#ececec' }}>
         <div
           style={{
             display: 'flex',
@@ -368,7 +644,6 @@ function App() {
             Entre em contato e <br /> solicite um(a) análise/orçamento
           </h2>
 
-          {/* Alteramos o formulário para usar onSubmit e remover action e method */}
           <form
             onSubmit={handleSubmit}
             style={{
@@ -378,11 +653,9 @@ function App() {
               alignItems: 'center',
             }}
           >
-            {/* Campos ocultos (se desejar mantê-los) */}
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value="Novo contato via formulário" />
 
-            {/* Nome e Telefone em uma linha */}
             <div
               style={{
                 display: 'flex',
@@ -392,7 +665,6 @@ function App() {
                 gap: '30px',
               }}
             >
-              {/* Nome */}
               <div style={{ flex: '1' }}>
                 <label
                   htmlFor="nome"
@@ -425,8 +697,6 @@ function App() {
                   }}
                 />
               </div>
-
-              {/* Telefone */}
               <div style={{ flex: '1', textAlign: 'right' }}>
                 <label
                   htmlFor="telefone"
@@ -461,7 +731,6 @@ function App() {
               </div>
             </div>
 
-            {/* Assunto e Email em uma linha */}
             <div
               style={{
                 display: 'flex',
@@ -471,7 +740,6 @@ function App() {
                 gap: '30px',
               }}
             >
-              {/* Assunto */}
               <div style={{ flex: '1' }}>
                 <label
                   htmlFor="assunto"
@@ -504,8 +772,6 @@ function App() {
                   }}
                 />
               </div>
-
-              {/* Email */}
               <div style={{ flex: '1' }}>
                 <label
                   htmlFor="email"
@@ -539,7 +805,6 @@ function App() {
               </div>
             </div>
 
-            {/* Descreva sua necessidade */}
             <div style={{ flex: '1', width: '100%' }}>
               <label
                 htmlFor="necessidade"
@@ -574,8 +839,18 @@ function App() {
               ></textarea>
             </div>
 
-            {/* Botão de Enviar */}
-            <button className='button-enviar' type="submit">
+            <button
+              className="button-enviar"
+              type="submit"
+              style={{
+                padding: '10px 20px',
+                backgroundColor: '#3f7652',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer',
+              }}
+            >
               Enviar
             </button>
           </form>
