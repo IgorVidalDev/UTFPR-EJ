@@ -90,60 +90,60 @@ function App() {
         <section
           id="contact"
           className="contact-section"
-          style={{ backgroundColor: 'white', padding: '30px', margin: '40px 0' }}
+          style={{
+            backgroundColor: 'white',
+            padding: '20px',  // Reduzi o padding
+            margin: '0vh', // Reduzi a margem
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: 'calc(100vh - 80px)', // Subtraí a altura da navbar para centralizar corretamente
+          }}
         >
-          <h2
-            style={{
-              color: '#3f7652',
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: '600',
-              textAlign: 'center',
-              marginBottom: '30px',
-            }}
-          >
-            Entre em contato e solicite um(a) análise/orçamento
-          </h2>
           <div
             style={{
               display: 'flex',
-              flexDirection: window.innerWidth <= 768 ? 'column' : 'row',
-              gap: '20px',
-              maxWidth: '1200px',
-              margin: '0 auto',
+              alignItems: 'center', // Alinha o conteúdo ao centro verticalmente
+              gap: '20px',  // Reduzi o gap entre o formulário e o widget
+              maxWidth: '1000px',
+              width: '100%',
             }}
           >
-            {/* Coluna Esquerda: Widget do Facebook */}
+           {/* Coluna Esquerda: Widget do Facebook */}
 <div
   style={{
     flex: '0 0 300px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    marginBottom: '35px',
+    paddingBottom: '22vh',  // Ajuste do espaço superior (valor menor para não esticar tanto para cima)
   }}
 >
   <div
     className="fb-page"
     data-href="https://www.facebook.com/utflorestal?ref=embed_page"
     data-width="300"
-    data-height="580"
+    data-height="680"
     data-show-posts="true"
     data-hide-cover="false"
     data-show-facepile="true"
   >
-    {/* O src foi configurado para um iframe com a URL do Facebook Page Plugin */}
     <iframe
       title="Facebook"
-      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Futflorestal&tabs=timeline&width=300&height=580&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Futflorestal&tabs=timeline&width=300&height=780&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
       width="300"
-      height="580"
-      style={{ border: 'none', overflow: 'hidden' }}
+      height="780"
+      style={{
+        border: 'none',
+        overflow: 'hidden',
+      }}
       scrolling="no"
       frameBorder="0"
       allow="encrypted-media"
     ></iframe>
   </div>
 </div>
-
 
 
             {/* Coluna Direita: Formulário de Contato */}
@@ -154,8 +154,24 @@ function App() {
                 backgroundColor: '#ececec',
                 borderRadius: '8px',
                 boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center', // Centraliza o conteúdo dentro do formulário
+                alignItems: 'center',
+                minWidth: '300px', // Garante que o formulário tenha uma largura mínima
               }}
             >
+              <h2
+                style={{
+                  color: '#3f7652',
+                  fontFamily: 'Poppins, sans-serif',
+                  fontWeight: '600',
+                  textAlign: 'center',
+                  marginBottom: '20px', // Reduzi o espaço abaixo do título
+                }}
+              >
+                Entre em contato e solicite um(a) análise/orçamento
+              </h2>
               <form
                 onSubmit={handleSubmit}
                 style={{
@@ -173,7 +189,7 @@ function App() {
                   style={{
                     display: 'flex',
                     flexWrap: 'wrap',
-                    gap: '30px',
+                    gap: '20px', // Reduzi o gap entre os inputs
                     justifyContent: 'space-between',
                   }}
                 >
@@ -244,7 +260,7 @@ function App() {
                   style={{
                     display: 'flex',
                     flexWrap: 'wrap',
-                    gap: '30px',
+                    gap: '20px', // Reduzi o gap
                     justifyContent: 'space-between',
                   }}
                 >
@@ -344,19 +360,30 @@ function App() {
 
                 {/* Botão de Enviar */}
                 <button
-                  className="button-enviar"
-                  type="submit"
-                  style={{
-                    padding: '10px 20px',
-                    backgroundColor: '#3f7652',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '5px',
-                    cursor: 'pointer',
-                  }}
-                >
-                  Enviar
-                </button>
+  className="button-enviar"
+  type="submit"
+  style={{
+    padding: '12px 22vh',  // Ajusta o tamanho do botão
+    backgroundColor: '#3f7652',
+    color: 'white',
+    border: 'none',
+    borderRadius: '9px',
+    cursor: 'pointer',
+    justifyContent: 'center',
+    display: 'flex',  // Centraliza o conteúdo dentro do botão
+    alignItems: 'center',
+    textAlign: 'center',
+    width: 'auto',  // Deixa o botão ajustar seu tamanho automaticamente com base no conteúdo
+    maxWidth: '200px',  // Limita o tamanho máximo do botão
+    marginTop: '20px',  // Adiciona um espaçamento acima do botão
+    marginLeft: 'auto',  // Centraliza o botão horizontalmente
+    marginRight: 'auto', // Centraliza o botão horizontalmente
+  }}
+>
+  Enviar
+</button>
+
+
               </form>
             </div>
           </div>
@@ -364,6 +391,9 @@ function App() {
       </div>
     );
   }
+
+
+
 
   // Se o hash não for "#contact", renderiza a página completa
   return (
@@ -782,7 +812,7 @@ function App() {
                     marginBottom: '5px',
                   }}
                 >
-                  Email (Não Obrigátorio) 
+                  Email (Não Obrigátorio)
                 </label>
                 <input
                   id="email"

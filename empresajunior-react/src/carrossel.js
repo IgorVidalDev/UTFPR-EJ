@@ -46,6 +46,20 @@ const Carrosel = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Função de rolagem suave até a seção de contato
+  const scrollToContact = () => {
+    // Encontrar a seção de contato correta
+    const contactSection = document.getElementById('contact'); // Certifique-se que a seção tenha o id 'contact'
+    
+    // Rolagem suave para a seção de contato
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: 'smooth',  // Rolagem suave
+        block: 'start',      // Alinha a seção no topo da tela
+      });
+    }
+  };  
+
   return (
     <div>
       <div className="carrossel-container">
@@ -68,15 +82,12 @@ const Carrosel = () => {
                     <button className="carrosel-button" onClick={toggleSaibaMais}>
                       SAIBA MAIS
                     </button>
+
                   ) : (
                     // Botão do segundo slide: ENTRE EM CONTATO AGORA
-                    <a
-                      className="carrossel-button"
-                      href="/#contact"
-                      aria-label="ENTRE EM CONTATO AGORA"
-                    >
-                      ENTRE EM CONTATO AGORA
-                    </a>
+                    <button className="carrosel-button" onClick={scrollToContact}>
+  ENTRE EM CONTATO AGORA
+</button>
                   )}
                 </div>
               )}

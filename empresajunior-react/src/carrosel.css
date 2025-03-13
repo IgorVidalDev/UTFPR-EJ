@@ -122,5 +122,10 @@ button.next:hover {
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-
 }
+
+.carrosel-button:hover {
+  background-color: #28a745; /* Uma cor mais escura de verde para o hover */
+}
+
+
