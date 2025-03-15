@@ -81,9 +81,9 @@ function App() {
       </nav>
 
       <div className='social-icons'>
-      {/* Telefone */}
-      <a href="tel:+46999730867" aria-label="Telefone">
-          <img src="./img/telefone.png" alt="Ícone Telefone" style={{ width: '24px', height: '24px' }}  />
+        {/* Telefone */}
+        <a href="tel:+46999730867" aria-label="Telefone">
+          <img src="./img/telefone.png" alt="Ícone Telefone" style={{ width: '24px', height: '24px' }} />
         </a>
 
         {/* WhatsApp */}
@@ -105,9 +105,9 @@ function App() {
         <a href="https://www.linkedin.com/company/utflorestal-empresa-j%C3%BAnior" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <img src="/img/linkedin.png" alt="Ícone LinkedIn" style={{ width: '24px', height: '24px' }} />
         </a>
-        </div>
+      </div>
 
-          
+
     </header>
   );
 
@@ -176,40 +176,40 @@ function App() {
 
             {/* Coluna Direita: Container com o texto acima e o quadrado do formulário */}
             {/* Coluna Direita: Container com o texto acima e o quadrado do formulário */}
-<div
-  style={{
-    flex: '1',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '10px',
-    position: 'relative', // Necessário para posicionamento absoluto dos elementos internos
-    paddingTop: '100px', // Espaço reservado para o formulário
-  }}
->
-  {/* Texto acima do formulário, posicionado absolutamente */}
-  <div className="form-text__container">
-    <h4 className="form-text__title">
-      <span className="form-text__text">Nossos</span>
-      <span className="form-text__text" style={{ marginLeft: '5px' }}>contatos</span>
-    </h4>
+            <div
+              style={{
+                flex: '1',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '10px',
+                position: 'relative', // Necessário para posicionamento absoluto dos elementos internos
+                paddingTop: '100px', // Espaço reservado para o formulário
+              }}
+            >
+              {/* Texto acima do formulário, posicionado absolutamente */}
+              <div className="form-text__container">
+                <h4 className="form-text__title">
+                  <span className="form-text__text">Nossos</span>
+                  <span className="form-text__text" style={{ marginLeft: '5px' }}>contatos</span>
+                </h4>
 
-    <h1>
-      <span className="form-text__text">Tel: (46)</span>
-      <span className="form-text__phone">99973-0867</span>
-    </h1>
+                <h1>
+                  <span className="form-text__text">Tel: (46)</span>
+                  <span className="form-text__phone">99973-0867</span>
+                </h1>
 
-    <span style={{ fontSize: '21px' }}>
-      <span className="form-text__text">
-        E-mail:&nbsp;
-        <a
-          href="mailto:utflorestal.utfpr@gmail.com"
-          className="form-text__email-link"
-        >
-          utflorestal.utfpr@gmail.com
-        </a>
-      </span>
-    </span>
-  </div>
+                <span style={{ fontSize: '21px' }}>
+                  <span className="form-text__text">
+                    E-mail:&nbsp;
+                    <a
+                      href="mailto:utflorestal.utfpr@gmail.com"
+                      className="form-text__email-link"
+                    >
+                      utflorestal.utfpr@gmail.com
+                    </a>
+                  </span>
+                </span>
+              </div>
 
 
               {/* Quadrado do Formulário */}
@@ -712,13 +712,13 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section id="contact" className="contact-section" style={{ backgroundColor: '#ececec' }}>
+      <section id="contact" className="contact-section" style={{ backgroundColor: '#FFFFFF' }}>
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
             padding: '30px',
-            border: '1px rgb(247, 34, 34)',
+            border: '1px rgb(255, 255, 255)',
             borderRadius: '8px',
             backgroundColor: '#ececec',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
@@ -951,8 +951,68 @@ function App() {
             </button>
           </form>
         </div>
+
       </section>
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-left">
+            <span style={{ fontSize: '14px', letterSpacing: '0.05em' }}>UTFlorestal © 2021</span>
+          </div>
+          <div className="footer-center">
+            <div className="footer-section">
+              <h3>Institucional</h3>
+              <ul>
+                <li><a href="#">Inicío</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Contato</a></li>
+              </ul>
+            </div>
+            <div className="footer-section">
+              <h3>Serviços</h3>
+              <ul>
+                <li><a href="#services">Licenciamento/Regularização<br /> Ambiental</a></li>
+                <li><a href="#services">Georreferenciamento <br />
+                  Inventário Florestal</a></li>
+                <li><a href="#services">Programa de Recuperação de<br /> Áreas Degradadas (PRAD)</a></li>
+                <li><a href="#services">Recuperação de Nascentes <br />
+                  Projetos Paisagisticos</a></li>
+              </ul>
+            </div>
+            <div className="footer-section">
+              <h3>Contatos</h3>
+              <ul>
+                <li><a href="#">utflorestal.utfpr@gmail.com</a></li>
+                <br />
+                <li><a href="#">+55 (46) 99973-0867</a></li>
+                <br />
+                <li><a href="#">UTFlorestal - Planejamento e Execução</a></li>
+                <br />
+                <li>Estrada P/ Boa Esperança Km 04. <br />
+                CEP 85660-000 – Dois Vizinhos, Paraná. <br />
+                Caixa Postal 157 Bloco A2, Sala S/N</li>
+              </ul>
+            </div>
+          </div>
+          <div className="footer-right">
+            <ul>
+              <li><a href="#">Icon Telefone</a></li>
+              <li><a href="#">Icon WhatsApp</a></li>
+              <li><a href="#">Icon Instagram</a></li>
+              <li><a href="#">Icon Facebook</a></li>
+              <li><a href="#">Icon linkdIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="footer-bottom">
+    <span style={{ fontSize: '14px', letterSpacing: '0.05em' }}>UTFlorestal | 2023 Todos direitos reservados</span>
+  </div>
+      </footer>
     </div>
+
+
+
   );
 }
 

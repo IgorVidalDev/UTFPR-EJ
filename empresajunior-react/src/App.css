@@ -66,15 +66,131 @@ section {
   padding: 20px;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+/* Garanta que o HTML e o Body ocupem toda a altura da tela */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Isso vai garantir que os elementos se empurrem */
 }
+
+/* Container principal (componente ou div que envolve o conteúdo e footer) */
+.main-container {
+  flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+}
+
+/* Estilos do Footer */
+.footer {
+  width: 100%;
+  background-color: #ececec;
+  color: black;
+  text-align: center;
+  z-index: 1000;
+  position: relative; /* Para garantir o controle da posição interna */
+  padding: 40px 0; /* Padding geral, aumentando o espaço ao redor */
+  min-height: 400px; /* Aumenta a altura mínima do footer para dar mais espaço */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-left {
+  position: absolute; /* Fixa o conteúdo no canto esquerdo do footer */
+  left: 20px; /* Margem da borda esquerda do footer */
+  bottom: 37vh; /* Distância da borda inferior do footer */
+  font-family: "Arial, sans-serif"; /* Fonte fina e simples */
+  font-weight: lighter; /* Fonte mais fina */
+  font-size: 12px; /* Fonte pequena */
+  letter-spacing: 0.05em; /* Ajuste para espaçamento */
+  margin-bottom: 13vh;
+  color: #595959;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 0; /* Faz a seção central crescer para ocupar o espaço disponível */
+  text-align: left;
+  font-family: "Arial, sans-serif";
+}
+
+.footer-section {
+  margin: 0 20px;
+  font-family: "Arial, sans-serif";
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Arial, sans-serif";
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+  font-family: "Arial, sans-serif";
+}
+
+.footer-center li {
+  margin: 5px 0;
+  
+}
+
+.footer-center a {
+  color: black;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.footer-center a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  flex-basis: 20%;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right li {
+  margin: 5px 0;
+  font-family: "Arial, sans-serif";
+}
+
+.footer-right a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  position: absolute; /* Coloca o texto na parte inferior do footer */
+  bottom: 0; /* Fixa a posição na parte inferior */
+  width: 100%; /* Largura total */
+  text-align: center;
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: 0.05em;
+  color: #595959;
+  padding: 5px 0px; /* Ajusta o padding para não deixar o texto colado na borda */
+  margin-top: 10px;
+}
+
+
+
+
+
 
 #home {
   height: 70vh;
