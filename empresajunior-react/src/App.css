@@ -13,6 +13,7 @@ header {
   align-items: center;
   z-index: 10;
   position: relative;
+  justify-Content: 'space-between'
 }
 
 nav {
@@ -35,6 +36,23 @@ nav a {
 
 nav a:hover {
   color: #008136ce;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px; /* Espaçamento entre os ícones */
+  margin-right: 550px; /* Margem à direita dos ícones */
+  justify-content: flex-end; /* Garante que os ícones fiquem à direita */
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0073e6; /* Cor ao passar o mouse */
 }
 
 .logo {
