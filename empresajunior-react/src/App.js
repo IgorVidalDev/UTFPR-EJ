@@ -92,305 +92,342 @@ function App() {
           className="contact-section"
           style={{
             backgroundColor: 'white',
-            padding: '20px',  // Reduzi o padding
-            margin: '0vh', // Reduzi a margem
+            padding: '20px', // Reduzi o padding
+            margin: '0vh',  // Reduzi a margem
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            minHeight: 'calc(100vh - 80px)', // Subtraí a altura da navbar para centralizar corretamente
+            minHeight: 'calc(100vh - 80px)', // Subtrai a altura da navbar para centralizar corretamente
           }}
         >
           <div
             style={{
               display: 'flex',
               alignItems: 'center', // Alinha o conteúdo ao centro verticalmente
-              gap: '20px',  // Reduzi o gap entre o formulário e o widget
+              gap: '10px', // Gap reduzido para aproximar a coluna da direita do widget
               maxWidth: '1000px',
               width: '100%',
             }}
           >
-           {/* Coluna Esquerda: Widget do Facebook */}
-<div
-  style={{
-    flex: '0 0 300px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: '35px',
-    paddingBottom: '22vh',  // Ajuste do espaço superior (valor menor para não esticar tanto para cima)
-  }}
->
-  <div
-    className="fb-page"
-    data-href="https://www.facebook.com/utflorestal?ref=embed_page"
-    data-width="300"
-    data-height="680"
-    data-show-posts="true"
-    data-hide-cover="false"
-    data-show-facepile="true"
-  >
-    <iframe
-      title="Facebook"
-      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Futflorestal&tabs=timeline&width=300&height=780&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-      width="300"
-      height="780"
-      style={{
-        border: 'none',
-        overflow: 'hidden',
-      }}
-      scrolling="no"
-      frameBorder="0"
-      allow="encrypted-media"
-    ></iframe>
-  </div>
-</div>
-
-
-            {/* Coluna Direita: Formulário de Contato */}
+            {/* Coluna Esquerda: Widget do Facebook */}
             <div
               style={{
-                flex: '1',
-                padding: '20px',
-                backgroundColor: '#ececec',
-                borderRadius: '8px',
-                boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                flex: '0 0 300px',
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center', // Centraliza o conteúdo dentro do formulário
+                justifyContent: 'center',
                 alignItems: 'center',
-                minWidth: '300px', // Garante que o formulário tenha uma largura mínima
+                marginBottom: '35px',
+                paddingBottom: '8.7vh', // Espaço superior reduzido para o widget
               }}
             >
-              <h2
-                style={{
-                  color: '#3f7652',
-                  fontFamily: 'Poppins, sans-serif',
-                  fontWeight: '600',
-                  textAlign: 'center',
-                  marginBottom: '20px', // Reduzi o espaço abaixo do título
-                }}
+              <div
+                className="fb-page"
+                data-href="https://www.facebook.com/utflorestal?ref=embed_page"
+                data-width="300"
+                data-height="680"
+                data-show-posts="true"
+                data-hide-cover="false"
+                data-show-facepile="true"
               >
-                Entre em contato e solicite um(a) análise/orçamento
-              </h2>
-              <form
-                onSubmit={handleSubmit}
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '15px',
-                }}
-              >
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="Novo contato via formulário" />
-
-                {/* Nome e Telefone */}
-                <div
+                <iframe
+                  title="Facebook"
+                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Futflorestal&tabs=timeline&width=300&height=780&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                  width="300"
+                  height="780"
                   style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: '20px', // Reduzi o gap entre os inputs
-                    justifyContent: 'space-between',
+                    border: 'none',
+                    overflow: 'hidden',
                   }}
-                >
-                  <div style={{ flex: '1' }}>
-                    <label
-                      htmlFor="nome"
-                      style={{
-                        color: '#3f7652',
-                        display: 'block',
-                        marginBottom: '5px',
-                      }}
-                    >
-                      Nome Completo *
-                    </label>
-                    <input
-                      id="nome"
-                      type="text"
-                      name="nome"
-                      required
-                      placeholder="Digite seu nome completo"
-                      value={formData.nome}
-                      onChange={handleChange}
-                      style={{
-                        backgroundColor: '#e1e7e3',
-                        width: '100%',
-                        marginBottom: '15px',
-                        padding: '10px',
-                        borderRadius: '5px',
-                        border: '1px solid #ddd',
-                        boxSizing: 'border-box',
-                      }}
-                    />
-                  </div>
-                  <div style={{ flex: '1' }}>
-                    <label
-                      htmlFor="telefone"
-                      style={{
-                        color: '#3f7652',
-                        display: 'block',
-                        marginBottom: '5px',
-                      }}
-                    >
-                      Telefone *
-                    </label>
-                    <input
-                      id="telefone"
-                      type="tel"
-                      name="telefone"
-                      required
-                      placeholder="Digite seu telefone"
-                      value={formData.telefone}
-                      onChange={handleChange}
-                      style={{
-                        backgroundColor: '#e1e7e3',
-                        width: '100%',
-                        marginBottom: '15px',
-                        padding: '10px',
-                        borderRadius: '5px',
-                        border: '1px solid #ddd',
-                        boxSizing: 'border-box',
-                      }}
-                    />
-                  </div>
-                </div>
+                  scrolling="no"
+                  frameBorder="0"
+                  allow="encrypted-media"
+                ></iframe>
+              </div>
+            </div>
 
-                {/* Assunto e Email */}
-                <div
-                  style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: '20px', // Reduzi o gap
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div style={{ flex: '1' }}>
-                    <label
-                      htmlFor="assunto"
-                      style={{
-                        color: '#3f7652',
-                        display: 'block',
-                        marginBottom: '5px',
-                      }}
-                    >
-                      Assunto *
-                    </label>
-                    <input
-                      id="assunto"
-                      type="text"
-                      name="assunto"
-                      required
-                      placeholder="Qual o assunto do seu contato?"
-                      value={formData.assunto}
-                      onChange={handleChange}
-                      style={{
-                        backgroundColor: '#e1e7e3',
-                        width: '100%',
-                        marginBottom: '15px',
-                        padding: '10px',
-                        borderRadius: '5px',
-                        border: '1px solid #ddd',
-                        boxSizing: 'border-box',
-                      }}
-                    />
-                  </div>
-                  <div style={{ flex: '1' }}>
-                    <label
-                      htmlFor="email"
-                      style={{
-                        color: '#3f7652',
-                        display: 'block',
-                        marginBottom: '5px',
-                      }}
-                    >
-                      Email (Não Obrigatório)
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      name="email"
-                      placeholder="Digite seu e-mail"
-                      value={formData.email}
-                      onChange={handleChange}
-                      style={{
-                        backgroundColor: '#e1e7e3',
-                        width: '100%',
-                        marginBottom: '15px',
-                        padding: '10px',
-                        borderRadius: '5px',
-                        border: '1px solid #ddd',
-                        boxSizing: 'border-box',
-                      }}
-                    />
-                  </div>
-                </div>
-
-                {/* Necessidade */}
-                <div style={{ width: '100%' }}>
-                  <label
-                    htmlFor="necessidade"
-                    style={{
-                      color: '#3f7652',
-                      display: 'block',
-                      marginBottom: '5px',
-                    }}
-                  >
-                    Descreva sua necessidade
-                  </label>
-                  <textarea
-                    id="necessidade"
-                    name="necessidade"
-                    rows="5"
-                    placeholder="Descreva sua necessidade detalhadamente"
-                    value={formData.necessidade}
-                    onChange={handleChange}
-                    style={{
-                      backgroundColor: '#e1e7e3',
-                      width: '100%',
-                      marginBottom: '15px',
-                      padding: '10px',
-                      borderRadius: '5px',
-                      border: '1px solid #ddd',
-                      boxSizing: 'border-box',
-                      resize: 'none',
-                      height: '150px',
-                    }}
-                  ></textarea>
-                </div>
-
-                {/* Botão de Enviar */}
-                <button
-  className="button-enviar"
-  type="submit"
+            {/* Coluna Direita: Container com o texto acima e o quadrado do formulário */}
+            {/* Coluna Direita: Container com o texto acima e o quadrado do formulário */}
+<div
   style={{
-    padding: '12px 22vh',  // Ajusta o tamanho do botão
-    backgroundColor: '#3f7652',
-    color: 'white',
-    border: 'none',
-    borderRadius: '9px',
-    cursor: 'pointer',
-    justifyContent: 'center',
-    display: 'flex',  // Centraliza o conteúdo dentro do botão
-    alignItems: 'center',
-    textAlign: 'center',
-    width: 'auto',  // Deixa o botão ajustar seu tamanho automaticamente com base no conteúdo
-    maxWidth: '200px',  // Limita o tamanho máximo do botão
-    marginTop: '20px',  // Adiciona um espaçamento acima do botão
-    marginLeft: 'auto',  // Centraliza o botão horizontalmente
-    marginRight: 'auto', // Centraliza o botão horizontalmente
+    flex: '1',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '10px',
+    position: 'relative', // Necessário para posicionamento absoluto dos elementos internos
+    paddingTop: '100px', // Espaço reservado para o formulário
   }}
 >
-  Enviar
-</button>
+  {/* Texto acima do formulário, posicionado absolutamente */}
+  <div className="form-text__container">
+    <h4 className="form-text__title">
+      <span className="form-text__text">Nossos</span>
+      <span className="form-text__text" style={{ marginLeft: '5px' }}>contatos</span>
+    </h4>
+
+    <h1>
+      <span className="form-text__text">Tel: (46)</span>
+      <span className="form-text__phone">99973-0867</span>
+    </h1>
+
+    <span style={{ fontSize: '21px' }}>
+      <span className="form-text__text">
+        E-mail:&nbsp;
+        <a
+          href="mailto:utflorestal.utfpr@gmail.com"
+          className="form-text__email-link"
+        >
+          utflorestal.utfpr@gmail.com
+        </a>
+      </span>
+    </span>
+  </div>
 
 
-              </form>
+              {/* Quadrado do Formulário */}
+              <div
+                style={{
+                  padding: '20px',
+                  backgroundColor: '#ececec',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  minWidth: '300px',
+                }}
+              >
+                <h2
+                  style={{
+                    color: '#3f7652',
+                    fontFamily: 'Poppins, sans-serif',
+                    fontWeight: '600',
+                    textAlign: 'center',
+                    marginBottom: '20px',
+                  }}
+                >
+                  Entre em contato e solicite um(a) análise/orçamento
+                </h2>
+                <form
+                  onSubmit={handleSubmit}
+                  style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '15px',
+                  }}
+                >
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_subject" value="Novo contato via formulário" />
+
+                  {/* Nome e Telefone */}
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      gap: '20px', // Reduzi o gap entre os inputs
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <div style={{ flex: '1' }}>
+                      <label
+                        htmlFor="nome"
+                        style={{
+                          color: '#3f7652',
+                          display: 'block',
+                          marginBottom: '5px',
+                        }}
+                      >
+                        Nome Completo *
+                      </label>
+                      <input
+                        id="nome"
+                        type="text"
+                        name="nome"
+                        required
+                        placeholder="Digite seu nome completo"
+                        value={formData.nome}
+                        onChange={handleChange}
+                        style={{
+                          backgroundColor: '#e1e7e3',
+                          width: '100%',
+                          marginBottom: '15px',
+                          padding: '10px',
+                          borderRadius: '5px',
+                          border: '1px solid #ddd',
+                          boxSizing: 'border-box',
+                        }}
+                      />
+                    </div>
+                    <div style={{ flex: '1' }}>
+                      <label
+                        htmlFor="telefone"
+                        style={{
+                          color: '#3f7652',
+                          display: 'block',
+                          marginBottom: '5px',
+                        }}
+                      >
+                        Telefone *
+                      </label>
+                      <input
+                        id="telefone"
+                        type="tel"
+                        name="telefone"
+                        required
+                        placeholder="Digite seu telefone"
+                        value={formData.telefone}
+                        onChange={handleChange}
+                        style={{
+                          backgroundColor: '#e1e7e3',
+                          width: '100%',
+                          marginBottom: '15px',
+                          padding: '10px',
+                          borderRadius: '5px',
+                          border: '1px solid #ddd',
+                          boxSizing: 'border-box',
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Assunto e Email */}
+                  <div
+                    style={{
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      gap: '20px', // Reduzi o gap
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <div style={{ flex: '1' }}>
+                      <label
+                        htmlFor="assunto"
+                        style={{
+                          color: '#3f7652',
+                          display: 'block',
+                          marginBottom: '5px',
+                        }}
+                      >
+                        Assunto *
+                      </label>
+                      <input
+                        id="assunto"
+                        type="text"
+                        name="assunto"
+                        required
+                        placeholder="Qual o assunto do seu contato?"
+                        value={formData.assunto}
+                        onChange={handleChange}
+                        style={{
+                          backgroundColor: '#e1e7e3',
+                          width: '100%',
+                          marginBottom: '15px',
+                          padding: '10px',
+                          borderRadius: '5px',
+                          border: '1px solid #ddd',
+                          boxSizing: 'border-box',
+                        }}
+                      />
+                    </div>
+                    <div style={{ flex: '1' }}>
+                      <label
+                        htmlFor="email"
+                        style={{
+                          color: '#3f7652',
+                          display: 'block',
+                          marginBottom: '5px',
+                        }}
+                      >
+                        Email (Não Obrigatório)
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        value={formData.email}
+                        onChange={handleChange}
+                        style={{
+                          backgroundColor: '#e1e7e3',
+                          width: '100%',
+                          marginBottom: '15px',
+                          padding: '10px',
+                          borderRadius: '5px',
+                          border: '1px solid #ddd',
+                          boxSizing: 'border-box',
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Necessidade */}
+                  <div style={{ width: '100%' }}>
+                    <label
+                      htmlFor="necessidade"
+                      style={{
+                        color: '#3f7652',
+                        display: 'block',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Descreva sua necessidade
+                    </label>
+                    <textarea
+                      id="necessidade"
+                      name="necessidade"
+                      rows="5"
+                      placeholder="Descreva sua necessidade detalhadamente"
+                      value={formData.necessidade}
+                      onChange={handleChange}
+                      style={{
+                        backgroundColor: '#e1e7e3',
+                        width: '100%',
+                        marginBottom: '15px',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        boxSizing: 'border-box',
+                        resize: 'none',
+                        height: '150px',
+                      }}
+                    ></textarea>
+                  </div>
+
+                  {/* Botão de Enviar */}
+                  <button
+                    className="button-enviar"
+                    type="submit"
+                    style={{
+                      padding: '12px 22vh', // Ajusta o tamanho do botão
+                      backgroundColor: '#3f7652',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '9px',
+                      cursor: 'pointer',
+                      justifyContent: 'center',
+                      display: 'flex', // Centraliza o conteúdo dentro do botão
+                      alignItems: 'center',
+                      textAlign: 'center',
+                      width: 'auto', // Ajusta o tamanho automaticamente com base no conteúdo
+                      maxWidth: '200px', // Limita o tamanho máximo do botão
+                      marginTop: '20px', // Espaçamento acima do botão
+                      marginLeft: 'auto',
+                      marginRight: 'auto',
+                    }}
+                  >
+                    Enviar
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </section>
       </div>
     );
   }
+
+
 
 
 

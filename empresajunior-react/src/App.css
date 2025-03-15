@@ -197,6 +197,52 @@ footer {
   transform: scale(1.03);
 }
 
+/* FormText.css */
+
+/* Container */
+.form-text__container {
+  position: absolute;
+  top: -16.2vh;
+  left: 10px;
+  text-align: left;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 2.0;
+  font-stretch: condensed;
+}
+
+/* Título */
+.form-text__title {
+  font-size: 21px;
+  line-height: normal;
+}
+
+/* Texto */
+.form-text__text {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Texto do telefone */
+.form-text__phone {
+  font-size: 35px;
+  color: #000;
+  font-weight: 300;
+  letter-spacing: normal;
+}
+
+/* Link de email */
+.form-text__email-link {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+
 /* Responsividade para dispositivos móveis */
 @media screen and (max-width: 480px) {
   #home {
