@@ -103,7 +103,7 @@ function App() {
 
         {/* LinkedIn */}
         <a href="https://www.linkedin.com/company/utflorestal-empresa-j%C3%BAnior" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <img src="/img/linkedin.png" alt="Ícone LinkedIn" style={{ width: '24px', height: '24px' }} />
+          <img src="/img/LinkedIn.png" alt="Ícone LinkedIn" style={{ width: '24px', height: '24px' }} />
         </a>
       </div>
 
