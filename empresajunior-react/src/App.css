@@ -1,6 +1,6 @@
 /* App.css */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial, sans-serif";
   margin: 0;
   padding: 0;
 }
@@ -102,7 +102,6 @@ html, body {
   position: absolute; /* Fixa o conteúdo no canto esquerdo do footer */
   left: 20px; /* Margem da borda esquerda do footer */
   bottom: 37vh; /* Distância da borda inferior do footer */
-  font-family: "Arial, sans-serif"; /* Fonte fina e simples */
   font-weight: lighter; /* Fonte mais fina */
   font-size: 12px; /* Fonte pequena */
   letter-spacing: 0.05em; /* Ajuste para espaçamento */
@@ -115,25 +114,21 @@ html, body {
   justify-content: space-around;
   flex-grow: 0; /* Faz a seção central crescer para ocupar o espaço disponível */
   text-align: left;
-  font-family: "Arial, sans-serif";
 }
 
 .footer-section {
   margin: 0 20px;
-  font-family: "Arial, sans-serif";
 }
 
 .footer-section h3 {
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: bold;
-  font-family: "Arial, sans-serif";
 }
 
 .footer-center ul {
   list-style: none;
   padding: 0;
-  font-family: "Arial, sans-serif";
 }
 
 .footer-center li {
@@ -144,7 +139,6 @@ html, body {
 .footer-center a {
   color: black;
   text-decoration: none;
-  font-family: Arial, sans-serif;
 }
 
 .footer-center a:hover {
@@ -162,7 +156,6 @@ html, body {
 
 .footer-right li {
   margin: 5px 0;
-  font-family: "Arial, sans-serif";
 }
 
 .footer-right a {
