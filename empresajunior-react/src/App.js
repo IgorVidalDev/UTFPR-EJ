@@ -497,7 +497,6 @@ function App() {
       </section>
       {/* Blocos adicionais (CONTATO INICIAL, PLANEJAMENTO, ENTREGA E EXECUÇÃO) */}
       <section
-        className="divs"
         style={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -511,7 +510,7 @@ function App() {
         {/* CONTATO INICIAL */}
         <div
           style={{
-            marginTop: window.innerWidth <= 768 ? '25vh' : '-8vh',
+            marginTop: window.innerWidth <= 768 ? '36vh' : '-8vh',
             backgroundColor: '#ececec',
             padding: window.innerWidth <= 768 ? '10px' : '40px',
             display: 'flex',
@@ -575,7 +574,7 @@ function App() {
           <span
             style={{
               fontFamily:
-                'avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif',
+                "avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif",
               fontSize: '24px',
               fontWeight: '300',
               color: '#303030',
@@ -602,6 +601,7 @@ function App() {
         <div
           style={{
             marginTop: window.innerWidth <= 768 ? '0vh' : '-8vh',
+            marginBottom: window.innerWidth <= 768 ? '0vh' : '-8vh',
             backgroundColor: '#ececec',
             padding: window.innerWidth <= 768 ? '10px' : '40px',
             display: 'flex',
@@ -609,8 +609,8 @@ function App() {
             justifyContent: 'flex-start',
             alignItems: 'center',
             textAlign: 'center',
-            minHeight: window.innerWidth <= 768 ? '200px' : '300px',
-            minHeight: window.innerWidth <= 1024 ? '445px' : '300px',
+            minHeight: window.innerWidth <= 768 ? '200px' :
+              window.innerWidth <= 1024 ? '445px' : '300px',
             width: '100%',
             flex: '1 1 33.33%',
           }}
@@ -618,7 +618,7 @@ function App() {
           <span
             style={{
               fontFamily:
-                'avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif',
+                "avenir-lt-w01_85-heavy1475544, avenir-lt-w05_85-heavy, sans-serif",
               fontSize: '24px',
               fontWeight: '300',
               color: '#303030',
@@ -642,7 +642,7 @@ function App() {
       </section>
       <section id="services">
         <h1>
-          <span style={{ fontWeight: 500 }}>Nossos </span>
+          <span style={{ fontWeight: 500, backgroundColor: 'white' }}>Nossos </span>
           <b>Serviços</b>
         </h1>
         <p>
@@ -990,24 +990,43 @@ function App() {
                 <li><a href="#">UTFlorestal - Planejamento e Execução</a></li>
                 <br />
                 <li>Estrada P/ Boa Esperança Km 04. <br />
-                CEP 85660-000 – Dois Vizinhos, Paraná. <br />
-                Caixa Postal 157 Bloco A2, Sala S/N</li>
+                  CEP 85660-000 – Dois Vizinhos, Paraná. <br />
+                  Caixa Postal 157 Bloco A2, Sala S/N</li>
               </ul>
             </div>
           </div>
           <div className="footer-right">
             <ul>
-              <li><a href="#">Icon Telefone</a></li>
-              <li><a href="#">Icon WhatsApp</a></li>
-              <li><a href="#">Icon Instagram</a></li>
-              <li><a href="#">Icon Facebook</a></li>
-              <li><a href="#">Icon linkdIn</a></li>
+              {/* Telefone */}
+        <a href="tel:+46999730867" aria-label="Telefone">
+          <img src="./img/telefone.png" alt="Ícone Telefone" style={{ width: '24px', height: '24px' }} />
+        </a>
+
+        {/* WhatsApp */}
+        <a href="https://wa.me/46999730867" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <img src="/img/whatsapp.png" alt="Ícone WhatsApp" style={{ width: '24px', height: '24px' }} />
+        </a>
+
+        {/* Instagram */}
+        <a href="https://www.instagram.com/utflorestal" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="/img/instagram.png" alt="Ícone Instagram" style={{ width: '24px', height: '24px' }} />
+        </a>
+
+        {/* Facebook */}
+        <a href="https://www.facebook.com/utflorestal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="/img/facebook.png" alt="Ícone Facebook" style={{ width: '24px', height: '24px' }} />
+        </a>
+
+        {/* LinkedIn */}
+        <a href="https://www.linkedin.com/company/utflorestal-empresa-j%C3%BAnior" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="/img/LinkedIn.png" alt="Ícone LinkedIn" style={{ width: '24px', height: '24px' }} />
+        </a>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
-    <span style={{ fontSize: '14px', letterSpacing: '0.05em' }}>UTFlorestal | 2023 Todos direitos reservados</span>
-  </div>
+          <span style={{ fontSize: '14px', letterSpacing: '0.05em' }}>UTFlorestal | 2023 Todos direitos reservados</span>
+        </div>
       </footer>
     </div>
 
