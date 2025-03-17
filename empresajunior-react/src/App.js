@@ -998,29 +998,29 @@ function App() {
           <div className="footer-right">
             <ul>
               {/* Telefone */}
-        <a href="tel:+46999730867" aria-label="Telefone">
-          <img src="./img/telefone.png" alt="Ícone Telefone" style={{ width: '24px', height: '24px' }} />
-        </a>
+              <a href="tel:+46999730867" aria-label="Telefone">
+                <img src="./img/telefone.png" alt="Ícone Telefone" style={{ width: '24px', height: '24px' }} />
+              </a>
 
-        {/* WhatsApp */}
-        <a href="https://wa.me/46999730867" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-          <img src="/img/whatsapp.png" alt="Ícone WhatsApp" style={{ width: '24px', height: '24px' }} />
-        </a>
+              {/* WhatsApp */}
+              <a href="https://wa.me/46999730867" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <img src="/img/whatsapp.png" alt="Ícone WhatsApp" style={{ width: '24px', height: '24px' }} />
+              </a>
 
-        {/* Instagram */}
-        <a href="https://www.instagram.com/utflorestal" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <img src="/img/instagram.png" alt="Ícone Instagram" style={{ width: '24px', height: '24px' }} />
-        </a>
+              {/* Instagram */}
+              <a href="https://www.instagram.com/utflorestal" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="/img/instagram.png" alt="Ícone Instagram" style={{ width: '24px', height: '24px' }} />
+              </a>
 
-        {/* Facebook */}
-        <a href="https://www.facebook.com/utflorestal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <img src="/img/facebook.png" alt="Ícone Facebook" style={{ width: '24px', height: '24px' }} />
-        </a>
+              {/* Facebook */}
+              <a href="https://www.facebook.com/utflorestal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="/img/facebook.png" alt="Ícone Facebook" style={{ width: '24px', height: '24px' }} />
+              </a>
 
-        {/* LinkedIn */}
-        <a href="https://www.linkedin.com/company/utflorestal-empresa-j%C3%BAnior" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <img src="/img/LinkedIn.png" alt="Ícone LinkedIn" style={{ width: '24px', height: '24px' }} />
-        </a>
+              {/* LinkedIn */}
+              <a href="https://www.linkedin.com/company/utflorestal-empresa-j%C3%BAnior" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="/img/LinkedIn.png" alt="Ícone LinkedIn" style={{ width: '24px', height: '24px' }} />
+              </a>
             </ul>
           </div>
         </div>
