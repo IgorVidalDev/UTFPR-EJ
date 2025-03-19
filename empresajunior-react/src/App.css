@@ -305,6 +305,17 @@ html, body {
   width: 49%;
 }
 
+section h5 {
+  width: 70%;
+  text-align: justify;
+  font-weight: normal;
+  font-size: 19px;
+  letter-spacing: 0.05em;
+  line-height: 1.6em;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
 
 .contact-section {
   align-items: center;

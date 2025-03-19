@@ -415,14 +415,30 @@ function App() {
         <main >
           <section className='services'>
             <h4 style={{
+              width: '70%',
               fontSize: '35px',
               textAlign: 'justify',
               fontFamily: 'Helvetica, Arial, sans-serif',
               color: '#000000',
               fontWeight: 700,
+              marginBottom: '0px'
             }}>Oferecemos a Solução Ideal para projetos ambientais, com serviços
               especializados e personalizados para garantir a sustentabilidade e
               preservação dos recursos naturais.</h4>
+
+              <h5>A UTFlorestal é uma empresa de consultoria ambiental que oferece uma ampla gama de serviços, incluindo soluções de Licenciamento / Regularização, 
+                Inventário Florestal, Georreferenciamento, Programa de Recuperação de Áreas Degradadas (PRAD), Recuperação de Nascentes, Projetos Paisagísticos e 
+                entre outros. Além disso, nossa empresa tem uma forte atuação na conservação, gestão e valorização dos recursos naturais.</h5>
+
+                <h5>Nosso compromisso com a excelência é evidente em todos os nossos trabalhos e projetos, que se destacam pela alta qualidade técnica e pelas soluções 
+                  inteligentes e inovadoras oferecidas por nossa equipe de profissionais experientes e altamente capacitados em serviços ambientais. Na UTFlorestal, 
+                  acreditamos que é nossa responsabilidade preservar, manter e utilizar os recursos naturais de forma sustentável, e nossa equipe se dedica a cumprir essa 
+                  missão com rigor técnico-científico e responsabilidade ambiental em todos os nossos serviços.
+
+                </h5>
+
+                <h5 style={{marginBottom: '70px'}}>Se você está buscando soluções ambientais eficazes e sustentáveis, a UTFlorestal é a escolha certa para atender às suas necessidades. Contate-nos hoje 
+                  mesmo para saber mais sobre nossos serviços.</h5>
           </section>
           <section className='services' style={{ backgroundColor: '#ececec' }}>
             <h2>Licenciamento / Regularização Ambiental</h2>
