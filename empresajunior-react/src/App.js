@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import Carrosel from './carrossel';
+import renderFooter from './renderFooter';
+import renderHeader from './renderHeader';
 
 function App() {
   // Estado para os dados do formulário
@@ -59,57 +61,7 @@ function App() {
     }
   };
 
-  // Função para renderizar a navbar (header)
-  const renderHeader = () => (
-    <header>
-      <img className="logo" src="/img/logo.png" alt="Logo" />
-      <nav>
-        <a
-          href="#home"
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.hash = "#home";
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-        >
-          Início
-        </a>
-        <a href="#about">Sobre nós</a>
-        <a href="#services">Serviços</a>
-        <a href="#noticias">Notícias</a>
-        <a href="#contact">Contato</a>
-      </nav>
 
-      <div className='social-icons'>
-        {/* Telefone */}
-        <a href="tel:+46999730867" aria-label="Telefone">
-          <img src="./img/telefone.png" alt="Ícone Telefone" style={{ width: '24px', height: '24px' }} />
-        </a>
-
-        {/* WhatsApp */}
-        <a href="https://wa.me/46999730867" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-          <img src="/img/whatsapp.png" alt="Ícone WhatsApp" style={{ width: '24px', height: '24px' }} />
-        </a>
-
-        {/* Instagram */}
-        <a href="https://www.instagram.com/utflorestal" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <img src="/img/instagram.png" alt="Ícone Instagram" style={{ width: '24px', height: '24px' }} />
-        </a>
-
-        {/* Facebook */}
-        <a href="https://www.facebook.com/utflorestal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <img src="/img/facebook.png" alt="Ícone Facebook" style={{ width: '24px', height: '24px' }} />
-        </a>
-
-        {/* LinkedIn */}
-        <a href="https://www.linkedin.com/company/utflorestal-empresa-j%C3%BAnior" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <img src="/img/LinkedIn.png" alt="Ícone LinkedIn" style={{ width: '24px', height: '24px' }} />
-        </a>
-      </div>
-
-
-    </header>
-  );
 
   // Se o hash for "#contact", renderiza apenas o header e a seção de contato isolada
   if (activeHash === "#contact") {
@@ -456,7 +408,71 @@ function App() {
     );
   }
 
-
+  if (activeHash === "#services") {
+    return (
+      <div>
+        {renderHeader()}
+        <main>
+          <section id="services">
+            <h4 style={{
+              fontSize: '35px',
+              textAlign: 'justify',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              color: '#000000',
+              fontWeight: 700,
+            }}>Oferecemos a Solução Ideal para projetos ambientais, com serviços
+              especializados e personalizados para garantir a sustentabilidade e
+              preservação dos recursos naturais.</h4>
+          </section>
+          <section id="services" style={{ backgroundColor: '#ececec' }}>
+            <h2>Licenciamento / Regularização Ambiental</h2>
+            <p>
+              Os serviços de licenciamento e regularização de um imóvel rural são essenciais para
+              garantir a conformidade legal e ambiental da propriedade. Por isso, é importante contar
+              com profissionais especializados para que todos os procedimentos sejam realizados de forma correta e eficiente.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section id="services">
+            <h2>Georreferenciamento</h2>
+            <p>
+              Os serviços de georreferenciamento garantem a documentação precisa e atualizada do imóvel rural, permitindo sua regularização junto aos órgãos competentes.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section id="services" style={{ backgroundColor: '#ececec' }}>
+            <h2>Inventário Florestal</h2>
+            <p>
+              Essencial para a gestão sustentável das florestas, o inventário avalia o estoque de recursos e identifica áreas de preservação.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section id="services">
+            <h2>Programa de Recuperação de Áreas Degradadas (PRAD)</h2>
+            <p>
+              Focado na recuperação de áreas degradadas, garantindo a conservação da biodiversidade e a sustentabilidade ambiental.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section id="services" style={{ backgroundColor: '#ececec' }}>
+            <h2>Recuperação de Nascentes</h2>
+            <p>
+              Fundamental para a conservação do meio ambiente, assegurando a disponibilidade de água em regiões escassas.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section id="services">
+            <h2>Projetos Paisagísticos</h2>
+            <p>
+              Projetos que transformam ambientes externos em espaços aconchegantes e funcionais, valorizando o imóvel e promovendo o bem-estar.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+        </main>
+        {renderFooter()}
+      </div>
+    );
+  }
 
 
 
@@ -645,19 +661,19 @@ function App() {
           <span style={{ fontWeight: 500, backgroundColor: 'white' }}>Nossos </span>
           <b>Serviços</b>
         </h1>
-        <p>
+        <p style={{textAlign: "center"}}>
           Nossas soluções são cuidadosamente desenvolvidas para serem viáveis em todos os
-          aspectos, incluindo o meio ambiente, a economia e o bem-estar social.
+          aspectos, incluindo o meio<br /> ambiente, a economia e o bem-estar social.
         </p>
       </section>
       <section id="services" style={{ backgroundColor: '#ececec' }}>
         <h2>Licenciamento / Regularização Ambiental</h2>
-        <p>
-          Os serviços de licenciamento e regularização de um imóvel rural são essenciais para
-          garantir a conformidade legal e ambiental da propriedade. Por isso, é importante contar
-          com profissionais especializados nesse tipo de serviço para garantir que todos os
-          procedimentos sejam realizados de forma correta e eficiente.
-        </p>
+        <p>Os serviços de inventário florestal são essenciais para a gestão 
+        sustentável das florestas, permitindo a avaliação do estoque de 
+        recursos florestais, a identificação de áreas de preservação 
+        permanente e a elaboração de planos <br /> de manejo florestal. É 
+        importante contar com profissionais especializados e 
+        qualidade dos dados coletados.</p>
         <button>SAIBA MAIS</button>
       </section>
       <section id="services">
@@ -953,81 +969,7 @@ function App() {
         </div>
 
       </section>
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-left">
-            <span style={{ fontSize: '14px', letterSpacing: '0.05em' }}>UTFlorestal © 2021</span>
-          </div>
-          <div className="footer-center">
-            <div className="footer-section">
-              <h3>Institucional</h3>
-              <ul>
-                <li><a href="#">Inicío</a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Notícias</a></li>
-                <li><a href="#">Contato</a></li>
-              </ul>
-            </div>
-            <div className="footer-section">
-              <h3>Serviços</h3>
-              <ul>
-                <li><a href="#services">Licenciamento/Regularização<br /> Ambiental</a></li>
-                <li><a href="#services">Georreferenciamento <br />
-                  Inventário Florestal</a></li>
-                <li><a href="#services">Programa de Recuperação de<br /> Áreas Degradadas (PRAD)</a></li>
-                <li><a href="#services">Recuperação de Nascentes <br />
-                  Projetos Paisagisticos</a></li>
-              </ul>
-            </div>
-            <div className="footer-section">
-              <h3>Contatos</h3>
-              <ul>
-                <li><a href="#">utflorestal.utfpr@gmail.com</a></li>
-                <br />
-                <li><a href="#">+55 (46) 99973-0867</a></li>
-                <br />
-                <li><a href="#">UTFlorestal - Planejamento e Execução</a></li>
-                <br />
-                <li>Estrada P/ Boa Esperança Km 04. <br />
-                  CEP 85660-000 – Dois Vizinhos, Paraná. <br />
-                  Caixa Postal 157 Bloco A2, Sala S/N</li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-right">
-            <ul>
-              {/* Telefone */}
-              <a href="tel:+46999730867" aria-label="Telefone">
-                <img src="./img/telefone.png" alt="Ícone Telefone" style={{ width: '24px', height: '24px' }} />
-              </a>
-
-              {/* WhatsApp */}
-              <a href="https://wa.me/46999730867" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <img src="/img/whatsapp.png" alt="Ícone WhatsApp" style={{ width: '24px', height: '24px' }} />
-              </a>
-
-              {/* Instagram */}
-              <a href="https://www.instagram.com/utflorestal" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <img src="/img/instagram.png" alt="Ícone Instagram" style={{ width: '24px', height: '24px' }} />
-              </a>
-
-              {/* Facebook */}
-              <a href="https://www.facebook.com/utflorestal/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <img src="/img/facebook.png" alt="Ícone Facebook" style={{ width: '24px', height: '24px' }} />
-              </a>
-
-              {/* LinkedIn */}
-              <a href="https://www.linkedin.com/company/utflorestal-empresa-j%C3%BAnior" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <img src="/img/LinkedIn.png" alt="Ícone LinkedIn" style={{ width: '24px', height: '24px' }} />
-              </a>
-            </ul>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          <span style={{ fontSize: '14px', letterSpacing: '0.05em' }}>UTFlorestal | 2023 Todos direitos reservados</span>
-        </div>
-      </footer>
+      {renderFooter()}
     </div>
 
 

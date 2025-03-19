@@ -147,6 +147,8 @@ html, body {
 
 .footer-right {
   flex-basis: 20%;
+  width: "24px";
+  height: "24px";
 }
 
 .footer-right ul {
@@ -178,6 +180,11 @@ html, body {
   color: #595959;
   padding: 5px 0px; /* Ajusta o padding para não deixar o texto colado na borda */
   margin-top: 10px;
+}
+
+.footer-bottom span {
+  font-size: '14px';
+  letter-spacing: '0.05em'
 }
 
 
@@ -287,15 +294,16 @@ html, body {
 }
 
 #services p {
-  line-height: 1.5;
+  line-height: 1.6em;
   margin-top: 0px;
   text-align: justify;
   font-weight: 300;
   color: #525252e5;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif';
   letter-spacing: 1px;
   margin-top: 0;
+  width: 49%;
 }
 
 .contact-section {
