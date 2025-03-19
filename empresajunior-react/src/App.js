@@ -410,10 +410,10 @@ function App() {
 
   if (activeHash === "#services") {
     return (
-      <div>
+      <div >
         {renderHeader()}
-        <main>
-          <section id="services">
+        <main >
+          <section className='services'>
             <h4 style={{
               fontSize: '35px',
               textAlign: 'justify',
@@ -424,7 +424,7 @@ function App() {
               especializados e personalizados para garantir a sustentabilidade e
               preservação dos recursos naturais.</h4>
           </section>
-          <section id="services" style={{ backgroundColor: '#ececec' }}>
+          <section className='services' style={{ backgroundColor: '#ececec' }}>
             <h2>Licenciamento / Regularização Ambiental</h2>
             <p>
               Os serviços de licenciamento e regularização de um imóvel rural são essenciais para
@@ -433,35 +433,35 @@ function App() {
             </p>
             <button>SAIBA MAIS</button>
           </section>
-          <section id="services">
+          <section className='services'>
             <h2>Georreferenciamento</h2>
             <p>
               Os serviços de georreferenciamento garantem a documentação precisa e atualizada do imóvel rural, permitindo sua regularização junto aos órgãos competentes.
             </p>
             <button>SAIBA MAIS</button>
           </section>
-          <section id="services" style={{ backgroundColor: '#ececec' }}>
+          <section className='services' style={{ backgroundColor: '#ececec' }}>
             <h2>Inventário Florestal</h2>
             <p>
               Essencial para a gestão sustentável das florestas, o inventário avalia o estoque de recursos e identifica áreas de preservação.
             </p>
             <button>SAIBA MAIS</button>
           </section>
-          <section id="services">
+          <section className='services'>
             <h2>Programa de Recuperação de Áreas Degradadas (PRAD)</h2>
             <p>
               Focado na recuperação de áreas degradadas, garantindo a conservação da biodiversidade e a sustentabilidade ambiental.
             </p>
             <button>SAIBA MAIS</button>
           </section>
-          <section id="services" style={{ backgroundColor: '#ececec' }}>
+          <section className='services' style={{ backgroundColor: '#ececec' }}>
             <h2>Recuperação de Nascentes</h2>
             <p>
               Fundamental para a conservação do meio ambiente, assegurando a disponibilidade de água em regiões escassas.
             </p>
             <button>SAIBA MAIS</button>
           </section>
-          <section id="services">
+          <section className='services'>
             <h2>Projetos Paisagísticos</h2>
             <p>
               Projetos que transformam ambientes externos em espaços aconchegantes e funcionais, valorizando o imóvel e promovendo o bem-estar.
@@ -656,7 +656,7 @@ function App() {
           </span>
         </div>
       </section>
-      <section id="services">
+      <section className='services'>
         <h1>
           <span style={{ fontWeight: 500, backgroundColor: 'white' }}>Nossos </span>
           <b>Serviços</b>
@@ -666,7 +666,7 @@ function App() {
           aspectos, incluindo o meio<br /> ambiente, a economia e o bem-estar social.
         </p>
       </section>
-      <section id="services" style={{ backgroundColor: '#ececec' }}>
+      <section className='services' style={{ backgroundColor: '#ececec' }}>
         <h2>Licenciamento / Regularização Ambiental</h2>
         <p>Os serviços de inventário florestal são essenciais para a gestão 
         sustentável das florestas, permitindo a avaliação do estoque de 
@@ -676,7 +676,7 @@ function App() {
         qualidade dos dados coletados.</p>
         <button>SAIBA MAIS</button>
       </section>
-      <section id="services">
+      <section className='services'>
         <h2>Georreferenciamento</h2>
         <p>
           Os serviços de georreferenciamento são essenciais para garantir a documentação precisa e
@@ -687,7 +687,7 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section id="services" style={{ backgroundColor: '#ececec' }}>
+      <section className='services' style={{ backgroundColor: '#ececec' }}>
         <h2>Inventário Florestal</h2>
         <p>
           Os serviços de inventário florestal são essenciais para a gestão sustentável das florestas,
@@ -698,7 +698,7 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section id="services">
+      <section className='services'>
         <h2>Programa de Recuperação de Áreas Degradadas (PRAD)</h2>
         <p>
           Os serviços de PRAD são essenciais para a recuperação de áreas degradadas, garantindo a
@@ -708,7 +708,7 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section id="services" style={{ backgroundColor: '#ececec' }}>
+      <section className='services' style={{ backgroundColor: '#ececec' }}>
         <h2>Recuperação de Nascentes</h2>
         <p>
           Os serviços de recuperação de nascentes são fundamentais para a conservação do meio ambiente e
@@ -718,7 +718,7 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section id="services">
+      <section className='services'>
         <h2>Projetos Paisagísticos</h2>
         <p>
           Os serviços de projetos paisagísticos são ideais para quem deseja transformar ambientes externos
