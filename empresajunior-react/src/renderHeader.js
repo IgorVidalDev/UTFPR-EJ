@@ -14,8 +14,15 @@ const RenderHeader = () => {
 
   return (
     <header>
-      <img className="logo" src="/img/logo.png" alt="Logo" />
+      <a
+          href="#home"
+          onClick={(e) => handleLinkClick(e, 'home')}
+          className={activeLink === 'home' ? 'active' : ''}
+        >
+      <img className="logo" src="/img/logo.png" alt="Logo"/>
+        </a>
       <nav>
+        
         <a
           href="#home"
           onClick={(e) => handleLinkClick(e, 'home')}

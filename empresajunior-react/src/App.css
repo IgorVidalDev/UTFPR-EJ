@@ -65,9 +65,10 @@ nav a:hover {
 }
 
 .logo {
-  width: 110px;
+  width: 115px;
   height: auto;
-  padding-left: 11%;
+  padding-left: 22vh;
+  margin-bottom: -1.3vh;
 }
 
 /* Outras seções */
