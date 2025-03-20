@@ -413,7 +413,7 @@ function App() {
       <div >
         {renderHeader()}
         <main >
-          <section className='services'>
+          <section className='services' id='services'>
             <h4 style={{
               width: '70%',
               fontSize: '35px',
@@ -497,7 +497,7 @@ function App() {
   return (
     <div>
       {renderHeader()}
-      <Carrosel />
+      <Carrosel /> 
       <section id="home">
         <div className="text">
           <h1>
