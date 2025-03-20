@@ -412,6 +412,7 @@ function App() {
     return (
       <div >
         {renderHeader()}
+        <img src='/img/image2.jpg' style={{width: '100%', height: '30vh', objectPosition: '0 20%',  objectFit: 'cover'}}></img>
         <main >
           <section className='services' id='services'>
             <h4 style={{
