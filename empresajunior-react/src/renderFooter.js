@@ -33,7 +33,7 @@ import './App.css';
               <ul>
                 <li><a href="#">utflorestal.utfpr@gmail.com</a></li>
                 <br />
-                <li><a href="#"><b>+55 (46) 99973-0867</b></a></li>
+                <li><a href="#">+55 (46) 99973-0867<b>+55 (46) 99973-0867</b></a></li>
                 <br />
                 <li><a href="#">UTFlorestal - Planejamento e Execução</a></li>
                 <br />

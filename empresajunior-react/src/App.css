@@ -209,6 +209,12 @@ html, body {
   letter-spacing: '0.05em'
 }
 
+.active {
+  color: green; /* Cor verde para o link ativo */
+  font-weight: bold; /* Negrito para destacar */
+}
+
+
 #home {
   height: 70vh;
   display: flex;
