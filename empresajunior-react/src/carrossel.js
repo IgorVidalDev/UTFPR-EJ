@@ -42,9 +42,9 @@ const Carrosel = () => {
     }
   };
 
-  const handleMouseOver = () => {
-    console.log("Mouse passou por cima do botão!");
-  };
+  // const handleMouseOver = () => {
+  //   console.log("Mouse passou por cima do botão!");
+  // };
 
   const handleSaibaMaisClick = () => {
     console.log("Saiba mais clicado!");
@@ -86,7 +86,7 @@ const Carrosel = () => {
                   {index === 0 ? (
   <button
     className="carrosel-button"
-    onMouseOver={handleMouseOver}
+    //onMouseOver={handleMouseOver} verificação do Mouse se passou por cima
     onClick={handleSaibaMaisClick} // Adiciona a navegação ao clicar
   >
     Saiba Mais
