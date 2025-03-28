@@ -164,7 +164,7 @@ function App() {
           }}>
             <div style={{ textAlign: 'center', width: '33.33%' }}>
               <h6 style={{
-                marginBottom: '0',
+                marginBottom: '15px',
                 marginTop: '0',
                 fontSize: '20px',
                 color: '#27331B',
@@ -195,7 +195,7 @@ function App() {
 
             <div style={{ textAlign: 'center', width: '33.33%' }}>
               <h6 style={{
-                marginBottom: '0',
+                marginBottom: '15px',
                 marginTop: '0',
                 fontSize: '20px',
                 color: '#27331B',
@@ -228,7 +228,7 @@ function App() {
 
             <div style={{ textAlign: 'center', width: '33.33%' }}>
               <h6 style={{
-                marginBottom: '10vh',
+                marginBottom: '15px',
                 marginTop: '0',
                 fontSize: '20px',
                 color: '#27331B',
