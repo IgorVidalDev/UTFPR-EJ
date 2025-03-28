@@ -66,7 +66,7 @@ function App() {
       <div >
         {renderHeader()}
         <main >
-          <section style={{ width: '68%'}}>
+          <section style={{ width: '68%' }}>
             <h4 style={{
               width: '50%',
               fontSize: '35px',
@@ -77,131 +77,473 @@ function App() {
               marginBottom: '0px',
               marginLeft: '33.5vh',
             }}>Quem somos</h4>
-            </section>
+          </section>
 
-<div style={{
-  display: 'flex',  // Usando flexbox para alinhar os elementos lado a lado
-  justifyContent: 'center', // Garante que o espaço entre os elementos seja distribuído
-  alignItems: 'flex-start', // Alinha os itens no topo
-  width: '100%', // Garante que o contêiner ocupe toda a largura disponível
-}}>
-  <h5 style={{
-    width: '50%',  // Aumente a largura para expandir para a direita
-    textAlign: 'justify',      // Alinha o texto
-    paddingRight: '0px', 
-    fontSize: '18px',      // Adiciona espaço à direita, ajustando conforme necessário
-    marginLeft: '35.7vh',
-    lineHeight: '1.6em',
-    letterSpacing: '0.05em',
-    fontWeight: 'normal',
-    marginTop: '0px',
-  }}>
-    Em 2014, entusiasmados com a ideia e com apoio dos professores e da coordenação do curso, um grupo de graduandos do curso de Engenharia Florestal da UTFPR do Câmpus Dois Vizinhos, decidiram fundar em 15 de dezembro do mesmo ano, a Empresa Júnior UTFlorestal de Planejamento e Execução Florestal.
-    <br />
-    <br />
-    Mediante a necessidade de se criar uma entidade própria, vinculada a Universidade Tecnológica Federal do Paraná, com o objetivo de tornar legal a realização de projetos, contratos e convênios ligados à Área Florestal, bem como, capacitar os estudantes para o mercado de trabalho.
-    <br />
-    <br />
-    A UTFlorestal é uma empresa sem fins lucrativos de caráter educacional, constituída por estudantes de Engenharia Florestal da UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ, preparados para lidar com projetos relacionados à área Florestal e Ambiental.
-  </h5>
+          <div style={{
+            display: 'flex',  // Usando flexbox para alinhar os elementos lado a lado
+            justifyContent: 'center', // Garante que o espaço entre os elementos seja distribuído
+            alignItems: 'flex-start', // Alinha os itens no topo
+            width: '100%', // Garante que o contêiner ocupe toda a largura disponível
+          }}>
+            <h5 style={{
+              width: '50%',  // Aumente a largura para expandir para a direita
+              textAlign: 'justify',      // Alinha o texto
+              paddingRight: '0px',
+              fontSize: '18px',      // Adiciona espaço à direita, ajustando conforme necessário
+              marginLeft: '35.7vh',
+              lineHeight: '1.6em',
+              letterSpacing: '0.05em',
+              fontWeight: 'normal',
+              marginTop: '0px',
+            }}>
+              Em 2014, entusiasmados com a ideia e com apoio dos professores e da coordenação do curso, um grupo de graduandos do curso de Engenharia Florestal da UTFPR do Câmpus Dois Vizinhos, decidiram fundar em 15 de dezembro do mesmo ano, a Empresa Júnior UTFlorestal de Planejamento e Execução Florestal.
+              <br />
+              <br />
+              Mediante a necessidade de se criar uma entidade própria, vinculada a Universidade Tecnológica Federal do Paraná, com o objetivo de tornar legal a realização de projetos, contratos e convênios ligados à Área Florestal, bem como, capacitar os estudantes para o mercado de trabalho.
+              <br />
+              <br />
+              A UTFlorestal é uma empresa sem fins lucrativos de caráter educacional, constituída por estudantes de Engenharia Florestal da UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ, preparados para lidar com projetos relacionados à área Florestal e Ambiental.
+            </h5>
 
-  <h5 style={{
-    width: '50%',  // Defina a largura do segundo h5
-    textAlign: 'justify', // Alinha o texto no centro, mas você pode ajustar conforme necessário
-    paddingLeft: '3vh',
-    fontSize: '18px',
-    marginRight: '30vh',
-    lineHeight: '1.6em',
-    letterSpacing: '0.05em',
-    fontWeight: 'normal',
-    marginTop: '0px',
-  }}>
-    Conta com o apoio de Professores e Profissionais credenciados pelo 
-    CREA, desenvolvendo a capacidade empreendedora de seus Consultores, 
-    que tem a possibilidade de atuar profissionalmente, ainda dentro da 
-    Universidade.
+            <h5 style={{
+              width: '50%',  // Defina a largura do segundo h5
+              textAlign: 'justify', // Alinha o texto no centro, mas você pode ajustar conforme necessário
+              paddingLeft: '3vh',
+              fontSize: '18px',
+              marginRight: '30vh',
+              lineHeight: '1.6em',
+              letterSpacing: '0.05em',
+              fontWeight: 'normal',
+              marginTop: '0px',
+            }}>
+              Conta com o apoio de Professores e Profissionais credenciados pelo
+              CREA, desenvolvendo a capacidade empreendedora de seus Consultores,
+              que tem a possibilidade de atuar profissionalmente, ainda dentro da
+              Universidade.
 
-    <br />
-    <br />
-    A UTFlorestal supre a necessidade dos clientes através de excelentes 
-    resultados, comprometendo-se com aspectos sociais, ambientais e 
-    econômicos, trabalhando sempre com ética e dedicação.
-    
-    <br />
-    <br />
-    Nos comprometemos a atender nossos clientes de maneira responsável, 
-    produzindo resultados excelentes e considerando os aspectos sociais, 
-    ambientais e econômicos. Tudo isso é feito com ética e dedicação em 
-    cada etapa do processo.
+              <br />
+              <br />
+              A UTFlorestal supre a necessidade dos clientes através de excelentes
+              resultados, comprometendo-se com aspectos sociais, ambientais e
+              econômicos, trabalhando sempre com ética e dedicação.
 
-    <br />
-    <br />
-    Estamos localizados na cidade de Dois Vizinhos, a 156 km de Cascavel e a 
-    78 km de Pato Branco, no sudoeste do Paraná.
-  </h5>
+              <br />
+              <br />
+              Nos comprometemos a atender nossos clientes de maneira responsável,
+              produzindo resultados excelentes e considerando os aspectos sociais,
+              ambientais e econômicos. Tudo isso é feito com ética e dedicação em
+              cada etapa do processo.
+
+              <br />
+              <br />
+              Estamos localizados na cidade de Dois Vizinhos, a 156 km de Cascavel e a
+              78 km de Pato Branco, no sudoeste do Paraná.
+            </h5>
+          </div>
+          <div>
+            <div
+              style={{
+                position: 'relative',
+                height: '30vh',
+                overflow: 'hidden',
+                backgroundImage: "url('/img/image2.jpg')",
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
+                backgroundPosition: '0 20%'
+              }}
+            ></div>
+          </div>
+
+
+
+          <div style={{
+            display: 'flex',                // Usando flexbox para alinhar os elementos
+            justifyContent: 'space-between', // Garante que os itens sejam distribuídos igualmente
+            width: '100%',                  // Garante que o contêiner ocupe toda a largura disponível
+            marginTop: '20px',              // Ajuste o espaçamento superior se necessário
+          }}>
+            <div style={{ textAlign: 'center', width: '33.33%' }}>
+              <h6 style={{
+                marginBottom: '0',
+                marginTop: '0',
+                fontSize: '20px',
+                color: '#27331B',
+                lineHeight: '1.0em',
+                letterSpacing: '0.1em',
+                fontFamily: 'lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif',
+                fontWeight: 900,
+              }}>
+                MISSÃO
+              </h6>
+              <h5 style={{
+                width: '50%',
+                margin: '0 auto', // centraliza horizontalmente o h5
+                textAlign: 'justify',
+                fontSize: '18px',
+                lineHeight: '1.6em',
+                letterSpacing: '0.05em',
+                fontWeight: 'normal',
+                marginTop: '10px',
+                marginBottom: '5vh',
+              }}>
+                Garantir a satisfação do cliente com a
+                qualidade e execução do trabalho, que
+                superem suas expectativas.
+              </h5>
+            </div>
+
+
+            <div style={{ textAlign: 'center', width: '33.33%' }}>
+              <h6 style={{
+                marginBottom: '0',
+                marginTop: '0',
+                fontSize: '20px',
+                color: '#27331B',
+                lineHeight: '1.0em',
+                letterSpacing: '0.1em',
+                fontFamily: 'lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif',
+                fontWeight: 900,
+              }}>
+                VISÃO
+              </h6>
+              <h5 style={{
+                width: '50%',
+                margin: '0 auto', // centraliza horizontalmente o h5
+                textAlign: 'justify',
+                fontSize: '18px',
+                lineHeight: '1.6em',
+                letterSpacing: '0.05em',
+                fontWeight: 'normal',
+                marginTop: '10px',
+                marginBottom: '5vh',
+              }}>
+                Ser empresa de referência em prestação
+                de serviços de caráter inovador e
+                atuação global, reconhecida como a
+                melhor opção por clientes,
+                colaboradores, pela qualidade de
+                nossos serviços e relacionamento.
+              </h5>
+            </div>
+
+            <div style={{ textAlign: 'center', width: '33.33%' }}>
+              <h6 style={{
+                marginBottom: '10vh',
+                marginTop: '0',
+                fontSize: '20px',
+                color: '#27331B',
+                lineHeight: '1.0em',
+                letterSpacing: '0.1em',
+                fontFamily: 'lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif',
+                fontWeight: 900,
+              }}>
+                VALORES
+              </h6>
+              <ul style={{
+                width: '50%',
+                margin: '10px auto 5vh auto',
+                textAlign: 'left', // Alinha o texto à esquerda para a lista
+                fontSize: '18px',
+                lineHeight: '1.6em',
+                letterSpacing: '0',
+                fontWeight: 'normal',
+                listStyleType: 'none', // Remove os marcadores padrão, se preferir
+                padding: 0,
+              }}>
+                <li style={{ marginBottom: '0.5em' }}>🤝 Estabelecer relações de confiança</li>
+                <li style={{ marginBottom: '0.5em' }}>⚖️ Ética e responsabilidade na tomada de decisões</li>
+                <li style={{ marginBottom: '0.5em' }}>🔥 Comprometimento</li>
+                <li style={{ marginBottom: '0.5em' }}>🚀 Superar resultados</li>
+                <li style={{ marginBottom: '0.5em' }}>🎓 Capacitar os estudantes para o mercado de trabalho</li>
+                <li style={{ marginBottom: '0.5em' }}>🌱 Sustentabilidade</li>
+                <li>💡 Inovação</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 3vh' }}>
+  <div style={{ flex: 1, textAlign: 'left' }}>
+    <h1 style={{
+      textAlign: 'left',
+      fontFamily: 'lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif',
+      color: '#2F2E2E',
+      textAlign: 'justify',
+      marginLeft: '20vh',
+      marginBottom: '15vh',
+      marginTop: '-13vh',
+    }}>
+      Equipe
+      <br />
+      <span style={{ fontSize: '18px', fontWeight: 1, textAlign: 'justify' }}>
+        Nosso time é formado por 15 membros, sendo distribuídos em:
+        <br />
+        - 1 Presidente;
+        <br />
+        - 6 Diretores;
+        <br />
+        - 8 Gerentes.
+        <br />
+        Além disso, é orientada por 2 professores doutores, sendo eles:
+        <br />
+        - Prof. Dr. Eleandro José Brun;
+        <br />
+        - Prof. Dr. Álvaro Boson de Castro Faria.
+      </span>
+    </h1>
+  </div>
+  <div style={{ flex: 1.2, display: 'flex', justifyContent: 'flex-start', marginRight: '20vh', marginBottom: '15vh' }}>
+    <img 
+      src="./img/equipe.png" 
+      alt="Equipe" 
+      style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+    />
+  </div>
 </div>
-<img src='/img/image2.jpg' style={{ width: '100%', height: '30vh', objectPosition: '0 20%', objectFit: 'cover' }}></img>
 
 
+{/* FORMULÁRIO #SEPARAR O FORMULÁRIO PARA NÃO SE REPETIR DIVERSAS VEZES */}
+<section className="contact-section" style={{ backgroundColor: '#FFFFFF' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '30px',
+            border: '1px rgb(255, 255, 255)',
+            borderRadius: '8px',
+            backgroundColor: '#ececec',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            maxWidth: '600px',
+            width: '100%',
+            margin: '0 auto',
+            marginBottom: '40px',
+          }}
+        >
+          <h2
+            style={{
+              color: '#3f7652',
+              fontFamily: 'Poppins, sans-serif',
+              fontWeight: '600',
+              textAlign: 'center',
+              marginBottom: '30px',
+            }}
+          >
+            Entre em contato e <br /> solicite um(a) análise/orçamento
+          </h2>
 
-<div style={{
-  display: 'flex',                // Usando flexbox para alinhar os elementos
-  justifyContent: 'space-between', // Garante que os itens sejam distribuídos igualmente
-  width: '100%',                  // Garante que o contêiner ocupe toda a largura disponível
-  marginTop: '20px',              // Ajuste o espaçamento superior se necessário
-}}>
-  <div style={{ width: '33.33%', marginLeft: '16.5vh' }}>
-  <h6 style={{
-    marginBottom: '0',
-    marginTop: '0',
-    fontSize: '20px',
-    color: '#27331B',
-    lineHeight: '1.0em',  // Verifique se a linha de altura precisa ser ajustada para o seu caso
-    letterSpacing: '0.1em',  // Para igualar o exemplo anterior
-    fontFamily: 'lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif',
-    fontWeight: 900,  // Garante que o texto fique em negrito
-  }}>
-    MISSÃO
-  </h6>
+          <form
+            onSubmit={handleSubmit}
+            style={{
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="Novo contato via formulário" />
 
-    <h5 style={{
-      textAlign: 'justify',       // Alinha o texto
-      fontSize: '20px',           // Ajusta o tamanho da fonte
-      lineHeight: '1.6em',        // Ajusta o espaçamento entre as linhas
-      letterSpacing: '0.05em',    // Ajusta o espaçamento entre as letras
-      fontWeight: 'normal',       // Define o peso da fonte
-    }}>
-      Garantir a satisfação
-    </h5>
-  </div>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                width: '100%',
+                gap: '30px',
+              }}
+            >
+              <div style={{ flex: '1' }}>
+                <label
+                  htmlFor="nome"
+                  style={{
+                    color: '#3f7652',
+                    textAlign: 'left',
+                    display: 'block',
+                    marginBottom: '5px',
+                  }}
+                >
+                  Nome Completo *
+                </label>
+                <input
+                  id="nome"
+                  type="text"
+                  name="nome"
+                  required
+                  placeholder="Digite seu nome completo"
+                  value={formData.nome}
+                  onChange={handleChange}
+                  style={{
+                    backgroundColor: '#e1e7e3',
+                    width: '100%',
+                    marginBottom: '15px',
+                    padding: '10px',
+                    borderRadius: '5px',
+                    border: '1px solid #ddd',
+                    boxSizing: 'border-box',
+                    textAlign: 'left',
+                  }}
+                />
+              </div>
+              <div style={{ flex: '1', textAlign: 'right' }}>
+                <label
+                  htmlFor="telefone"
+                  style={{
+                    color: '#3f7652',
+                    textAlign: 'left',
+                    display: 'block',
+                    marginBottom: '5px',
+                  }}
+                >
+                  Telefone *
+                </label>
+                <input
+                  id="telefone"
+                  type="tel"
+                  name="telefone"
+                  required
+                  placeholder="Digite seu telefone"
+                  value={formData.telefone}
+                  onChange={handleChange}
+                  style={{
+                    backgroundColor: '#e1e7e3',
+                    width: '100%',
+                    marginBottom: '15px',
+                    padding: '10px',
+                    borderRadius: '5px',
+                    border: '1px solid #ddd',
+                    boxSizing: 'border-box',
+                    textAlign: 'left',
+                  }}
+                />
+              </div>
+            </div>
 
-  <div style={{ width: '33.33%' }}>
-    <h6 style={{ marginBottom: '0', marginTop: '0' }}>Título 2</h6>
-    <h5 style={{
-      textAlign: 'justify',       // Alinha o texto
-      fontSize: '18px',           // Ajusta o tamanho da fonte
-      lineHeight: '1.6em',        // Ajusta o espaçamento entre as linhas
-      letterSpacing: '0.05em',    // Ajusta o espaçamento entre as letras
-      fontWeight: 'normal',       // Define o peso da fonte
-    }}>
-      Outra mensagem de exemplo
-    </h5>
-  </div>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                width: '100%',
+                gap: '30px',
+              }}
+            >
+              <div style={{ flex: '1' }}>
+                <label
+                  htmlFor="assunto"
+                  style={{
+                    color: '#3f7652',
+                    textAlign: 'left',
+                    display: 'block',
+                    marginBottom: '5px',
+                  }}
+                >
+                  Assunto
+                </label>
+                <input
+                  id="assunto"
+                  type="text"
+                  name="assunto"
+                  required
+                  placeholder="Qual o assunto do seu contato?"
+                  value={formData.assunto}
+                  onChange={handleChange}
+                  style={{
+                    backgroundColor: '#e1e7e3',
+                    width: '100%',
+                    marginBottom: '15px',
+                    padding: '10px',
+                    borderRadius: '5px',
+                    border: '1px solid #ddd',
+                    boxSizing: 'border-box',
+                    textAlign: 'left',
+                  }}
+                />
+              </div>
+              <div style={{ flex: '1' }}>
+                <label
+                  htmlFor="email"
+                  style={{
+                    color: '#3f7652',
+                    textAlign: 'left',
+                    display: 'block',
+                    marginBottom: '5px',
+                  }}
+                >
+                  Email (Não Obrigátorio)
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Digite seu e-mail"
+                  value={formData.email}
+                  onChange={handleChange}
+                  style={{
+                    backgroundColor: '#e1e7e3',
+                    width: '100%',
+                    marginBottom: '15px',
+                    padding: '10px',
+                    borderRadius: '5px',
+                    border: '1px solid #ddd',
+                    boxSizing: 'border-box',
+                    textAlign: 'left',
+                  }}
+                />
+              </div>
+            </div>
 
-  <div style={{ width: '33.33%' }}>
-    <h6 style={{ marginBottom: '0', marginTop: '0' }}>Título 3</h6>
-    <h5 style={{
-      textAlign: 'justify',       // Alinha o texto
-      fontSize: '18px',           // Ajusta o tamanho da fonte
-      lineHeight: '1.6em',        // Ajusta o espaçamento entre as linhas
-      letterSpacing: '0.05em',    // Ajusta o espaçamento entre as letras
-      fontWeight: 'normal',       // Define o peso da fonte
-    }}>
-      Mais conteúdo aqui
-    </h5>
-  </div>
-</div>
+            <div style={{ flex: '1', width: '100%' }}>
+              <label
+                htmlFor="necessidade"
+                style={{
+                  color: '#3f7652',
+                  textAlign: 'left',
+                  display: 'block',
+                  marginBottom: '5px',
+                }}
+              >
+                Descreva sua necessidade
+              </label>
+              <textarea
+                id="necessidade"
+                name="necessidade"
+                rows="5"
+                placeholder="Descreva sua necessidade detalhadamente"
+                value={formData.necessidade}
+                onChange={handleChange}
+                style={{
+                  backgroundColor: '#e1e7e3',
+                  width: '100%',
+                  marginBottom: '15px',
+                  padding: '10px',
+                  borderRadius: '5px',
+                  border: '1px solid #ddd',
+                  boxSizing: 'border-box',
+                  textAlign: 'left',
+                  height: '150px',
+                  resize: 'none',
+                }}
+              ></textarea>
+            </div>
 
+            <button
+              className="button-enviar"
+              type="submit"
+              style={{
+                padding: '10px 20px',
+                backgroundColor: '#3f7652',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer',
+              }}
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+
+      </section>
 
         </main>
         {renderFooter()}
