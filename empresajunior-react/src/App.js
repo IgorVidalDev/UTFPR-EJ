@@ -284,11 +284,9 @@ function App() {
         <br />
         - 8 Gerentes.
         <br />
-        Além disso, é orientada por 2 professores doutores, sendo eles:
+        Além disso, é orientada por 1 professor doutor, sendo ele:
         <br />
         - Prof. Dr. Eleandro José Brun;
-        <br />
-        - Prof. Dr. Álvaro Boson de Castro Faria.
       </span>
     </h1>
   </div>
