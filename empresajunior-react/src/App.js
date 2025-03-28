@@ -61,7 +61,236 @@ function App() {
     }
   };
 
+  if (activeHash === "#about") {
+    return (
+      <div >
+        {renderHeader()}
+        <main >
+          <section style={{ width: '68%'}}>
+            <h4 style={{
+              width: '50%',
+              fontSize: '35px',
+              textAlign: 'left',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              color: '#000000',
+              fontWeight: 'bold',
+              marginBottom: '0px',
+              marginLeft: '33.5vh',
+            }}>Quem somos</h4>
+            </section>
 
+<div style={{
+  display: 'flex',  // Usando flexbox para alinhar os elementos lado a lado
+  justifyContent: 'center', // Garante que o espaço entre os elementos seja distribuído
+  alignItems: 'flex-start', // Alinha os itens no topo
+  width: '100%', // Garante que o contêiner ocupe toda a largura disponível
+}}>
+  <h5 style={{
+    width: '50%',  // Aumente a largura para expandir para a direita
+    textAlign: 'justify',      // Alinha o texto
+    paddingRight: '0px', 
+    fontSize: '18px',      // Adiciona espaço à direita, ajustando conforme necessário
+    marginLeft: '35.7vh',
+    lineHeight: '1.6em',
+    letterSpacing: '0.05em',
+    fontWeight: 'normal',
+    marginTop: '0px',
+  }}>
+    Em 2014, entusiasmados com a ideia e com apoio dos professores e da coordenação do curso, um grupo de graduandos do curso de Engenharia Florestal da UTFPR do Câmpus Dois Vizinhos, decidiram fundar em 15 de dezembro do mesmo ano, a Empresa Júnior UTFlorestal de Planejamento e Execução Florestal.
+    <br />
+    <br />
+    Mediante a necessidade de se criar uma entidade própria, vinculada a Universidade Tecnológica Federal do Paraná, com o objetivo de tornar legal a realização de projetos, contratos e convênios ligados à Área Florestal, bem como, capacitar os estudantes para o mercado de trabalho.
+    <br />
+    <br />
+    A UTFlorestal é uma empresa sem fins lucrativos de caráter educacional, constituída por estudantes de Engenharia Florestal da UNIVERSIDADE TECNOLÓGICA FEDERAL DO PARANÁ, preparados para lidar com projetos relacionados à área Florestal e Ambiental.
+  </h5>
+
+  <h5 style={{
+    width: '50%',  // Defina a largura do segundo h5
+    textAlign: 'justify', // Alinha o texto no centro, mas você pode ajustar conforme necessário
+    paddingLeft: '3vh',
+    fontSize: '18px',
+    marginRight: '30vh',
+    lineHeight: '1.6em',
+    letterSpacing: '0.05em',
+    fontWeight: 'normal',
+    marginTop: '0px',
+  }}>
+    Conta com o apoio de Professores e Profissionais credenciados pelo 
+    CREA, desenvolvendo a capacidade empreendedora de seus Consultores, 
+    que tem a possibilidade de atuar profissionalmente, ainda dentro da 
+    Universidade.
+
+    <br />
+    <br />
+    A UTFlorestal supre a necessidade dos clientes através de excelentes 
+    resultados, comprometendo-se com aspectos sociais, ambientais e 
+    econômicos, trabalhando sempre com ética e dedicação.
+    
+    <br />
+    <br />
+    Nos comprometemos a atender nossos clientes de maneira responsável, 
+    produzindo resultados excelentes e considerando os aspectos sociais, 
+    ambientais e econômicos. Tudo isso é feito com ética e dedicação em 
+    cada etapa do processo.
+
+    <br />
+    <br />
+    Estamos localizados na cidade de Dois Vizinhos, a 156 km de Cascavel e a 
+    78 km de Pato Branco, no sudoeste do Paraná.
+  </h5>
+</div>
+<img src='/img/image2.jpg' style={{ width: '100%', height: '30vh', objectPosition: '0 20%', objectFit: 'cover' }}></img>
+
+
+
+<div style={{
+  display: 'flex',                // Usando flexbox para alinhar os elementos
+  justifyContent: 'space-between', // Garante que os itens sejam distribuídos igualmente
+  width: '100%',                  // Garante que o contêiner ocupe toda a largura disponível
+  marginTop: '20px',              // Ajuste o espaçamento superior se necessário
+}}>
+  <div style={{ width: '33.33%', marginLeft: '16.5vh' }}>
+  <h6 style={{
+    marginBottom: '0',
+    marginTop: '0',
+    fontSize: '20px',
+    color: '#27331B',
+    lineHeight: '1.0em',  // Verifique se a linha de altura precisa ser ajustada para o seu caso
+    letterSpacing: '0.1em',  // Para igualar o exemplo anterior
+    fontFamily: 'lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif',
+    fontWeight: 900,  // Garante que o texto fique em negrito
+  }}>
+    MISSÃO
+  </h6>
+
+    <h5 style={{
+      textAlign: 'justify',       // Alinha o texto
+      fontSize: '20px',           // Ajusta o tamanho da fonte
+      lineHeight: '1.6em',        // Ajusta o espaçamento entre as linhas
+      letterSpacing: '0.05em',    // Ajusta o espaçamento entre as letras
+      fontWeight: 'normal',       // Define o peso da fonte
+    }}>
+      Garantir a satisfação
+    </h5>
+  </div>
+
+  <div style={{ width: '33.33%' }}>
+    <h6 style={{ marginBottom: '0', marginTop: '0' }}>Título 2</h6>
+    <h5 style={{
+      textAlign: 'justify',       // Alinha o texto
+      fontSize: '18px',           // Ajusta o tamanho da fonte
+      lineHeight: '1.6em',        // Ajusta o espaçamento entre as linhas
+      letterSpacing: '0.05em',    // Ajusta o espaçamento entre as letras
+      fontWeight: 'normal',       // Define o peso da fonte
+    }}>
+      Outra mensagem de exemplo
+    </h5>
+  </div>
+
+  <div style={{ width: '33.33%' }}>
+    <h6 style={{ marginBottom: '0', marginTop: '0' }}>Título 3</h6>
+    <h5 style={{
+      textAlign: 'justify',       // Alinha o texto
+      fontSize: '18px',           // Ajusta o tamanho da fonte
+      lineHeight: '1.6em',        // Ajusta o espaçamento entre as linhas
+      letterSpacing: '0.05em',    // Ajusta o espaçamento entre as letras
+      fontWeight: 'normal',       // Define o peso da fonte
+    }}>
+      Mais conteúdo aqui
+    </h5>
+  </div>
+</div>
+
+
+        </main>
+        {renderFooter()}
+      </div>
+    );
+  }
+
+  if (activeHash === "#services") {
+    return (
+      <div >
+        {renderHeader()}
+        <img src='/img/image2.jpg' style={{ width: '100%', height: '30vh', objectPosition: '0 20%', objectFit: 'cover' }}></img>
+        <main >
+          <section className='services' id='services'>
+            <h4 style={{
+              width: '70%',
+              fontSize: '35px',
+              textAlign: 'justify',
+              fontFamily: 'Helvetica, Arial, sans-serif',
+              color: '#000000',
+              fontWeight: 700,
+              marginBottom: '0px'
+            }}>Oferecemos a Solução Ideal para projetos ambientais, com serviços
+              especializados e personalizados para garantir a sustentabilidade e
+              preservação dos recursos naturais.</h4>
+
+            <h5>A UTFlorestal é uma empresa de consultoria ambiental que oferece uma ampla gama de serviços, incluindo soluções de Licenciamento / Regularização,
+              Inventário Florestal, Georreferenciamento, Programa de Recuperação de Áreas Degradadas (PRAD), Recuperação de Nascentes, Projetos Paisagísticos e
+              entre outros. Além disso, nossa empresa tem uma forte atuação na conservação, gestão e valorização dos recursos naturais.</h5>
+
+            <h5>Nosso compromisso com a excelência é evidente em todos os nossos trabalhos e projetos, que se destacam pela alta qualidade técnica e pelas soluções
+              inteligentes e inovadoras oferecidas por nossa equipe de profissionais experientes e altamente capacitados em serviços ambientais. Na UTFlorestal,
+              acreditamos que é nossa responsabilidade preservar, manter e utilizar os recursos naturais de forma sustentável, e nossa equipe se dedica a cumprir essa
+              missão com rigor técnico-científico e responsabilidade ambiental em todos os nossos serviços.
+
+            </h5>
+
+            <h5 style={{ marginBottom: '70px' }}>Se você está buscando soluções ambientais eficazes e sustentáveis, a UTFlorestal é a escolha certa para atender às suas necessidades. Contate-nos hoje
+              mesmo para saber mais sobre nossos serviços.</h5>
+          </section>
+          <section className='services' style={{ backgroundColor: '#ececec' }}>
+            <h2>Licenciamento / Regularização Ambiental</h2>
+            <p>
+              Os serviços de licenciamento e regularização de um imóvel rural são essenciais para
+              garantir a conformidade legal e ambiental da propriedade. Por isso, é importante contar
+              com profissionais especializados para que todos os procedimentos sejam realizados de forma correta e eficiente.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section className='services'>
+            <h2>Georreferenciamento</h2>
+            <p>
+              Os serviços de georreferenciamento garantem a documentação precisa e atualizada do imóvel rural, permitindo sua regularização junto aos órgãos competentes.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section className='services' style={{ backgroundColor: '#ececec' }}>
+            <h2>Inventário Florestal</h2>
+            <p>
+              Essencial para a gestão sustentável das florestas, o inventário avalia o estoque de recursos e identifica áreas de preservação.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section className='services'>
+            <h2>Programa de Recuperação de Áreas Degradadas (PRAD)</h2>
+            <p>
+              Focado na recuperação de áreas degradadas, garantindo a conservação da biodiversidade e a sustentabilidade ambiental.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section className='services' style={{ backgroundColor: '#ececec' }}>
+            <h2>Recuperação de Nascentes</h2>
+            <p>
+              Fundamental para a conservação do meio ambiente, assegurando a disponibilidade de água em regiões escassas.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+          <section className='services'>
+            <h2>Projetos Paisagísticos</h2>
+            <p>
+              Projetos que transformam ambientes externos em espaços aconchegantes e funcionais, valorizando o imóvel e promovendo o bem-estar.
+            </p>
+            <button>SAIBA MAIS</button>
+          </section>
+        </main>
+        {renderFooter()}
+      </div>
+    );
+  }
 
   // Se o hash for "#contact", renderiza apenas o header e a seção de contato isolada
   if (activeHash === "#contact") {
@@ -409,88 +638,8 @@ function App() {
     );
   }
 
-  if (activeHash === "#services") {
-    return (
-      <div >
-        {renderHeader()}
-        <img src='/img/image2.jpg' style={{width: '100%', height: '30vh', objectPosition: '0 20%',  objectFit: 'cover'}}></img>
-        <main >
-          <section className='services' id='services'>
-            <h4 style={{
-              width: '70%',
-              fontSize: '35px',
-              textAlign: 'justify',
-              fontFamily: 'Helvetica, Arial, sans-serif',
-              color: '#000000',
-              fontWeight: 700,
-              marginBottom: '0px'
-            }}>Oferecemos a Solução Ideal para projetos ambientais, com serviços
-              especializados e personalizados para garantir a sustentabilidade e
-              preservação dos recursos naturais.</h4>
 
-              <h5>A UTFlorestal é uma empresa de consultoria ambiental que oferece uma ampla gama de serviços, incluindo soluções de Licenciamento / Regularização, 
-                Inventário Florestal, Georreferenciamento, Programa de Recuperação de Áreas Degradadas (PRAD), Recuperação de Nascentes, Projetos Paisagísticos e 
-                entre outros. Além disso, nossa empresa tem uma forte atuação na conservação, gestão e valorização dos recursos naturais.</h5>
 
-                <h5>Nosso compromisso com a excelência é evidente em todos os nossos trabalhos e projetos, que se destacam pela alta qualidade técnica e pelas soluções 
-                  inteligentes e inovadoras oferecidas por nossa equipe de profissionais experientes e altamente capacitados em serviços ambientais. Na UTFlorestal, 
-                  acreditamos que é nossa responsabilidade preservar, manter e utilizar os recursos naturais de forma sustentável, e nossa equipe se dedica a cumprir essa 
-                  missão com rigor técnico-científico e responsabilidade ambiental em todos os nossos serviços.
-
-                </h5>
-
-                <h5 style={{marginBottom: '70px'}}>Se você está buscando soluções ambientais eficazes e sustentáveis, a UTFlorestal é a escolha certa para atender às suas necessidades. Contate-nos hoje 
-                  mesmo para saber mais sobre nossos serviços.</h5>
-          </section>
-          <section className='services' style={{ backgroundColor: '#ececec' }}>
-            <h2>Licenciamento / Regularização Ambiental</h2>
-            <p>
-              Os serviços de licenciamento e regularização de um imóvel rural são essenciais para
-              garantir a conformidade legal e ambiental da propriedade. Por isso, é importante contar
-              com profissionais especializados para que todos os procedimentos sejam realizados de forma correta e eficiente.
-            </p>
-            <button>SAIBA MAIS</button>
-          </section>
-          <section className='services'>
-            <h2>Georreferenciamento</h2>
-            <p>
-              Os serviços de georreferenciamento garantem a documentação precisa e atualizada do imóvel rural, permitindo sua regularização junto aos órgãos competentes.
-            </p>
-            <button>SAIBA MAIS</button>
-          </section>
-          <section className='services' style={{ backgroundColor: '#ececec' }}>
-            <h2>Inventário Florestal</h2>
-            <p>
-              Essencial para a gestão sustentável das florestas, o inventário avalia o estoque de recursos e identifica áreas de preservação.
-            </p>
-            <button>SAIBA MAIS</button>
-          </section>
-          <section className='services'>
-            <h2>Programa de Recuperação de Áreas Degradadas (PRAD)</h2>
-            <p>
-              Focado na recuperação de áreas degradadas, garantindo a conservação da biodiversidade e a sustentabilidade ambiental.
-            </p>
-            <button>SAIBA MAIS</button>
-          </section>
-          <section className='services' style={{ backgroundColor: '#ececec' }}>
-            <h2>Recuperação de Nascentes</h2>
-            <p>
-              Fundamental para a conservação do meio ambiente, assegurando a disponibilidade de água em regiões escassas.
-            </p>
-            <button>SAIBA MAIS</button>
-          </section>
-          <section className='services'>
-            <h2>Projetos Paisagísticos</h2>
-            <p>
-              Projetos que transformam ambientes externos em espaços aconchegantes e funcionais, valorizando o imóvel e promovendo o bem-estar.
-            </p>
-            <button>SAIBA MAIS</button>
-          </section>
-        </main>
-        {renderFooter()}
-      </div>
-    );
-  }
 
 
 
@@ -499,7 +648,7 @@ function App() {
   return (
     <div>
       {renderHeader()}
-      <Carrosel /> 
+      <Carrosel />
       <section id="home">
         <div className="text">
           <h1>
@@ -681,19 +830,19 @@ function App() {
           <span style={{ fontWeight: 500, backgroundColor: 'white' }}>Nossos </span>
           <b>Serviços</b>
         </h1>
-        <p style={{textAlign: "center"}}>
+        <p style={{ textAlign: "center" }}>
           Nossas soluções são cuidadosamente desenvolvidas para serem viáveis em todos os
           aspectos, incluindo o meio<br /> ambiente, a economia e o bem-estar social.
         </p>
       </section>
       <section id='Licenciamento' className='services' style={{ backgroundColor: '#ececec' }}>
         <h2>Licenciamento / Regularização Ambiental</h2>
-        <p>Os serviços de inventário florestal são essenciais para a gestão 
-        sustentável das florestas, permitindo a avaliação do estoque de 
-        recursos florestais, a identificação de áreas de preservação 
-        permanente e a elaboração de planos <br /> de manejo florestal. É 
-        importante contar com profissionais especializados e 
-        qualidade dos dados coletados.</p>
+        <p>Os serviços de inventário florestal são essenciais para a gestão
+          sustentável das florestas, permitindo a avaliação do estoque de
+          recursos florestais, a identificação de áreas de preservação
+          permanente e a elaboração de planos <br /> de manejo florestal. É
+          importante contar com profissionais especializados e
+          qualidade dos dados coletados.</p>
         <button>SAIBA MAIS</button>
       </section>
       <section id='Georreferenciamento' className='services'>
