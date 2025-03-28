@@ -4,14 +4,14 @@ const renderFooter = () => {
   // Função que realiza o scroll para o topo e, depois, para a seção desejada
   const handleScrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-  
+
     if (section) {
       // Se a seção já está visível, apenas rola até ela
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
       // Se a seção não estiver visível ainda, primeiro sobe para o topo
       window.scrollTo({ top: 0, behavior: 'smooth' });
-  
+
       // Aguarda um pouco para garantir que a página subiu antes de tentar rolar
       setTimeout(() => {
         window.location.hash = sectionId;
@@ -22,7 +22,7 @@ const renderFooter = () => {
       }, 300); // Reduzi o tempo para melhorar a fluidez
     }
   };
-  
+
 
   return (
     <footer className="footer">
@@ -39,25 +39,25 @@ const renderFooter = () => {
               <li><a href="#">Inicío</a></li>
               <li><a href="#">Sobre nós</a></li>
               <li>
-              <a
-  href="#services"
-  onClick={(e) => {
-    e.preventDefault();
-    handleScrollToSection('services');
-  }}
->
-  Serviços
-</a>
-<br />
-<a
-  href="#contact"
-  onClick={(e) => {
-    e.preventDefault();
-    handleScrollToSection('contact');
-  }}
->
-  Contato
-</a>
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollToSection('services');
+                  }}
+                >
+                  Serviços
+                </a>
+                <br />
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollToSection('contact');
+                  }}
+                >
+                  Contato
+                </a>
 
               </li>
             </ul>
@@ -95,17 +95,15 @@ const renderFooter = () => {
             <h3>Contatos</h3>
             <ul>
               <li>
-                <a href="#">utflorestal.utfpr@gmail.com</a>
+                <a href="mailto:utflorestal.utfpr@gmail.com">utflorestal.utfpr@gmail.com</a>
               </li>
               <br />
               <li>
-                <a href="#">
-                  <b>+55 (46) 99973-0867</b>
-                </a>
+                <b>+55 (46) 99973-0867</b>
               </li>
               <br />
               <li>
-                <a href="#">UTFlorestal - Planejamento e Execução</a>
+                UTFlorestal - Planejamento e Execução
               </li>
               <br />
               <li>
