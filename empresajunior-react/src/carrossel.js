@@ -47,7 +47,7 @@ const Carrosel = () => {
   // };
 
   const handleSaibaMaisClick = () => {
-    console.log("Saiba mais clicado!");
+    // console.log("Saiba mais clicado!"); clique no Saiba Mais do Carrossel
     window.location.href = "#services";
     // ou
     const servicesSection = document.getElementById("services");

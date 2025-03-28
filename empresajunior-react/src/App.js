@@ -404,6 +404,7 @@ function App() {
             </div>
           </div>
         </section>
+        {renderFooter()}
       </div>
     );
   }
@@ -523,6 +524,8 @@ function App() {
             trazer soluções vantajosas para sua propriedade, sem abrir mão da preservação e
             do uso sustentável dos recursos naturais.
           </p>
+          <br />
+          <br />
         </div>
         <div className="image">
           <img src="/img/image3.png" alt="Imagem" />
@@ -683,7 +686,7 @@ function App() {
           aspectos, incluindo o meio<br /> ambiente, a economia e o bem-estar social.
         </p>
       </section>
-      <section className='services' style={{ backgroundColor: '#ececec' }}>
+      <section id='Licenciamento' className='services' style={{ backgroundColor: '#ececec' }}>
         <h2>Licenciamento / Regularização Ambiental</h2>
         <p>Os serviços de inventário florestal são essenciais para a gestão 
         sustentável das florestas, permitindo a avaliação do estoque de 
@@ -693,7 +696,7 @@ function App() {
         qualidade dos dados coletados.</p>
         <button>SAIBA MAIS</button>
       </section>
-      <section className='services'>
+      <section id='Georreferenciamento' className='services'>
         <h2>Georreferenciamento</h2>
         <p>
           Os serviços de georreferenciamento são essenciais para garantir a documentação precisa e
@@ -715,7 +718,7 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section className='services'>
+      <section id='Recuperação' className='services'>
         <h2>Programa de Recuperação de Áreas Degradadas (PRAD)</h2>
         <p>
           Os serviços de PRAD são essenciais para a recuperação de áreas degradadas, garantindo a
@@ -725,7 +728,7 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section className='services' style={{ backgroundColor: '#ececec' }}>
+      <section id='Nascentes' className='services' style={{ backgroundColor: '#ececec' }}>
         <h2>Recuperação de Nascentes</h2>
         <p>
           Os serviços de recuperação de nascentes são fundamentais para a conservação do meio ambiente e
@@ -745,7 +748,7 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section id="contact" className="contact-section" style={{ backgroundColor: '#FFFFFF' }}>
+      <section className="contact-section" style={{ backgroundColor: '#FFFFFF' }}>
         <div
           style={{
             display: 'flex',

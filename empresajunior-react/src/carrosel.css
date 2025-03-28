@@ -26,7 +26,7 @@
   /* Absolute para todas as imagens estarem sobrepostas */
   opacity: 0;
   /* Imagens começam invisíveis */
-  transition: opacity 0.5s ease;
+  transition: opacity 1.5s ease;
   /* A transição de opacidade é feita em 1 segundo */
 }
 
