@@ -247,301 +247,302 @@ function App() {
                 lineHeight: '1.6em',
                 letterSpacing: '0',
                 fontWeight: 'normal',
-                listStyleType: 'none', // Remove os marcadores padrão, se preferir
+                listStyleType: 'disc', // Define as bolinhas
                 padding: 0,
+                paddingLeft: '20px', // Ajuste o recuo dos marcadores
               }}>
-                <li style={{ marginBottom: '0.5em' }}>🤝 Estabelecer relações de confiança</li>
-                <li style={{ marginBottom: '0.5em' }}>⚖️ Ética e responsabilidade na tomada de decisões</li>
-                <li style={{ marginBottom: '0.5em' }}>🔥 Comprometimento</li>
-                <li style={{ marginBottom: '0.5em' }}>🚀 Superar resultados</li>
-                <li style={{ marginBottom: '0.5em' }}>🎓 Capacitar os estudantes para o mercado de trabalho</li>
-                <li style={{ marginBottom: '0.5em' }}>🌱 Sustentabilidade</li>
-                <li>💡 Inovação</li>
+                <li style={{ marginBottom: '0.5em' }}>Estabelecer relações de confiança</li>
+                <li style={{ marginBottom: '0.5em' }}>Ética e responsabilidade na tomada de decisões</li>
+                <li style={{ marginBottom: '0.5em' }}>Comprometimento</li>
+                <li style={{ marginBottom: '0.5em' }}>Superar resultados</li>
+                <li style={{ marginBottom: '0.5em' }}>Capacitar os estudantes para o mercado de trabalho</li>
+                <li style={{ marginBottom: '0.5em' }}>Sustentabilidade</li>
+                <li>Inovação</li>
               </ul>
             </div>
           </div>
 
 
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 3vh' }}>
-  <div style={{ flex: 1, textAlign: 'left' }}>
-    <h1 style={{
-      textAlign: 'left',
-      fontFamily: 'lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif',
-      color: '#2F2E2E',
-      textAlign: 'justify',
-      marginLeft: '20vh',
-      marginBottom: '15vh',
-      marginTop: '-13vh',
-    }}>
-      Equipe
-      <br />
-      <span style={{ fontSize: '18px', fontWeight: 1, textAlign: 'justify' }}>
-        Nosso time é formado por 15 membros, sendo distribuídos em:
-        <br />
-        - 1 Presidente;
-        <br />
-        - 6 Diretores;
-        <br />
-        - 8 Gerentes.
-        <br />
-        Além disso, é orientada por 1 professor doutor, sendo ele:
-        <br />
-        - Prof. Dr. Eleandro José Brun;
-      </span>
-    </h1>
-  </div>
-  <div style={{ flex: 1.2, display: 'flex', justifyContent: 'flex-start', marginRight: '20vh', marginBottom: '15vh' }}>
-    <img 
-      src="./img/equipe.png" 
-      alt="Equipe" 
-      style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
-    />
-  </div>
-</div>
+            <div style={{ flex: 1, textAlign: 'left' }}>
+              <h1 style={{
+                textAlign: 'left',
+                fontFamily: 'lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif',
+                color: '#2F2E2E',
+                textAlign: 'justify',
+                marginLeft: '20vh',
+                marginBottom: '15vh',
+                marginTop: '-13vh',
+              }}>
+                Equipe
+                <br />
+                <span style={{ fontSize: '18px', fontWeight: 1, textAlign: 'justify' }}>
+                  Nosso time é formado por 15 membros, sendo distribuídos em:
+                  <br />
+                  - 1 Presidente;
+                  <br />
+                  - 6 Diretores;
+                  <br />
+                  - 8 Gerentes.
+                  <br />
+                  Além disso, é orientada por 1 professor doutor, sendo ele:
+                  <br />
+                  - Prof. Dr. Eleandro José Brun;
+                </span>
+              </h1>
+            </div>
+            <div style={{ flex: 1.2, display: 'flex', justifyContent: 'flex-start', marginRight: '20vh', marginBottom: '15vh' }}>
+              <img
+                src="./img/equipe.png"
+                alt="Equipe"
+                style={{ width: '100%', height: 'auto', borderRadius: '10px' }}
+              />
+            </div>
+          </div>
 
 
-{/* FORMULÁRIO #SEPARAR O FORMULÁRIO PARA NÃO SE REPETIR DIVERSAS VEZES */}
-<section className="contact-section" style={{ backgroundColor: '#FFFFFF' }}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '30px',
-            border: '1px rgb(255, 255, 255)',
-            borderRadius: '8px',
-            backgroundColor: '#ececec',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            maxWidth: '600px',
-            width: '100%',
-            margin: '0 auto',
-            marginBottom: '40px',
-          }}
-        >
-          <h2
-            style={{
-              color: '#3f7652',
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: '600',
-              textAlign: 'center',
-              marginBottom: '30px',
-            }}
-          >
-            Entre em contato e <br /> solicite um(a) análise/orçamento
-          </h2>
-
-          <form
-            onSubmit={handleSubmit}
-            style={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          >
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="Novo contato via formulário" />
-
+          {/* FORMULÁRIO #SEPARAR O FORMULÁRIO PARA NÃO SE REPETIR DIVERSAS VEZES */}
+          <section className="contact-section" style={{ backgroundColor: '#FFFFFF' }}>
             <div
               style={{
                 display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
+                flexDirection: 'column',
+                padding: '30px',
+                border: '1px rgb(255, 255, 255)',
+                borderRadius: '8px',
+                backgroundColor: '#ececec',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                maxWidth: '600px',
                 width: '100%',
-                gap: '30px',
+                margin: '0 auto',
+                marginBottom: '40px',
               }}
             >
-              <div style={{ flex: '1' }}>
-                <label
-                  htmlFor="nome"
-                  style={{
-                    color: '#3f7652',
-                    textAlign: 'left',
-                    display: 'block',
-                    marginBottom: '5px',
-                  }}
-                >
-                  Nome Completo *
-                </label>
-                <input
-                  id="nome"
-                  type="text"
-                  name="nome"
-                  required
-                  placeholder="Digite seu nome completo"
-                  value={formData.nome}
-                  onChange={handleChange}
-                  style={{
-                    backgroundColor: '#e1e7e3',
-                    width: '100%',
-                    marginBottom: '15px',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    border: '1px solid #ddd',
-                    boxSizing: 'border-box',
-                    textAlign: 'left',
-                  }}
-                />
-              </div>
-              <div style={{ flex: '1', textAlign: 'right' }}>
-                <label
-                  htmlFor="telefone"
-                  style={{
-                    color: '#3f7652',
-                    textAlign: 'left',
-                    display: 'block',
-                    marginBottom: '5px',
-                  }}
-                >
-                  Telefone *
-                </label>
-                <input
-                  id="telefone"
-                  type="tel"
-                  name="telefone"
-                  required
-                  placeholder="Digite seu telefone"
-                  value={formData.telefone}
-                  onChange={handleChange}
-                  style={{
-                    backgroundColor: '#e1e7e3',
-                    width: '100%',
-                    marginBottom: '15px',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    border: '1px solid #ddd',
-                    boxSizing: 'border-box',
-                    textAlign: 'left',
-                  }}
-                />
-              </div>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                width: '100%',
-                gap: '30px',
-              }}
-            >
-              <div style={{ flex: '1' }}>
-                <label
-                  htmlFor="assunto"
-                  style={{
-                    color: '#3f7652',
-                    textAlign: 'left',
-                    display: 'block',
-                    marginBottom: '5px',
-                  }}
-                >
-                  Assunto
-                </label>
-                <input
-                  id="assunto"
-                  type="text"
-                  name="assunto"
-                  required
-                  placeholder="Qual o assunto do seu contato?"
-                  value={formData.assunto}
-                  onChange={handleChange}
-                  style={{
-                    backgroundColor: '#e1e7e3',
-                    width: '100%',
-                    marginBottom: '15px',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    border: '1px solid #ddd',
-                    boxSizing: 'border-box',
-                    textAlign: 'left',
-                  }}
-                />
-              </div>
-              <div style={{ flex: '1' }}>
-                <label
-                  htmlFor="email"
-                  style={{
-                    color: '#3f7652',
-                    textAlign: 'left',
-                    display: 'block',
-                    marginBottom: '5px',
-                  }}
-                >
-                  Email (Não Obrigátorio)
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="Digite seu e-mail"
-                  value={formData.email}
-                  onChange={handleChange}
-                  style={{
-                    backgroundColor: '#e1e7e3',
-                    width: '100%',
-                    marginBottom: '15px',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    border: '1px solid #ddd',
-                    boxSizing: 'border-box',
-                    textAlign: 'left',
-                  }}
-                />
-              </div>
-            </div>
-
-            <div style={{ flex: '1', width: '100%' }}>
-              <label
-                htmlFor="necessidade"
+              <h2
                 style={{
                   color: '#3f7652',
-                  textAlign: 'left',
-                  display: 'block',
-                  marginBottom: '5px',
+                  fontFamily: 'Poppins, sans-serif',
+                  fontWeight: '600',
+                  textAlign: 'center',
+                  marginBottom: '30px',
                 }}
               >
-                Descreva sua necessidade
-              </label>
-              <textarea
-                id="necessidade"
-                name="necessidade"
-                rows="5"
-                placeholder="Descreva sua necessidade detalhadamente"
-                value={formData.necessidade}
-                onChange={handleChange}
+                Entre em contato e <br /> solicite um(a) análise/orçamento
+              </h2>
+
+              <form
+                onSubmit={handleSubmit}
                 style={{
-                  backgroundColor: '#e1e7e3',
                   width: '100%',
-                  marginBottom: '15px',
-                  padding: '10px',
-                  borderRadius: '5px',
-                  border: '1px solid #ddd',
-                  boxSizing: 'border-box',
-                  textAlign: 'left',
-                  height: '150px',
-                  resize: 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
                 }}
-              ></textarea>
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="Novo contato via formulário" />
+
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    width: '100%',
+                    gap: '30px',
+                  }}
+                >
+                  <div style={{ flex: '1' }}>
+                    <label
+                      htmlFor="nome"
+                      style={{
+                        color: '#3f7652',
+                        textAlign: 'left',
+                        display: 'block',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Nome Completo *
+                    </label>
+                    <input
+                      id="nome"
+                      type="text"
+                      name="nome"
+                      required
+                      placeholder="Digite seu nome completo"
+                      value={formData.nome}
+                      onChange={handleChange}
+                      style={{
+                        backgroundColor: '#e1e7e3',
+                        width: '100%',
+                        marginBottom: '15px',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        boxSizing: 'border-box',
+                        textAlign: 'left',
+                      }}
+                    />
+                  </div>
+                  <div style={{ flex: '1', textAlign: 'right' }}>
+                    <label
+                      htmlFor="telefone"
+                      style={{
+                        color: '#3f7652',
+                        textAlign: 'left',
+                        display: 'block',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Telefone *
+                    </label>
+                    <input
+                      id="telefone"
+                      type="tel"
+                      name="telefone"
+                      required
+                      placeholder="Digite seu telefone"
+                      value={formData.telefone}
+                      onChange={handleChange}
+                      style={{
+                        backgroundColor: '#e1e7e3',
+                        width: '100%',
+                        marginBottom: '15px',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        boxSizing: 'border-box',
+                        textAlign: 'left',
+                      }}
+                    />
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    width: '100%',
+                    gap: '30px',
+                  }}
+                >
+                  <div style={{ flex: '1' }}>
+                    <label
+                      htmlFor="assunto"
+                      style={{
+                        color: '#3f7652',
+                        textAlign: 'left',
+                        display: 'block',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Assunto
+                    </label>
+                    <input
+                      id="assunto"
+                      type="text"
+                      name="assunto"
+                      required
+                      placeholder="Qual o assunto do seu contato?"
+                      value={formData.assunto}
+                      onChange={handleChange}
+                      style={{
+                        backgroundColor: '#e1e7e3',
+                        width: '100%',
+                        marginBottom: '15px',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        boxSizing: 'border-box',
+                        textAlign: 'left',
+                      }}
+                    />
+                  </div>
+                  <div style={{ flex: '1' }}>
+                    <label
+                      htmlFor="email"
+                      style={{
+                        color: '#3f7652',
+                        textAlign: 'left',
+                        display: 'block',
+                        marginBottom: '5px',
+                      }}
+                    >
+                      Email (Não Obrigátorio)
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="Digite seu e-mail"
+                      value={formData.email}
+                      onChange={handleChange}
+                      style={{
+                        backgroundColor: '#e1e7e3',
+                        width: '100%',
+                        marginBottom: '15px',
+                        padding: '10px',
+                        borderRadius: '5px',
+                        border: '1px solid #ddd',
+                        boxSizing: 'border-box',
+                        textAlign: 'left',
+                      }}
+                    />
+                  </div>
+                </div>
+
+                <div style={{ flex: '1', width: '100%' }}>
+                  <label
+                    htmlFor="necessidade"
+                    style={{
+                      color: '#3f7652',
+                      textAlign: 'left',
+                      display: 'block',
+                      marginBottom: '5px',
+                    }}
+                  >
+                    Descreva sua necessidade
+                  </label>
+                  <textarea
+                    id="necessidade"
+                    name="necessidade"
+                    rows="5"
+                    placeholder="Descreva sua necessidade detalhadamente"
+                    value={formData.necessidade}
+                    onChange={handleChange}
+                    style={{
+                      backgroundColor: '#e1e7e3',
+                      width: '100%',
+                      marginBottom: '15px',
+                      padding: '10px',
+                      borderRadius: '5px',
+                      border: '1px solid #ddd',
+                      boxSizing: 'border-box',
+                      textAlign: 'left',
+                      height: '150px',
+                      resize: 'none',
+                    }}
+                  ></textarea>
+                </div>
+
+                <button
+                  className="button-enviar"
+                  type="submit"
+                  style={{
+                    padding: '10px 20px',
+                    backgroundColor: '#3f7652',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '5px',
+                    cursor: 'pointer',
+                  }}
+                >
+                  Enviar
+                </button>
+              </form>
             </div>
 
-            <button
-              className="button-enviar"
-              type="submit"
-              style={{
-                padding: '10px 20px',
-                backgroundColor: '#3f7652',
-                color: 'white',
-                border: 'none',
-                borderRadius: '5px',
-                cursor: 'pointer',
-              }}
-            >
-              Enviar
-            </button>
-          </form>
-        </div>
-
-      </section>
+          </section>
 
         </main>
         {renderFooter()}
