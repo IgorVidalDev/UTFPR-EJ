@@ -1166,7 +1166,7 @@ function App() {
           </span>
         </div>
       </section>
-      <section className='services'>
+      <section className='services' style={{ borderTop: '4px solid #27331B', paddingTop: '10px' }}>
         <h1>
           <span style={{ fontWeight: 500, backgroundColor: 'white' }}>Nossos </span>
           <b>Serviços</b>
