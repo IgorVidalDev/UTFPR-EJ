@@ -1238,7 +1238,7 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section className="contact-section" style={{ backgroundColor: '#FFFFFF' }}>
+      <section id='contact' className="contact-section" style={{ backgroundColor: '#FFFFFF' }}>
         <div
           style={{
             display: 'flex',
