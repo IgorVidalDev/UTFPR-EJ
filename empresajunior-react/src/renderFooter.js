@@ -37,7 +37,16 @@ const renderFooter = () => {
             <h3>Institucional</h3>
             <ul>
               <li><a href="#">Inicío</a></li>
-              <li><a href="#">Sobre nós</a></li>
+              <a
+                  href="#about"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleScrollToSection('about');
+                  }}
+                >
+                  Sobre nós
+                </a>
+
               <li>
                 <a
                   href="#services"

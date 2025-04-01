@@ -3,6 +3,7 @@ import './App.css';
 import Carrosel from './carrossel';
 import renderFooter from './renderFooter';
 import renderHeader from './renderHeader';
+import Noticias from './Noticias';
 
 function App() {
   // Estado para os dados do formulário
@@ -632,6 +633,17 @@ function App() {
       </div>
     );
   }
+
+  if (activeHash === "#noticias") {
+    return (
+      <>
+        {renderHeader()}
+        <Noticias />
+        {renderFooter()}
+      </>
+    );
+  }
+  
 
   // Se o hash for "#contact", renderiza apenas o header e a seção de contato isolada
   if (activeHash === "#contact") {
