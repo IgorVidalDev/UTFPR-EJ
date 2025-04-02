@@ -58,7 +58,6 @@ const Carrosel = () => {
   
 
   useEffect(() => {
-    console.log(`Slide atual: ${currentSlide}`);
     const interval = setInterval(nextSlide, 6500);
 
     return () => {

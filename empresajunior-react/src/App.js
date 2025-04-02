@@ -1048,7 +1048,7 @@ function App() {
         {/* CONTATO INICIAL */}
         <div
           style={{
-            marginTop: window.innerWidth <= 768 ? '40vh' : '-8vh',
+            marginTop: window.innerWidth <= 768 ? '23.5vh' : '-8vh',
             backgroundColor: '#ececec',
             padding: window.innerWidth <= 768 ? '16px' : '40px',
             display: 'flex',
@@ -1250,68 +1250,26 @@ function App() {
         </p>
         <button>SAIBA MAIS</button>
       </section>
-      <section id='contact' className="contact-section" style={{ backgroundColor: '#FFFFFF' }}>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            padding: '30px',
-            border: '1px rgb(255, 255, 255)',
-            borderRadius: '8px',
-            backgroundColor: '#ececec',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            maxWidth: '600px',
-            width: '100%',
-            margin: '0 auto',
-            marginBottom: '40px',
-          }}
-        >
-          <h2
-            style={{
-              color: '#3f7652',
-              fontFamily: 'Poppins, sans-serif',
-              fontWeight: '600',
-              textAlign: 'center',
-              marginBottom: '30px',
-            }}
-          >
+      <section id='contact' className="contact-section">
+        <div className='div-pai'>
+          <h2>
             Entre em contato e <br /> solicite um(a) análise/orçamento
           </h2>
 
           <form
             onSubmit={handleSubmit}
-            style={{
-              width: '100%',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
           >
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value="Novo contato via formulário" />
 
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                width: '100%',
-                gap: '30px',
-              }}
-            >
+            <div className='div-form'>
               <div style={{ flex: '1' }}>
-                <label
+                <label className='label-form'
                   htmlFor="nome"
-                  style={{
-                    color: '#3f7652',
-                    textAlign: 'left',
-                    display: 'block',
-                    marginBottom: '5px',
-                  }}
                 >
                   Nome Completo *
                 </label>
-                <input
+                <input className='input-form'
                   id="nome"
                   type="text"
                   name="nome"
@@ -1319,74 +1277,32 @@ function App() {
                   placeholder="Digite seu nome completo"
                   value={formData.nome}
                   onChange={handleChange}
-                  style={{
-                    backgroundColor: '#e1e7e3',
-                    width: '100%',
-                    marginBottom: '15px',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    border: '1px solid #ddd',
-                    boxSizing: 'border-box',
-                    textAlign: 'left',
-                  }}
                 />
               </div>
               <div style={{ flex: '1', textAlign: 'right' }}>
-                <label
+                <label className='label-form'
                   htmlFor="telefone"
-                  style={{
-                    color: '#3f7652',
-                    textAlign: 'left',
-                    display: 'block',
-                    marginBottom: '5px',
-                  }}
                 >
                   Telefone *
                 </label>
-                <input
+                <input className='input-form'
                   id="telefone"
                   type="tel"
                   name="telefone"
                   required
                   placeholder="Digite seu telefone"
                   value={formData.telefone}
-                  onChange={handleChange}
-                  style={{
-                    backgroundColor: '#e1e7e3',
-                    width: '100%',
-                    marginBottom: '15px',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    border: '1px solid #ddd',
-                    boxSizing: 'border-box',
-                    textAlign: 'left',
-                  }}
-                />
+                  onChange={handleChange}/>
               </div>
             </div>
 
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                width: '100%',
-                gap: '30px',
-              }}
-            >
+            <div className='div-form'>
               <div style={{ flex: '1' }}>
-                <label
-                  htmlFor="assunto"
-                  style={{
-                    color: '#3f7652',
-                    textAlign: 'left',
-                    display: 'block',
-                    marginBottom: '5px',
-                  }}
-                >
+                <label className='label-form'
+                  htmlFor="assunto">
                   Assunto
                 </label>
-                <input
+                <input className='input-form'
                   id="assunto"
                   type="text"
                   name="assunto"
@@ -1394,61 +1310,26 @@ function App() {
                   placeholder="Qual o assunto do seu contato?"
                   value={formData.assunto}
                   onChange={handleChange}
-                  style={{
-                    backgroundColor: '#e1e7e3',
-                    width: '100%',
-                    marginBottom: '15px',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    border: '1px solid #ddd',
-                    boxSizing: 'border-box',
-                    textAlign: 'left',
-                  }}
                 />
               </div>
               <div style={{ flex: '1' }}>
-                <label
-                  htmlFor="email"
-                  style={{
-                    color: '#3f7652',
-                    textAlign: 'left',
-                    display: 'block',
-                    marginBottom: '5px',
-                  }}
-                >
+                <label className='label-form'
+                  htmlFor="email">
                   Email (Não Obrigátorio)
                 </label>
-                <input
+                <input className='input-form'
                   id="email"
                   type="email"
                   name="email"
                   placeholder="Digite seu e-mail"
                   value={formData.email}
-                  onChange={handleChange}
-                  style={{
-                    backgroundColor: '#e1e7e3',
-                    width: '100%',
-                    marginBottom: '15px',
-                    padding: '10px',
-                    borderRadius: '5px',
-                    border: '1px solid #ddd',
-                    boxSizing: 'border-box',
-                    textAlign: 'left',
-                  }}
-                />
+                  onChange={handleChange}/>
               </div>
             </div>
 
-            <div style={{ flex: '1', width: '100%' }}>
-              <label
-                htmlFor="necessidade"
-                style={{
-                  color: '#3f7652',
-                  textAlign: 'left',
-                  display: 'block',
-                  marginBottom: '5px',
-                }}
-              >
+            <div style={{ flex: '1' }}>
+              <label className='label-form'
+                htmlFor="necessidade">
                 Descreva sua necessidade
               </label>
               <textarea
@@ -1457,20 +1338,8 @@ function App() {
                 rows="5"
                 placeholder="Descreva sua necessidade detalhadamente"
                 value={formData.necessidade}
-                onChange={handleChange}
-                style={{
-                  backgroundColor: '#e1e7e3',
-                  width: '100%',
-                  marginBottom: '15px',
-                  padding: '10px',
-                  borderRadius: '5px',
-                  border: '1px solid #ddd',
-                  boxSizing: 'border-box',
-                  textAlign: 'left',
-                  height: '150px',
-                  resize: 'none',
-                }}
-              ></textarea>
+                onChange={handleChange}>
+                </textarea>
             </div>
 
             <button

@@ -7,7 +7,8 @@ body {
 }
 
 .menu-toggle {
-  display: none; /* Esconde o botão de menu hambúrguer por padrão */
+  display: none;
+  /* Esconde o botão de menu hambúrguer por padrão */
 }
 
 header {
@@ -22,7 +23,8 @@ header {
 
 nav {
   display: flex;
-  justify-content: flex-end; /* Alinha os links para a direita */
+  justify-content: flex-end;
+  /* Alinha os links para a direita */
   gap: 2rem;
   flex: 1;
 }
@@ -53,9 +55,12 @@ nav a:hover {
 
 .social-icons {
   display: flex;
-  gap: 10px; /* Espaçamento entre os ícones */
-  margin-right: 250px; /* Margem à direita dos ícones */
-  justify-content: flex-end; /* Garante que os ícones fiquem à direita */
+  gap: 10px;
+  /* Espaçamento entre os ícones */
+  margin-right: 250px;
+  /* Margem à direita dos ícones */
+  justify-content: flex-end;
+  /* Garante que os ícones fiquem à direita */
   margin-left: 180px;
   margin-bottom: -5vh;
 }
@@ -67,11 +72,13 @@ nav a:hover {
 }
 
 .social-icons a:hover {
-  color: #0073e6; /* Cor ao passar o mouse */
+  color: #0073e6;
+  /* Cor ao passar o mouse */
 }
 
 .social-icons img {
-  width: 30px; /* ajuste conforme necessário */
+  width: 30px;
+  /* ajuste conforme necessário */
   height: 30px;
 }
 
@@ -88,16 +95,19 @@ section {
 }
 
 /* Garanta que o HTML e o Body ocupem toda a altura da tela */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   display: flex;
-  flex-direction: column; /* Isso vai garantir que os elementos se empurrem */
+  flex-direction: column;
+  /* Isso vai garantir que os elementos se empurrem */
 }
 
 /* Container principal (componente ou div que envolve o conteúdo e footer) */
 .main-container {
-  flex: 1; /* Faz o conteúdo ocupar o espaço restante */
+  flex: 1;
+  /* Faz o conteúdo ocupar o espaço restante */
 }
 
 /* Estilos do Footer */
@@ -107,9 +117,12 @@ html, body {
   color: black;
   text-align: center;
   z-index: 1000;
-  position: relative; /* Para garantir o controle da posição interna */
-  padding: 40px 0; /* Padding geral, aumentando o espaço ao redor */
-  min-height: 400px; /* Aumenta a altura mínima do footer para dar mais espaço */
+  position: relative;
+  /* Para garantir o controle da posição interna */
+  padding: 40px 0;
+  /* Padding geral, aumentando o espaço ao redor */
+  min-height: 400px;
+  /* Aumenta a altura mínima do footer para dar mais espaço */
 }
 
 .footer-container {
@@ -121,12 +134,18 @@ html, body {
 }
 
 .footer-left {
-  position: absolute; /* Fixa o conteúdo no canto esquerdo do footer */
-  left: 20px; /* Margem da borda esquerda do footer */
-  bottom: 37vh; /* Distância da borda inferior do footer */
-  font-weight: lighter; /* Fonte mais fina */
-  font-size: 12px; /* Fonte pequena */
-  letter-spacing: 0.05em; /* Ajuste para espaçamento */
+  position: absolute;
+  /* Fixa o conteúdo no canto esquerdo do footer */
+  left: 20px;
+  /* Margem da borda esquerda do footer */
+  bottom: 37vh;
+  /* Distância da borda inferior do footer */
+  font-weight: lighter;
+  /* Fonte mais fina */
+  font-size: 12px;
+  /* Fonte pequena */
+  letter-spacing: 0.05em;
+  /* Ajuste para espaçamento */
   margin-bottom: 13vh;
   color: #595959;
 }
@@ -134,7 +153,8 @@ html, body {
 .footer-center {
   display: flex;
   justify-content: space-around;
-  flex-grow: 0; /* Faz a seção central crescer para ocupar o espaço disponível */
+  flex-grow: 0;
+  /* Faz a seção central crescer para ocupar o espaço disponível */
   text-align: left;
 }
 
@@ -160,7 +180,7 @@ html, body {
 
 }
 
-.footer-section ul li{
+.footer-section ul li {
   line-height: 1.5;
 }
 
@@ -194,8 +214,8 @@ html, body {
   text-decoration: none;
 }
 
-.footer-right img{
-  width: 40px; 
+.footer-right img {
+  width: 40px;
   height: 40px;
 }
 
@@ -204,15 +224,19 @@ html, body {
 }
 
 .footer-bottom {
-  position: absolute; /* Coloca o texto na parte inferior do footer */
-  bottom: 0; /* Fixa a posição na parte inferior */
-  width: 100%; /* Largura total */
+  position: absolute;
+  /* Coloca o texto na parte inferior do footer */
+  bottom: 0;
+  /* Fixa a posição na parte inferior */
+  width: 100%;
+  /* Largura total */
   text-align: center;
   font-size: 14px;
   font-weight: lighter;
   letter-spacing: 0.05em;
   color: #595959;
-  padding: 5px 0px; /* Ajusta o padding para não deixar o texto colado na borda */
+  padding: 5px 0px;
+  /* Ajusta o padding para não deixar o texto colado na borda */
   margin-top: 10px;
 }
 
@@ -222,8 +246,10 @@ html, body {
 }
 
 .active {
-  color: green; /* Cor verde para o link ativo */
-  font-weight: bold; /* Negrito para destacar */
+  color: green;
+  /* Cor verde para o link ativo */
+  font-weight: bold;
+  /* Negrito para destacar */
 }
 
 
@@ -288,7 +314,8 @@ html {
 }
 
 #services {
-  scroll-margin-top: 50vh; /* ajuste esse valor conforme necessário */
+  scroll-margin-top: 50vh;
+  /* ajuste esse valor conforme necessário */
 }
 
 .services h1 {
@@ -460,9 +487,9 @@ section h5 {
   .logo {
     width: 115px;
     height: auto;
-    padding-left: 6vh;
+    padding-left: 2vh;
     margin-bottom: -1.3vh;
-    }
+  }
 
   /* Formulário */
   .contact-section {
@@ -482,12 +509,13 @@ section h5 {
     gap: 1em;
   }
 
-  #contact form > div {
+  #contact form>div {
     display: block;
     width: 100%;
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 10px;
@@ -515,23 +543,33 @@ section h5 {
 
   #home {
     width: 100%;
-    flex-direction: column;
-    padding: 2em 1em;
     height: 90vh;
-    display: block;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;
+    /* Troca de block para flex */
+    flex-direction: column;
+    /* Garante empilhamento dos elementos */
+    justify-content: center;
+    /* Centraliza verticalmente */
     align-items: center;
-    text-align: left;
-    padding: 5em;
-    padding-top: 30px;
+    /* Centraliza horizontalmente */
+    text-align: center;
+    padding: 2em 0em;
+    /* Evita excesso de padding */
   }
 
+
   #home h1 {
+    padding-top: 32vh;
     font-size: 4.8em;
-    padding-top: 6px;
+    margin: 0;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    /* Evita que ultrapasse a largura da tela */
+    white-space: normal;
+    /* Permite quebra de linha */
   }
+
 
   #home .text {
     width: 100%;
@@ -539,19 +577,29 @@ section h5 {
     text-align: center;
   }
 
-  #home .text p { 
-    font-size: 16px !important;
-    }
+  #home .text p {
+    font-size: 18px !important;
+    text-align: justify !important;
+    align-items: center !important;
+    justify-content: justify !important;
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+  }
 
   #home .image {
-    margin-left: -9vh;
+    margin-left: 0vh;
     margin-right: 0;
-    margin-top: 55vh;
-    width: 90%;
+    margin-top: 48vh;
+    width: 100%;
     height: auto;
     display: block;
     align-items: center;
     justify-content: center;
+  }
+
+  .services h1 {
+    font-size: 46px;
+    width: 100%;
   }
 
   .services+section,
@@ -560,22 +608,25 @@ section h5 {
     display: flex;
     flex-direction: column;
     gap: 0.3em;
-    padding: 1em 0.5em;
+    padding: 1em 0.0em;
+    width: 100%;
   }
 
   .services+section h2,
   .services+section+section h2,
   #contact h2 {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 8px;
+    width: 100%;
   }
 
   .services+section p,
   .services+section+section p,
   #contact p {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.4;
     margin-bottom: 8px;
+    width: 85%;
   }
 
   .services+section button,
@@ -586,8 +637,137 @@ section h5 {
     margin-top: 8px;
   }
 
+  .services button {
+  background-color: rgb(8, 128, 12);
+  color: white;
+  font-size: 16px !important;
+  font-weight: bold;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600 !important;
+}
+
   #contact {
     text-align: center;
+  }
+
+  #contact .contact-section {
+    background-Color: #FFFFFF;
+  }
+
+  #contact .div-pai {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0px !important;
+    border: 1px rgb(255, 255, 255) !important;
+    border-radius: 8px !important;
+    background-color: #ececec !important;
+    box-Shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    max-Width: 600px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    margin-Bottom: 40px !important;
+  }
+
+  #contact .div-form {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 35px;
+    padding-bottom: 10px;
+  }
+
+  #contact .div-telefone {}
+
+  #contact .div-assunto {}
+
+  #contact .div-email {}
+
+  #contact .label-form {
+    color: #3f7652;
+    text-align: left;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  #contact .input-form {
+    background-color: #e1e7e3;
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    text-align: left;
+    display: flex;
+  }
+
+  #contact .div-nome-telefone {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  #contact form {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  #contact textarea {
+    background-color: #e1e7e3;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 7px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      text-align: left;
+      height: 150px;
+      resize: none;
+      text-align: left;
+      display: flex;
+  }
+
+  #contact .button-enviar {
+    width: 40%;
+    background-color: #3f7652;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    display: flex;
+    justify-content: center; /* Centraliza o texto dentro do botão */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0px auto 50px; /* Centraliza o botão dentro do container */
+}
+
+  .button-enviar:hover {
+    background-color: #356446;
+    transform: scale(1.03);
+  }
+
+  .contact-section h2 {
+    color: #3f7652;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 600;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    margin-left: 0px !important;
+    width: 100% !important;
   }
 
   section {
@@ -600,7 +780,7 @@ section h5 {
     gap: 0px;
   }
 
-  
+
   section>div {
     flex: 1 1 100%;
     margin-top: 0;
@@ -608,17 +788,19 @@ section h5 {
 
 
 
-    /* Estilos para o menu hambúrguer */
-.menu-toggle {
-  position: absolute;
-  top: 20px; /* Ajuste o valor conforme necessário para a distância do topo */
-  right: 20px; /* Ajuste o valor conforme necessário para a distância da direita */
-  display: block;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
+  /* Estilos para o menu hambúrguer */
+  .menu-toggle {
+    position: absolute;
+    top: 20px;
+    /* Ajuste o valor conforme necessário para a distância do topo */
+    right: 20px;
+    /* Ajuste o valor conforme necessário para a distância da direita */
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
 
   nav {
     display: none;
@@ -628,15 +810,16 @@ section h5 {
     right: 0;
     background: white;
     width: 100%;
-    
+
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: height 0.3s ease; /* Adiciona uma transição suave na altura */
+    transition: height 0.3s ease;
+    /* Adiciona uma transição suave na altura */
   }
 
   nav.open {
     display: block;
     height: 300px;
-    
+
   }
 
   nav a {
@@ -649,16 +832,17 @@ section h5 {
 
   /* Esconde os ícones de redes sociais em dispositivos móveis */
   .social-icons {
-    display: none !important; /* Garante que o display seja ocultado */
+    display: none !important;
+    /* Garante que o display seja ocultado */
   }
 
-/* Os ícones de redes sociais voltam a aparecer em resoluções maiores */
-@media screen and (min-width: 769px) {
+  /* Os ícones de redes sociais voltam a aparecer em resoluções maiores */
+  @media screen and (min-width: 769px) {
 
-  .social-icons {
-    display: flex;
+    .social-icons {
+      display: flex;
+    }
   }
-}
 
   .footer {
     width: 100%;
@@ -666,113 +850,140 @@ section h5 {
     color: black;
     text-align: center;
     z-index: 1000;
-    position: relative; /* Para garantir o controle da posição interna */
-    padding: 40px 0; /* Padding geral, aumentando o espaço ao redor */
-    min-height: 400px; /* Aumenta a altura mínima do footer para dar mais espaço */
+    position: relative;
+    /* Para garantir o controle da posição interna */
+    padding: 40px 0;
+    /* Padding geral, aumentando o espaço ao redor */
+    min-height: 400px;
+    /* Aumenta a altura mínima do footer para dar mais espaço */
   }
-  
+
   .footer-container {
     display: flex;
-    justify-content: flex-start; /* Move toda a seção para a esquerda */
-    padding-left: 0px; /* Ajuste se precisar de espaço da borda esquerda */
+    justify-content: flex-start;
+    /* Move toda a seção para a esquerda */
+    padding-left: 0px;
+    /* Ajuste se precisar de espaço da borda esquerda */
   }
-  
+
   .footer-left {
     width: 100%;
     display: flex;
-    position: absolute; /* Fixa o conteúdo no canto esquerdo do footer */
-    left: 20px; /* Margem da borda esquerda do footer */
-    bottom: 100vh; /* Distância da borda inferior do footer */
-    font-weight: lighter; /* Fonte mais fina */
-    font-size: 12px; /* Fonte pequena */
-    letter-spacing: 0.05em; /* Ajuste para espaçamento */
+    position: absolute;
+    /* Fixa o conteúdo no canto esquerdo do footer */
+    left: 20px;
+    /* Margem da borda esquerda do footer */
+    bottom: 94vh;
+    /* Distância da borda inferior do footer */
+    font-weight: lighter;
+    /* Fonte mais fina */
+    font-size: 12px;
+    /* Fonte pequena */
+    letter-spacing: 0.05em;
+    /* Ajuste para espaçamento */
     margin-bottom: 27vh;
     color: #595959;
   }
-  
+
   .footer-center {
-  display: flex;
-  flex-direction: column; /* Deixa os itens um abaixo do outro */
-  align-items: flex-start; /* Alinha os itens à esquerda */
-  text-align: left; /* Alinha o texto à esquerda */
-  width: 100%; /* Garante que ocupe toda a largura */
-  padding: 0;
-  margin: 0;
-}
-  
+    display: flex;
+    flex-direction: column;
+    /* Deixa os itens um abaixo do outro */
+    align-items: flex-start;
+    /* Alinha os itens à esquerda */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    width: 100%;
+    /* Garante que ocupe toda a largura */
+    padding: 0;
+    margin: 0;
+  }
+
   .footer-section {
     margin: 0 20px;
   }
-  
+
   .footer-section h3 {
     margin-bottom: 10px;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
   }
-  
+
   .footer-center ul {
     list-style: none;
     padding: 0;
   }
-  
+
   .footer-center li {
     margin: 3px 0;
-    
+
   }
-  
+
   .footer-center a {
     color: black;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
   }
-  
+
   .footer-center a:hover {
     text-decoration: underline;
   }
-  
+
   .footer-right {
     flex-basis: 30%;
-    margin-top: 0; /* Evita espaçamento excessivo */
+    margin-top: 0;
+    /* Evita espaçamento excessivo */
     text-align: left;
-}
+    margin-bottom: -74vh;
+    margin-left: 35px;
+  }
 
-.footer-right ul {
+  .footer-right ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Garante que os itens fiquem um abaixo do outro */
-    align-items: flex-start; /* Alinha os itens à esquerda */
-}
+    flex-direction: column;
+    /* Garante que os itens fiquem um abaixo do outro */
+    align-items: flex-start;
+    /* Alinha os itens à esquerda */
+  }
 
-.footer-right li {
-    margin-bottom: 10px; /* Espaço entre os ícones */
-}
+  .footer-right li {
+    margin-bottom: 10px;
+    /* Espaço entre os ícones */
+  }
 
-.footer-right a {
-    display: flex; /* Mantém a estrutura flexível */
-    align-items: center; /* Alinha o ícone ao centro */
-}
+  .footer-right a {
+    display: flex;
+    /* Mantém a estrutura flexível */
+    align-items: center;
+    /* Alinha o ícone ao centro */
+  }
 
-.footer-right img {
-    width: 24px;
-    height: 24px;
-}
-  
+  .footer-right img {
+    width: 36px;
+    height: 36px;
+  }
+
   .footer-right a:hover {
     text-decoration: underline;
   }
-  
+
   .footer-bottom {
-    position: absolute; /* Coloca o texto na parte inferior do footer */
-    bottom: 0; /* Fixa a posição na parte inferior */
-    width: 100%; /* Largura total */
+    position: absolute;
+    /* Coloca o texto na parte inferior do footer */
+    bottom: 0;
+    /* Fixa a posição na parte inferior */
+    width: 100%;
+    /* Largura total */
     text-align: center;
     font-size: 14px;
     font-weight: lighter;
     letter-spacing: 0.05em;
     color: #595959;
-    padding: 5px 0px; /* Ajusta o padding para não deixar o texto colado na borda */
+    padding: 5px 0px;
+    /* Ajusta o padding para não deixar o texto colado na borda */
     margin-top: 10px;
   }
 }
@@ -832,4 +1043,3 @@ button.prev:hover,
 button.next:hover {
   background-color: none;
 }
-

@@ -137,8 +137,12 @@ button.next:hover {
 }
 
 @media screen and (max-width: 768px) {
+
+  .carrossel-container{
+    margin-bottom: 40px;
+  }
   .carrossel-title{
-    font-size: 8vh; /* Maior destaque para o título principal */
+    font-size: 7vh; /* Maior destaque para o título principal */
     font-weight: bold;
     margin-bottom: 10px;
     margin-top: 0px;
@@ -153,6 +157,25 @@ button.next:hover {
 
   .carrossel-description{
     font-size: 20px;
+  }
+
+  .carrosel-button {
+    background-color: #32CD32;
+    border: 2px solid #28a745;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    z-index: 9999;
+    pointer-events: auto;
+    margin-top: 20px;
   }
 
   }
