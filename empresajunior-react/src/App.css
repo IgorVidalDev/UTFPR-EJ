@@ -110,6 +110,76 @@ body {
   /* Faz o conteúdo ocupar o espaço restante */
 }
 
+#contact .div-pai {
+  display: flex;
+flex-direction: column;
+padding: 30px;
+border: 1px solid rgb(255, 255, 255);
+border-radius: 8px;
+background-color: #ececec;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+max-width: 600px;
+width: 100%;
+margin: 0 auto;
+margin-bottom: 40px;
+
+}
+
+#contact textarea {
+  background-color: #e1e7e3;
+width: 100%;
+margin-bottom: 15px;
+padding: 10px;
+border-radius: 5px;
+border: 1px solid #ddd;
+box-sizing: border-box;
+text-align: left;
+height: 150px;
+resize: none;
+
+}
+
+#contact .div-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+#contact .label-form{
+  color: #3f7652;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact .input-form{
+  background-color: #e1e7e3;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.contact-section h2 {
+  color: #3f7652;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: '15px';
+}
+
 /* Estilos do Footer */
 .footer {
   width: 100%;
@@ -395,17 +465,20 @@ section h5 {
 }
 
 .button-enviar {
-  width: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 10px 20px;
   background-color: #3f7652;
   color: #fff;
-  padding: 15px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  box-sizing: border-box;
   transition: background-color 0.5s ease, transform 0.3s ease;
+  margin: 0 auto;
 }
 
 .button-enviar:hover {
@@ -661,17 +734,17 @@ section h5 {
   }
 
   #contact .div-pai {
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 0px !important;
-    border: 1px rgb(255, 255, 255) !important;
-    border-radius: 8px !important;
-    background-color: #ececec !important;
-    box-Shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
-    max-Width: 600px !important;
-    width: 95% !important;
-    margin: 0 auto !important;
-    margin-Bottom: 40px !important;
+    display: flext;
+    flex-direction: column;
+    padding: 0px;
+    border: 1px rgb(255, 255, 255);
+    border-radius: 8px;
+    background-color: #ececec;
+    box-Shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-Width: 600px;
+    width: 95%;
+    margin: 0 auto;
+    margin-Bottom: 40px;
   }
 
   #contact .div-form {
@@ -709,17 +782,17 @@ section h5 {
   }
 
   #contact .div-nome-telefone {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
   #contact form {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #contact textarea {

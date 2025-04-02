@@ -529,14 +529,6 @@ function App() {
                 <button
                   className="button-enviar"
                   type="submit"
-                  style={{
-                    padding: '10px 20px',
-                    backgroundColor: '#3f7652',
-                    color: 'white',
-                    border: 'none',
-                    borderRadius: '5px',
-                    cursor: 'pointer',
-                  }}
                 >
                   Enviar
                 </button>
@@ -1252,7 +1244,7 @@ function App() {
       </section>
       <section id='contact' className="contact-section">
         <div className='div-pai'>
-          <h2>
+          <h2                                 >
             Entre em contato e <br /> solicite um(a) análise/orçamento
           </h2>
 
@@ -1327,7 +1319,7 @@ function App() {
               </div>
             </div>
 
-            <div style={{ flex: '1' }}>
+            <div style={{ flex: '1', width: '100%' }}>
               <label className='label-form'
                 htmlFor="necessidade">
                 Descreva sua necessidade
