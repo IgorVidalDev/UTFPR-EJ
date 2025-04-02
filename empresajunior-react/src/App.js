@@ -1048,7 +1048,7 @@ function App() {
         {/* CONTATO INICIAL */}
         <div
           style={{
-            marginTop: window.innerWidth <= 768 ? '23.5vh' : '-8vh',
+            marginTop: window.innerWidth <= 768 ? '26.5vh' : '-8vh',
             backgroundColor: '#ececec',
             padding: window.innerWidth <= 768 ? '16px' : '40px',
             display: 'flex',
