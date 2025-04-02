@@ -1042,6 +1042,7 @@ function App() {
           style={{
             marginTop: window.innerWidth <= 768 ? '27.5vh' : '-8vh',
             paddingTop: window.innerWidth <= 768 ? '30px' : '40px',
+            paddingBottom: window.innerWidth <= 768 ? '0px' : '39px',
             backgroundColor: '#ececec',
             display: 'flex',
             flexDirection: 'column',
@@ -1089,6 +1090,7 @@ function App() {
         <div
           style={{
             marginTop: window.innerWidth <= 768 ? '0vh' : '-8vh',
+            paddingTop: window.innerWidth <= 768 ? '30px' : '40px',
             backgroundColor: '#FFFFFF',
             padding: window.innerWidth <= 768 ? '0px' : '40px',
             display: 'flex',
@@ -1130,10 +1132,11 @@ function App() {
         {/* ENTREGA E EXECUÇÃO */}
         <div
           style={{
+            paddingTop: window.innerWidth <= 768 ? '30px' : '40px',
             marginTop: window.innerWidth <= 768 ? '0vh' : '-8vh',
             marginBottom: window.innerWidth <= 768 ? '0vh' : '-8vh',
             backgroundColor: '#ececec',
-            padding: window.innerWidth <= 768 ? '16px' : '40px',
+            padding: window.innerWidth <= 768 ? '0px' : '40px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-start',
