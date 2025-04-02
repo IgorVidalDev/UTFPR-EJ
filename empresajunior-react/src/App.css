@@ -873,7 +873,7 @@ section h5 {
     /* Fixa o conteúdo no canto esquerdo do footer */
     left: 20px;
     /* Margem da borda esquerda do footer */
-    bottom: 94vh;
+    bottom: 100vh;
     /* Distância da borda inferior do footer */
     font-weight: lighter;
     /* Fonte mais fina */
