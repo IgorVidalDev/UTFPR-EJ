@@ -136,4 +136,25 @@ button.next:hover {
   background-color: #66B3FF; /* Uma cor mais escura de verde para o hover */
 }
 
+@media screen and (max-width: 768px) {
+  .carrossel-title{
+    font-size: 8vh; /* Maior destaque para o título principal */
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  .carrossel-subtitle {
+    color: #32CD32; /* Verde */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0vh;
+  }
+
+  .carrossel-description{
+    font-size: 20px;
+  }
+
+  }
+
 

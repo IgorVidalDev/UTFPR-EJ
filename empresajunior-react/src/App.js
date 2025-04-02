@@ -1048,9 +1048,9 @@ function App() {
         {/* CONTATO INICIAL */}
         <div
           style={{
-            marginTop: window.innerWidth <= 768 ? '36vh' : '-8vh',
+            marginTop: window.innerWidth <= 768 ? '40vh' : '-8vh',
             backgroundColor: '#ececec',
-            padding: window.innerWidth <= 768 ? '10px' : '40px',
+            padding: window.innerWidth <= 768 ? '16px' : '40px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-start',
@@ -1096,9 +1096,9 @@ function App() {
         {/* PLANEJAMENTO */}
         <div
           style={{
-            marginTop: window.innerWidth <= 768 ? '3vh' : '-8vh',
+            marginTop: window.innerWidth <= 768 ? '-3vh' : '-8vh',
             backgroundColor: '#FFFFFF',
-            padding: window.innerWidth <= 768 ? '10px' : '40px',
+            padding: window.innerWidth <= 768 ? '16px' : '40px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-start',
@@ -1141,7 +1141,7 @@ function App() {
             marginTop: window.innerWidth <= 768 ? '0vh' : '-8vh',
             marginBottom: window.innerWidth <= 768 ? '0vh' : '-8vh',
             backgroundColor: '#ececec',
-            padding: window.innerWidth <= 768 ? '10px' : '40px',
+            padding: window.innerWidth <= 768 ? '16px' : '40px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-start',

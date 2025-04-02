@@ -1,8 +1,13 @@
 /* App.css */
+
 body {
   font-family: "Arial, sans-serif";
   margin: 0;
   padding: 0;
+}
+
+.menu-toggle {
+  display: none; /* Esconde o botão de menu hambúrguer por padrão */
 }
 
 header {
@@ -37,6 +42,13 @@ nav a {
 
 nav a:hover {
   color: #008136ce;
+}
+
+/* Os ícones de redes sociais voltam a aparecer em resoluções maiores */
+@media screen and (min-width: 769px) {
+  .social-icons {
+    display: flex;
+  }
 }
 
 .social-icons {
@@ -440,9 +452,22 @@ section h5 {
 
 /* Responsividade para dispositivos pequenos (celulares e tablets pequenos) */
 @media screen and (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    width: 115px;
+    height: auto;
+    padding-left: 6vh;
+    margin-bottom: -1.3vh;
+    }
+
   /* Formulário */
   .contact-section {
     padding: 1em 0.5em;
+    width: 85%;
   }
 
   #contact {
@@ -493,16 +518,31 @@ section h5 {
     padding: 2em 1em;
   }
 
+  /* #home {
+    height: 90vh;
+    display: block;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 5em;
+    padding-top: 30px;
+  } */
+
   #home .text {
     width: 100%;
     max-width: none;
     text-align: center;
   }
 
+  #home .text p { 
+    font-size: 16px !important;
+    }
+
   #home .image {
     margin-left: 0;
     margin-right: 0;
-    margin-top: 9.5vh;
+    margin-top: 68.5vh;
     width: 100%;
     height: auto;
     display: block;
@@ -510,13 +550,20 @@ section h5 {
     justify-content: center;
   }
 
-  #home h1 {
-    font-size: 2.5em;
-    padding-top: 20px;
-  }
+  #home {
+  height: 90vh;
+  display: block;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 5em;
+  padding-top: 30px;
+}
 
-  #home p {
-    font-size: 16px;
+  #home h1 {
+    font-size: 4.8em;
+    padding-top: 6px;
   }
 
   .services+section,
@@ -570,6 +617,60 @@ section h5 {
     flex: 1 1 100%;
     margin-top: 0;
   }
+
+
+
+    /* Estilos para o menu hambúrguer */
+.menu-toggle {
+  position: absolute;
+  top: 20px; /* Ajuste o valor conforme necessário para a distância do topo */
+  right: 20px; /* Ajuste o valor conforme necessário para a distância da direita */
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    width: 100%;
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease; /* Adiciona uma transição suave na altura */
+  }
+
+  nav.open {
+    display: block;
+    height: 300px;
+    
+  }
+
+  nav a {
+    text-align: center;
+    padding: 10px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  /* Esconde os ícones de redes sociais em dispositivos móveis */
+  .social-icons {
+    display: none !important; /* Garante que o display seja ocultado */
+  }
+
+/* Os ícones de redes sociais voltam a aparecer em resoluções maiores */
+@media screen and (min-width: 769px) {
+
+  .social-icons {
+    display: flex;
+  }
+}
 
   .footer {
     width: 100%;
