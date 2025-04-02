@@ -530,6 +530,7 @@ section h5 {
   #home h1 {
     font-size: 4.8em;
     padding-top: 6px;
+    text-align: center;
   }
 
   #home .text {
