@@ -859,6 +859,7 @@ section h5 {
   }
 
   .footer-container {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     /* Move toda a seção para a esquerda */
@@ -867,13 +868,12 @@ section h5 {
   }
 
   .footer-left {
-    width: 100%;
+    width: auto;
     display: flex;
-    position: absolute;
     /* Fixa o conteúdo no canto esquerdo do footer */
     left: 20px;
     /* Margem da borda esquerda do footer */
-    bottom: 100vh;
+    bottom: 74%;
     /* Distância da borda inferior do footer */
     font-weight: lighter;
     /* Fonte mais fina */
