@@ -1040,9 +1040,9 @@ function App() {
         {/* CONTATO INICIAL */}
         <div
           style={{
-            marginTop: window.innerWidth <= 768 ? '26.5vh' : '-8vh',
+            marginTop: window.innerWidth <= 768 ? '27.5vh' : '-8vh',
+            paddingTop: window.innerWidth <= 768 ? '30px' : '40px',
             backgroundColor: '#ececec',
-            padding: window.innerWidth <= 768 ? '16px' : '40px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-start',
@@ -1088,9 +1088,9 @@ function App() {
         {/* PLANEJAMENTO */}
         <div
           style={{
-            marginTop: window.innerWidth <= 768 ? '-3vh' : '-8vh',
+            marginTop: window.innerWidth <= 768 ? '0vh' : '-8vh',
             backgroundColor: '#FFFFFF',
-            padding: window.innerWidth <= 768 ? '16px' : '40px',
+            padding: window.innerWidth <= 768 ? '0px' : '40px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-start',
