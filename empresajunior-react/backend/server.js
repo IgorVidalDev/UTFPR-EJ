@@ -8,12 +8,11 @@ const app = express();
 const port = process.env.PORT || 5001;
 
 // Definir as origens permitidas
-const allowedOrigins = process.env.NODE_ENV === 'production'
-  ? ['https://utflorestalutfpr.com']
-  : ['http://localhost:3000'];
+const allowedOrigins = ['https://utflorestalutfpr.com'];  // URL exata do seu frontend
 
 const corsOptions = {
   origin: function (origin, callback) {
+    // Permite que qualquer origem que esteja na lista de origens permitidas faça requisição
     if (!origin || allowedOrigins.includes(origin)) {
       return callback(null, true);
     }
@@ -21,38 +20,33 @@ const corsOptions = {
   },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  credentials: true,  // Permitir cookies (se necessário)
 };
 
-// 1) Habilita CORS genérico
+// Habilitar CORS para todas as requisições
 app.use(cors(corsOptions));
 
-// 2) Parse JSON
+// Parse JSON
 app.use(bodyParser.json());
 
-// 3) Tratamento explícito de preflight (OPTIONS)
+// Tratar requisições preflight (OPTIONS) com cabeçalhos apropriados
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   if (!origin || allowedOrigins.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin || '');
+    res.header('Access-Control-Allow-Origin', origin || '*');  // Definir a origem permitida (não usar '*' para cookies)
   }
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Allow-Credentials', 'true');  // Permitir credenciais (se necessário)
 
+  // Responder à requisição OPTIONS (preflight)
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
   next();
 });
 
-// 4) Log das origens (debug)
-app.use((req, res, next) => {
-  console.log('Origin:', req.headers.origin);
-  next();
-});
-
-// 5) Rota de envio de e-mail
+// Rota de envio de e-mail
 app.post('/send-email', async (req, res) => {
   const { nome, assunto, telefone, email, necessidade } = req.body;
 

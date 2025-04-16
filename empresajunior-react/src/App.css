@@ -852,12 +852,10 @@ section h5 {
   .contact-section {
     flex-direction: column !important;
     padding-top: 3em !important;
+    margin-left: 1.4em !important;
   }
 
-  #contact .div-form{
-    margin-left: -5em !important;
-    text-align: justify;
-  }
+
 
   #contact .button-enviar{
     width: 50% !important;
@@ -882,7 +880,7 @@ section h5 {
 
   .contact-section input,
   .contact-section textarea {
-    width: 100% !important;
+    width: 90% !important;
   }
 
   .contact-section .button-enviar {
@@ -1298,9 +1296,9 @@ section h5 {
   #contact .div-form {
     display: block;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
+    text-align: justify;
     width: 100%;
-    padding-left: 2.1875rem;
     padding-bottom: 0.625rem;
   }
 
@@ -1313,7 +1311,7 @@ section h5 {
 
   #contact .input-form {
     background-color: #e1e7e3;
-    width: 80%;
+    width: 90% !important;
     margin-bottom: 0.9375rem;
     padding: 0.625rem;
     border-radius: 0.4375rem;
@@ -1339,7 +1337,7 @@ section h5 {
 
   #contact textarea {
     background-color: #e1e7e3;
-    width: 100%;
+    width: 10%;
     margin-bottom: 0.9375rem;
     padding: 0.625rem;
     border-radius: 0.4375rem;
