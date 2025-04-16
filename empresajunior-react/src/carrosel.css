@@ -2,10 +2,10 @@
 .carrossel-container {
   position: relative;
   width: 100%;
-  height: 650px;
+  height: 40.625rem;
   /* Altura do carrossel */
   overflow: hidden;
-  margin-top: -100px;
+  margin-top: -6.25rem;
   /* Faz com que o header sobreponha a parte superior da imagem */
 }
 
@@ -52,16 +52,16 @@
   transform: translate(-50%, -50%);
   color: white;
   background-color: transparent;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
   width: 70%;
-  max-width: 1000px;
+  max-width: 62.5rem;
   z-index: 2; /* Garante que o texto (e o botão) fiquem acima da imagem */
 }
 
 .carrossel-subtitle {
   color: #32CD32; /* Verde */
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: bold;
   margin-bottom: 0vh;
 }
@@ -69,12 +69,12 @@
 .carrossel-title {
   font-size: 11vh; /* Maior destaque para o título principal */
   font-weight: bold;
-  margin-bottom: 10px;
-  margin-top: 0px;
+  margin-bottom: 0.625rem;
+  margin-top: 0;
 }
 
 .carrossel-description {
-  font-size: 28px; /* Texto maior para melhor leitura */
+  font-size: 1.75rem; /* Texto maior para melhor leitura */
   white-space: pre-line; /* Mantém a quebra de linha do \n */
 
 }
@@ -91,19 +91,19 @@ button.next {
   color: rgb(255, 255, 255);
   border: none;
   font-size: 2rem;
-  padding: 10px;
+  padding: 0.625rem;
   cursor: pointer;
   z-index: 20;
   /* Garante que as setas fiquem visíveis sobre a imagem */
 }
 
 button.prev {
-  left: 10px;
+  left: 0.625rem;
   /* Posição da seta anterior à esquerda */
 }
 
 button.next {
-  right: 10px;
+  right: 0.625rem;
   /* Posição da seta seguinte à direita */
 }
 
@@ -115,13 +115,13 @@ button.next:hover {
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 .carrosel-button {
   background-color: #32CD32;
-  border: 2px solid #28a745;
+  border: 0.125rem solid #28a745;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem;
   border: none;
-  border-radius: 22px;
+  border-radius: 1.375rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-transform: uppercase;
@@ -129,7 +129,7 @@ button.next:hover {
   position: relative;
   z-index: 9999;
   pointer-events: auto;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .carrosel-button:hover {
@@ -139,35 +139,35 @@ button.next:hover {
 @media screen and (max-width: 768px) {
 
   .carrossel-container{
-    margin-bottom: 40px;
+    margin-bottom: 3em;
   }
   .carrossel-title{
     font-size: 7vh; /* Maior destaque para o título principal */
     font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 0px;
+    margin-bottom: 0.625rem;
+    margin-top: 0;
   }
 
   .carrossel-subtitle {
     color: #32CD32; /* Verde */
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0vh;
   }
 
   .carrossel-description{
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .carrosel-button {
     background-color: #32CD32;
-    border: 2px solid #28a745;
+    border: 0.125rem solid #28a745;
     color: white;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
-    padding: 7px 20px;
+    padding: 0.4375rem 1.25rem;
     border: none;
-    border-radius: 22px;
+    border-radius: 1.375rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-transform: uppercase;
@@ -175,7 +175,7 @@ button.next:hover {
     position: relative;
     z-index: 9999;
     pointer-events: auto;
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 
   }

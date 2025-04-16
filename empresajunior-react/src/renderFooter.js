@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 
 const renderFooter = () => {
@@ -26,12 +27,12 @@ const renderFooter = () => {
 
   return (
     <footer className="footer">
-      <div className="footer-container">
         <div className="footer-left">
           <span style={{ fontSize: '14px', letterSpacing: '0.05em' }}>
             UTFlorestal © 2021
           </span>
         </div>
+      <div className="footer-container">
         <div className="footer-center">
           <div className="footer-section">
             <h3>Institucional</h3>

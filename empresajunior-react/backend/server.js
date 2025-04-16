@@ -5,45 +5,54 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
-// Definir as origens permitidas de acordo com o ambiente
-let allowedOrigins = [];
-
-if (process.env.NODE_ENV === 'production') {
-  // Em produção, permitir o domínio do frontend hospedado no Render e também localhost para testes
-  allowedOrigins = ['https://utfpr-ej-1.onrender.com', 'http://localhost:3000'];
-} else {
-  // Durante o desenvolvimento, permitir o localhost
-  allowedOrigins = ['http://localhost:3000'];
-}
+// Definir as origens permitidas
+const allowedOrigins = process.env.NODE_ENV === 'production'
+  ? ['https://utflorestalutfpr.com']
+  : ['http://localhost:3000'];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    // Permite requisições sem origin (por exemplo, via Postman)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1) {
+    if (!origin || allowedOrigins.includes(origin)) {
       return callback(null, true);
-    } else {
-      return callback(new Error('Not allowed by CORS'));
     }
+    return callback(new Error(`CORS policy: origin ${origin} not allowed`));
   },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,
+  credentials: true
 };
 
+// 1) Habilita CORS genérico
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // Suporte ao preflight do CORS
 
+// 2) Parse JSON
 app.use(bodyParser.json());
 
-// Middleware para logar o header "Origin"
+// 3) Tratamento explícito de preflight (OPTIONS)
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (!origin || allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin || '');
+  }
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+  next();
+});
+
+// 4) Log das origens (debug)
 app.use((req, res, next) => {
   console.log('Origin:', req.headers.origin);
   next();
 });
 
+// 5) Rota de envio de e-mail
 app.post('/send-email', async (req, res) => {
   const { nome, assunto, telefone, email, necessidade } = req.body;
 
@@ -65,18 +74,15 @@ app.post('/send-email', async (req, res) => {
       Email: ${email}
       Necessidade: ${necessidade}
     `,
+    replyTo: email && email.trim() ? email : undefined,
   };
-
-  if (email && email.trim() !== '') {
-    mailOptions.replyTo = email;
-  }
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).send({ message: 'Email enviado com sucesso!' });
+    return res.status(200).json({ message: 'Email enviado com sucesso!' });
   } catch (error) {
     console.error('Erro ao enviar o e-mail:', error);
-    res.status(500).send({ message: 'Erro ao enviar o email.' });
+    return res.status(500).json({ message: 'Erro ao enviar o email.' });
   }
 });
 
