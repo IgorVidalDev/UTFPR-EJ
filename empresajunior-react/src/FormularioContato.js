@@ -271,7 +271,7 @@ function FormularioContato() {
                     }}
                     disabled={isSubmitting} // Desabilita o botão durante o envio
                   >
-                    {isSubmitting ? 'Enviando...' : 'Enviar'}
+                    <span>{isSubmitting ? 'Enviando...' : 'Enviar'}</span>
                   </button>
                 </form>
               </div>
@@ -386,7 +386,7 @@ function FormularioContato() {
             }}
             disabled={isSubmitting} // Desabilita o botão durante o envio
           >
-            {isSubmitting ? 'Enviando...' : 'Enviar'}
+            <span>{isSubmitting ? 'Enviando...' : 'Enviar'}</span>
           </button>
         </form>
       </div>

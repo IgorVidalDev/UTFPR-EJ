@@ -160,10 +160,11 @@ button.next:hover {
   }
 
   .carrosel-button {
+    width: auto;
     background-color: #32CD32;
     border: 0.125rem solid #28a745;
     color: white;
-    font-size: 0.875rem;
+    font-size: 0.780rem;
     font-weight: bold;
     padding: 0.4375rem 1.25rem;
     border: none;
