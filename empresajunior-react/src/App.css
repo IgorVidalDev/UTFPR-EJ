@@ -849,6 +849,864 @@ section h5 {
   color: #27331B;
 }
 
+@media screen and (min-width: 1500px) and (max-width: 1570px) {
+
+  /* App.css */
+
+body {
+  width: 100%;
+  font-family: "Arial, sans-serif";
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.menu-toggle {
+  display: none;
+  /* Esconde o botão de menu hambúrguer por padrão */
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+  justify-Content: 'space-between'
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  /* Alinha os links para a direita */
+  gap: 2rem;
+  flex: 1;
+}
+
+nav a {
+  width: 5em;
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.375rem;
+  padding: 0.5rem 1.0rem;
+  border-radius: 0.3125rem;
+  transition: color 0.3s;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: -5vh;
+  font-weight: bold;
+}
+
+
+nav a:hover {
+  color: #008136ce;
+}
+
+#nossos-servicos {
+  border-Top: 0.25rem solid #27331B;
+  padding-Top: 0.625rem;
+  width: 100%;
+  padding-Left: 0;
+}
+
+/* StepsSection.css */
+
+/* Container geral: três blocos lado a lado, sem espaçamentos externos ou entre eles */
+.steps-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;  /* estica todos à mesma altura */
+  width: 100%;
+  box-sizing: border-box;
+  gap: 0;                /* sem espaço entre os blocos */
+  margin: 0;             /* sem margem acima/abaixo */
+  padding: 0;            /* sem padding interno */
+  flex-wrap: nowrap;     /* nunca empilha */
+}
+
+/* Cada bloco ocupa 1/3 da largura, sem espaçamento externo */
+.step-box {
+  flex: 1;               /* divide igualmente em três */
+  min-width: 0;          /* permite quebra interna de texto */
+  box-sizing: border-box;
+  padding: 2.5rem;         /* padding interno uniforme */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background-clip: padding-box;
+}
+
+/* Cores de fundo */
+.step-initial,
+.step-delivery {
+  background-color: #ececec;
+}
+
+.step-planning {
+  background-color: #ffffff;
+}
+
+/* Títulos */
+.step-box h3 {
+  font-family: 'Avenir Heavy', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #303030;
+  margin: 0 0 1.25rem;
+}
+
+/* Parágrafos */
+.step-box p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #303030;
+  margin: 0 0 0.625rem;
+  word-wrap: break-word;
+}
+
+/* Lista (apenas no primeiro bloco) */
+.step-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Itens da lista */
+.step-box ul li {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #303030;
+  margin-bottom: 0.3125rem;
+}
+
+.contato-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-wrap: wrap;      /* permite quebrar linha em telas pequenas */
+  justify-content: center;
+}
+
+.icones {
+  width: 2.5rem;
+  height: auto;
+  object-fit: contain;
+  /* remove margin-top antigo */
+  margin: 0;
+  /* “desce” o ícone em relação ao centro */
+  transform: translateY(8px);
+}
+
+.form-button {
+  background-color: #32CD32;
+  border: 0.125rem solid #28a745;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.625rem 1rem;
+  border: none;
+  border-radius: 1.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+  margin-top: 1rem;
+}
+
+.form-button:hover {
+  background-color: #66B3FF;
+}
+
+/* Os ícones de redes sociais voltam a aparecer em resoluções maiores */
+@media screen and (min-width: 769px) {
+  .social-icons {
+    display: flex;
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.625rem;
+  /* Espaçamento entre os ícones */
+  margin-right: 15.625rem;
+  /* Margem à direita dos ícones */
+  justify-content: flex-end;
+  /* Garante que os ícones fiquem à direita */
+  margin-left: 11.25rem;
+  margin-bottom: -5vh;
+}
+
+.social-icons a {
+  font-size: 2.125rem;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0073e6;
+  /* Cor ao passar o mouse */
+}
+
+.social-icons img {
+  width: 1.875rem;
+  /* ajuste conforme necessário */
+  height: 1.875rem;
+}
+
+.logo {
+  width: 7.1875rem;
+  height: auto;
+  padding: 0em 7em 0em 2em;
+}
+
+/* Outras seções */
+section {
+  padding: 1.25rem;
+}
+
+/* Garanta que o HTML e o Body ocupem toda a altura da tela */
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  /* Isso vai garantir que os elementos se empurrem */
+}
+
+/* Container principal (componente ou div que envolve o conteúdo e footer) */
+.main-container {
+  flex: 1;
+  /* Faz o conteúdo ocupar o espaço restante */
+}
+
+#contact .div-pai {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem 0 4rem;
+  border: 0.0625rem solid rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  background-color: #ececec;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  max-width: 37.5rem;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+#contact textarea {
+  background-color: #e1e7e3;
+  width: 100%;
+  margin-bottom: 0.9375rem;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #ddd;
+  box-sizing: border-box;
+  text-align: left;
+  height: 9.375rem;
+  resize: none;
+
+}
+
+.quadrado-formulario{
+  padding: 20px;
+  background-color: #ececec;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+#contact .div-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1.875rem;
+}
+
+#contact .label-form {
+  color: #3f7652;
+  text-align: left;
+  display: block;
+  margin-bottom: 0.3125rem;
+}
+
+#contact .input-form {
+  background-color: #e1e7e3;
+  width: 100%;
+  margin-bottom: 0.9375rem;
+  padding: 0.625rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid #ddd;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.contact-section h2 {
+  color: #3f7652;
+  font-family: 'Poppins' sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.875rem;
+}
+
+#contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quem-somos h4 {
+  width: 50%;
+  font-size: 2.1875rem;
+  text-align: left;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 13%;
+}
+
+.quem-somos-descricao {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 80%; /* Ou 100% se quiser ocupar toda a tela */
+  margin: 0 auto;
+  gap: 7%; /* Espaço entre os dois textos */
+}
+
+.quem-somos-desc-esquerda,
+.quem-somos-desc-direita {
+  width: 49%; /* Cada um ocupa metade, somando quase 100% */
+}
+
+.quem-somos-desc-esquerda h5,
+.quem-somos-desc-direita h5 {
+  text-align: justify;
+  font-size: 1.125rem;
+  line-height: 1.6em;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+  margin: 0;
+}
+
+.div-3-conjuntos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.div-3-conjuntos h6 {
+  margin-bottom: 0.9375rem;
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #27331B;
+  line-height: 1.0em;
+  letter-spacing: 0.1em;
+  font-family: lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif;
+  font-weight: 900;
+}
+
+.div-3-conjuntos h5 {
+  width: 50%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.125rem;
+  line-height: 1.6em;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+  margin-top: 0.625rem;
+  margin-bottom: 5vh;
+}
+
+.div-3-conjuntos ul{
+  width: 50%;
+  margin: 0.625rem auto 5vh auto;
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 1.6em;
+  letter-spacing: 0;
+  font-weight: normal;
+  list-style-type: disc;
+  padding: 0;
+  padding-left: 1.25rem;
+}
+
+.sub-div-3-conjuntos {
+  text-align: center;
+  width: 33.33%;
+}
+
+.div-equipe {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem 5%;
+}
+
+.equipe-texto {
+  flex: 1;
+  text-align: left;
+}
+
+.equipe-imagem {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15vh;
+}
+
+.equipe-imagem img {
+  width: 100%;
+  max-width: 60rem; /* aumente esse valor conforme quiser */
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+.div-equipe h1 {
+  font-family: lulo-clean-w01-one-bold, lulo-clean-w05-one-bold, sans-serif;
+  color: #2F2E2E;
+  font-size: 3rem;
+  margin: 1% 0% 5% 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.div-equipe-descricao {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: justify;
+  width: 100%;
+  letter-spacing: 0.03em;
+  line-height: 1.5em;
+  margin: 1rem;
+}
+
+.div-equipe-span {
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+  .Oferecemos-h4{
+    width: 85%;
+    font-size: 2.375rem;
+    text-align: justify;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+/* Estilos do Footer */
+.footer {
+  width: 100%;
+  background-color: #ececec;
+  color: black;
+  text-align: center;
+  z-index: 1000;
+  position: relative;
+  /* Para garantir o controle da posição interna */
+  padding: 2.5rem 0;
+  /* Padding geral, aumentando o espaço ao redor */
+  min-height: 25rem;
+  /* Aumenta a altura mínima do footer para dar mais espaço */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+}
+
+.footer-left {
+  position: absolute;
+  /* Fixa o conteúdo no canto esquerdo do footer */
+  left: 1.25rem;
+  /* Margem da borda esquerda do footer */
+  bottom: 51vh;
+  /* Distância da borda inferior do footer */
+  font-weight: lighter;
+  /* Fonte mais fina */
+  font-size: 0.75rem;
+  /* Fonte pequena */
+  letter-spacing: 0.05em;
+  /* Ajuste para espaçamento */
+  margin-bottom: 13vh;
+  color: #595959;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 0;
+  /* Faz a seção central crescer para ocupar o espaço disponível */
+  text-align: left;
+}
+
+.footer-section {
+  margin: 0 3.125rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 0.625rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.125rem;
+  letter-spacing: 0.1em;
+}
+
+.footer-center li {
+  margin: 0.3125rem 0rem;
+
+}
+
+.footer-section ul li {
+  line-height: 1.5;
+}
+
+.footer-center a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-center a:hover {
+  text-decoration: underline;
+}
+
+.footer-right {
+  flex-basis: 20%;
+  width: 2.125rem;
+  height: 30vh;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-right li {
+  margin: 0.625rem 0;
+  width: 20vh;
+}
+
+.footer-right a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-right img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.footer-right a:hover {
+  background-color: #f2f2f2;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  position: absolute;
+  /* Coloca o texto na parte inferior do footer */
+  bottom: 0;
+  /* Fixa a posição na parte inferior */
+  width: 100%;
+  /* Largura total */
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  letter-spacing: 0.05em;
+  color: #595959;
+  padding: 0.3125rem 0em;
+  /* Ajusta o padding para não deixar o texto colado na borda */
+  margin-top: 0.625rem;
+}
+
+.footer-bottom span {
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.active {
+  color: green;
+  /* Cor verde para o link ativo */
+  font-weight: bold;
+  /* Negrito para destacar */
+}
+
+
+#home {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 0em 0 1rem 10em;
+  margin-top: -1rem;
+  margin-bottom: -1.5rem;
+}
+
+#home .text {
+  width: 100%;
+  max-width: 35rem;
+  height: 100%;
+}
+
+#home .text span {
+  font-weight: 800;
+}
+
+#home .image {
+  margin-left: 2%;
+  margin-right: -5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+#home .image img {
+  object-fit: cover;
+  width: 100%;
+  height: 101vh;
+}
+
+#home h1 {
+  font-weight: 300;
+  color: #2F2E2E;
+  font-size: 3.6em;
+  max-width: 34.375rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+#home p {
+  font-weight: 300;
+  color: #525252e5;
+  font-size: 1.125rem;
+  max-width: 34.375rem;
+  text-align: justify;
+  font-family: 'avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif';
+  letter-spacing: 0.0625rem;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#services {
+  scroll-margin-top: 50vh;
+  /* ajuste esse valor conforme necessário */
+}
+
+.services h1 {
+  font-size: 3.25rem;
+  letter-spacing: 0.05em;
+  line-height: normal;
+  margin: 0;
+  color: rgb(39, 51, 27);
+}
+
+.services h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #2f2e2e;
+  font-size: 1.875rem;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.services button {
+  background-color: rgb(8, 128, 12);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.625rem 1.125rem;
+  border: none;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+}
+
+.services button:hover {
+  background-color: #66B3FF;
+}
+
+.services p {
+  line-height: 1.6em;
+  margin-top: 0;
+  text-align: justify;
+  font-weight: 300;
+  color: #525252e5;
+  font-size: 1.125rem;
+  font-family: 'avenir-lt-w01_35-light1475496, avenir-lt-w05_35-light, sans-serif';
+  letter-spacing: 0.0625rem;
+  width: 49%;
+}
+
+section h5 {
+  width: 80%;
+  text-align: justify;
+  font-weight: normal;
+  font-size: 1.1875rem;
+  letter-spacing: 0.05em;
+  line-height: 1.6em;
+  margin-top: 1.5625rem;
+  margin-bottom: 0;
+}
+
+
+.contact-section {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  scroll-margin-top: 10rem;
+}
+
+.button-enviar {
+  position: relative;
+  overflow: hidden; /* esconde o ::before fora do botão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  padding: 0.625rem 1.25rem;
+  background-color: #3f7652; /* cor base */
+  color: #fff;
+  border-radius: 0.5125rem !important;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 0 auto 2.5rem;
+  z-index: 1;
+}
+
+.button-enviar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, #4bb674 50%, transparent 100%);
+  transform: skewX(-20deg);
+  transition: all 1.3s ease;
+  z-index: 0;
+}
+
+.button-enviar:hover::before {
+  left: 100%;
+}
+
+.button-enviar:hover {
+  background-color: #3f7652; /* mantém a cor base no hover */
+  transform: scale(1.03);
+}
+ 
+.button-enviar span {
+  position: relative;
+  z-index: 1; /* garante que o texto fique acima do ::before */
+}
+
+/* FormText.css */
+
+/* Container */
+.form-text__container {
+  position: absolute;
+  top: -16.2vh;
+  left: 0.625rem;
+  text-align: left;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 100;
+  line-height: 1.2;
+  font-stretch: condensed;
+}
+
+/* Título */
+.form-text__title {
+  font-size: 1.3125rem;
+  line-height: normal;
+}
+
+/* Texto */
+.form-text__text {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.01875rem;
+  color: #27331B;
+}
+
+/* Texto do telefone */
+.form-text__phone {
+  font-size: 2.1875rem;
+  color: #000;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: #27331B;
+}
+
+/* Link de email */
+.form-text__email-link {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: #27331B;
+}
+
+
+
+}
 
 /* Responsividade para dispositivos móveis */
 @media screen and (max-width: 480px) {
