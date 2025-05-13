@@ -715,6 +715,7 @@ html {
   text-transform: uppercase;
   font-family: 'Arial', sans-serif;
   font-weight: 600;
+  margin-bottom: 1em;
 }
 
 .services button:hover {
@@ -1824,7 +1825,6 @@ section h5 {
 
   .contact-section .form-text__text {
     display: inline-block;
-    margin-bottom: 5px;
     font-size: 1.7rem;
   }
 
@@ -2175,6 +2175,7 @@ section h5 {
     justify-content: center;
     align-items: center;
     min-width: 300px;
+    margin-top: 2em;
   }
 
   #contact .contact-section {

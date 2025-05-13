@@ -48,7 +48,16 @@ app.use((req, res, next) => {
 
 // Rota de envio de e-mail
 app.post('/send-email', async (req, res) => {
-  const { nome, assunto, telefone, email, necessidade } = req.body;
+  const {
+    nome,
+    assunto,
+    telefone,
+    email,
+    necessidade,
+    municipio,
+    estado,
+    tamanhoArea
+  } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -65,6 +74,9 @@ app.post('/send-email', async (req, res) => {
     text: `
       Nome: ${nome}
       Telefone: ${telefone}
+      Município: ${municipio}
+      Estado: ${estado}
+      Tamanho da área: ${tamanhoArea}
       Email: ${email}
       Necessidade: ${necessidade}
     `,

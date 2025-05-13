@@ -5,6 +5,7 @@ import renderFooter from './renderFooter';
 import renderHeader from './renderHeader';
 import Noticias from './Noticias';
 import FormularioContato from './FormularioContato';
+import Chatbot from './Chatbot';
 
 function App() {
   // Estado para os dados do formulário
@@ -18,6 +19,9 @@ function App() {
 
   // Estado para armazenar o hash atual (por exemplo, "#contact")
   const [activeHash, setActiveHash] = useState(window.location.hash);
+
+  // Estado para controlar abertura do chatbot via botão
+  const [openChat, setOpenChat] = useState(false);
 
   // Atualiza o estado quando o hash da URL muda
   useEffect(() => {
@@ -63,6 +67,14 @@ function App() {
       alert(error.message || 'Erro ao enviar o email.');
     }
   };
+
+  // dispara abertura do chatbot
+  const handleOpenChat = () => setOpenChat(true);
+
+  // helper para renderizar chatbot em todas as rotas
+  const renderChatbot = () => (
+    <Chatbot openChat={openChat} onOpen={() => setOpenChat(false)} />
+  );
 
   if (activeHash === "#about") {
     return (
@@ -179,7 +191,7 @@ function App() {
     <div className="div-equipe-descricao">
       Nosso time é formado por 10 membros, sendo distribuídos em:<br />
       <div className="div-equipe-span">- 1 Presidente;<br /></div>
-      <div className="div-equipe-span">- 7 Diretores;<br /></div>
+      <div className="div-equipe-span">- 6 Diretores;<br /></div>
       <div className="div-equipe-span">- 3 Gerentes.<br /></div>
       Além disso, é orientada por 1 professor doutor, sendo ele:<br /><br />
       - Prof. Dr. Eleandro José Brun;
@@ -194,6 +206,7 @@ function App() {
         <FormularioContato />      
         </main>
         {renderFooter()}
+        <Chatbot />
       </div>
     );
   }
@@ -242,45 +255,46 @@ function App() {
               garantir a conformidade legal e ambiental da propriedade. Por isso, é importante contar
               com profissionais especializados para que todos os procedimentos sejam realizados de forma correta e eficiente.
             </p>
-            <button>SAIBA MAIS</button>
+            <button onClick={handleOpenChat}>SAIBA MAIS</button>
           </section>
           <section className='services'>
             <h2>Georreferenciamento</h2>
             <p>
               Os serviços de georreferenciamento garantem a documentação precisa e atualizada do imóvel rural, permitindo sua regularização junto aos órgãos competentes.
             </p>
-            <button>SAIBA MAIS</button>
+            <button onClick={handleOpenChat}>SAIBA MAIS</button>
           </section>
           <section className='services' style={{ backgroundColor: '#ececec' }}>
             <h2>Inventário Florestal</h2>
             <p>
               Essencial para a gestão sustentável das florestas, o inventário avalia o estoque de recursos e identifica áreas de preservação.
             </p>
-            <button>SAIBA MAIS</button>
+            <button onClick={handleOpenChat}>SAIBA MAIS</button>
           </section>
           <section className='services'>
             <h2>Programa de Recuperação de Áreas Degradadas (PRAD)</h2>
             <p>
               Focado na recuperação de áreas degradadas, garantindo a conservação da biodiversidade e a sustentabilidade ambiental.
             </p>
-            <button>SAIBA MAIS</button>
+            <button onClick={handleOpenChat}>SAIBA MAIS</button>
           </section>
           <section className='services' style={{ backgroundColor: '#ececec' }}>
             <h2>Recuperação de Nascentes</h2>
             <p>
               Fundamental para a conservação do meio ambiente, assegurando a disponibilidade de água em regiões escassas.
             </p>
-            <button>SAIBA MAIS</button>
+            <button onClick={handleOpenChat}>SAIBA MAIS</button>
           </section>
           <section className='services'>
             <h2>Projetos Paisagísticos</h2>
             <p>
               Projetos que transformam ambientes externos em espaços aconchegantes e funcionais, valorizando o imóvel e promovendo o bem-estar.
             </p>
-            <button>SAIBA MAIS</button>
+            <button onClick={handleOpenChat}>SAIBA MAIS</button>
           </section>
         </main>
         {renderFooter()}
+        {renderChatbot()}
       </div>
     );
   }
@@ -291,6 +305,7 @@ function App() {
         {renderHeader()}
         <Noticias />
         {renderFooter()}
+        <Chatbot />
       </>
     );
   }
@@ -303,6 +318,7 @@ function App() {
         {renderHeader()}
         <FormularioContato />
         {renderFooter()}
+        <Chatbot />
       </div>
     );
   }
@@ -437,7 +453,7 @@ function App() {
           permanente e a elaboração de planos <br /> de manejo florestal. É
           importante contar com profissionais especializados e
           qualidade dos dados coletados.</p>
-        <button>SAIBA MAIS</button>
+          <button onClick={handleOpenChat}>SAIBA MAIS</button>
       </section>
       <section id='Georreferenciamento' className='services'>
         <h2>Georreferenciamento</h2>
@@ -448,7 +464,7 @@ function App() {
           profissionais especializados e equipamentos modernos para garantir a precisão e qualidade dos
           dados coletados.
         </p>
-        <button>SAIBA MAIS</button>
+        <button onClick={handleOpenChat}>SAIBA MAIS</button>
       </section>
       <section className='services' style={{ backgroundColor: '#ececec' }}>
         <h2>Inventário Florestal</h2>
@@ -459,7 +475,7 @@ function App() {
           profissionais especializados e equipamentos modernos para garantir a precisão e qualidade dos
           dados coletados.
         </p>
-        <button>SAIBA MAIS</button>
+        <button onClick={handleOpenChat}>SAIBA MAIS</button>
       </section>
       <section id='Recuperação' className='services'>
         <h2>Programa de Recuperação de Áreas Degradadas (PRAD)</h2>
@@ -469,7 +485,7 @@ function App() {
           contar com profissionais especializados e equipamentos modernos para garantir a eficácia das
           medidas adotadas e a qualidade dos resultados alcançados.
         </p>
-        <button>SAIBA MAIS</button>
+        <button onClick={handleOpenChat}>SAIBA MAIS</button>
       </section>
       <section id='Nascentes' className='services' style={{ backgroundColor: '#ececec' }}>
         <h2>Recuperação de Nascentes</h2>
@@ -479,7 +495,7 @@ function App() {
           profissionais especializados e experientes, que possam oferecer soluções personalizadas e
           adequadas às necessidades de cada caso.
         </p>
-        <button>SAIBA MAIS</button>
+        <button onClick={handleOpenChat}>SAIBA MAIS</button>
       </section>
       <section className='services'>
         <h2>Projetos Paisagísticos</h2>
@@ -489,10 +505,11 @@ function App() {
           usuários. É fundamental contar com profissionais capacitados e experientes, que possam oferecer
           soluções personalizadas e adequadas às necessidades de cada projeto.
         </p>
-        <button>SAIBA MAIS</button>
+        <button onClick={handleOpenChat}>SAIBA MAIS</button>
       </section>
       <FormularioContato />
       {renderFooter()}
+      {renderChatbot()}
     </div>
 
 

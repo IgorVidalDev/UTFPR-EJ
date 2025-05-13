@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 
@@ -8,7 +8,7 @@ function FormularioContato() {
 
   const [formData, setFormData] = useState({
     nome: '',
-    telefone: '', 
+    telefone: '',
     assunto: '',
     email: '',
     necessidade: ''
@@ -63,8 +63,10 @@ function FormularioContato() {
       setFormData({
         nome: '',
         telefone: '',
+        municipio: '',
         assunto: '',
         email: '',
+        tamanhoArea: '',
         necessidade: '',
       });
 
@@ -125,7 +127,7 @@ function FormularioContato() {
                 ></iframe>
               </div>
             </div>
-  
+
             {/* Coluna Direita: Container com o texto e o formulário */}
             <div
               style={{
@@ -144,12 +146,12 @@ function FormularioContato() {
                     contatos
                   </span>
                 </h4>
-  
+
                 <h1>
                   <span className="form-text__text">Tel: (46)</span>
                   <span className="form-text__phone">99973-0867</span>
                 </h1>
-  
+
                 <span style={{ fontSize: '21px' }}>
                   <span className="form-text__text">
                     E-mail:&nbsp;
@@ -162,7 +164,7 @@ function FormularioContato() {
                   </span>
                 </span>
               </div>
-  
+
               <div className="quadrado-formulario">
                 <h2
                   style={{
@@ -178,7 +180,7 @@ function FormularioContato() {
                 <form onSubmit={handleSubmit}>
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_subject" value="Novo contato via formulário" />
-  
+
                   <div className="div-form">
                     <div style={{ flex: '1' }}>
                       <label className="label-form" htmlFor="nome">
@@ -211,7 +213,36 @@ function FormularioContato() {
                       />
                     </div>
                   </div>
-  
+
+                  <div className="div-form">
+                    <div style={{ flex: 1 }}>
+                      <label className="label-form" htmlFor="municipio">Município *</label>
+                      <input
+                        className="input-form"
+                        id="municipio"
+                        type="text"
+                        name="municipio"
+                        required
+                        placeholder="Digite o município"
+                        value={formData.municipio}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div style={{ flex: 1, textAlign: 'right' }}>
+                      <label className="label-form" htmlFor="estado">Estado *</label>
+                      <input
+                        className="input-form"
+                        id="estado"
+                        type="text"
+                        name="estado"
+                        required
+                        placeholder="Digite o estado"
+                        value={formData.estado}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+
                   <div className="div-form">
                     <div style={{ flex: '1' }}>
                       <label className="label-form" htmlFor="assunto">
@@ -243,7 +274,7 @@ function FormularioContato() {
                       />
                     </div>
                   </div>
-  
+
                   <div style={{ flex: '1', width: '100%' }}>
                     <label className="label-form" htmlFor="necessidade">
                       Descreva sua necessidade
@@ -257,7 +288,7 @@ function FormularioContato() {
                       onChange={handleChange}
                     ></textarea>
                   </div>
-  
+
                   <button
                     className="button-enviar"
                     type="submit"
@@ -281,7 +312,7 @@ function FormularioContato() {
       </div>
     );
   }
-  
+
   // Caso contrário, renderiza apenas o formulário padrão
   return (
     <section id="contact" className="contact-section">
@@ -289,11 +320,11 @@ function FormularioContato() {
         <h2>
           Entre em contato e <br /> solicite um(a) análise/orçamento
         </h2>
-  
+
         <form onSubmit={handleSubmit}>
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_subject" value="Novo contato via formulário" />
-  
+
           <div className="div-form">
             <div style={{ flex: '1' }}>
               <label className="label-form" htmlFor="nome">
@@ -326,7 +357,7 @@ function FormularioContato() {
               />
             </div>
           </div>
-  
+
           <div className="div-form">
             <div style={{ flex: '1' }}>
               <label className="label-form" htmlFor="assunto">
@@ -358,7 +389,7 @@ function FormularioContato() {
               />
             </div>
           </div>
-  
+
           <div style={{ flex: '1', width: '100%' }}>
             <label className="label-form" htmlFor="necessidade">
               Descreva sua necessidade
@@ -372,7 +403,7 @@ function FormularioContato() {
               onChange={handleChange}
             ></textarea>
           </div>
-  
+
           <button
             className="button-enviar"
             type="submit"
