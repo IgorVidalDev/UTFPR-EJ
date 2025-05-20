@@ -35,4 +35,4 @@ O projeto incluiu:
 
 ---
 
-**Projeto realizado como parte da participação na Empresa Júnior da UTFPR.**
+**Projeto desenvolvido por mim como desenvolvedor para a Empresa Júnior da UTFPR.**
