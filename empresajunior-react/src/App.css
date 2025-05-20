@@ -1,5 +1,3 @@
-/* App.css */
-
 body {
   width: 100%;
   font-family: "Arial, sans-serif";
@@ -10,7 +8,6 @@ body {
 
 .menu-toggle {
   display: none;
-  /* Esconde o botão de menu hambúrguer por padrão */
 }
 
 header {
@@ -26,7 +23,6 @@ header {
 nav {
   display: flex;
   justify-content: flex-end;
-  /* Alinha os links para a direita */
   gap: 2rem;
   flex: 1;
 }
@@ -55,27 +51,33 @@ nav a:hover {
   padding-Left: 0;
 }
 
-/* StepsSection.css */
+.div-widget-facebook{
+  flex: '0 0 300px';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15em;
+}
 
 /* Container geral: três blocos lado a lado, sem espaçamentos externos ou entre eles */
 .steps-section {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;  /* estica todos à mesma altura */
+  align-items: stretch;
   width: 100%;
   box-sizing: border-box;
-  gap: 0;                /* sem espaço entre os blocos */
-  margin: 0;             /* sem margem acima/abaixo */
-  padding: 0;            /* sem padding interno */
-  flex-wrap: nowrap;     /* nunca empilha */
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
 }
 
 /* Cada bloco ocupa 1/3 da largura, sem espaçamento externo */
 .step-box {
-  flex: 1;               /* divide igualmente em três */
-  min-width: 0;          /* permite quebra interna de texto */
+  flex: 1;
+  min-width: 0;
   box-sizing: border-box;
-  padding: 2.5rem;         /* padding interno uniforme */
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,7 +96,6 @@ nav a:hover {
   background-color: #ffffff;
 }
 
-/* Títulos */
 .step-box h3 {
   font-family: 'Avenir Heavy', sans-serif;
   font-size: 1.5rem;
@@ -103,7 +104,6 @@ nav a:hover {
   margin: 0 0 1.25rem;
 }
 
-/* Parágrafos */
 .step-box p {
   font-size: 1.125rem;
   line-height: 1.6;
@@ -112,14 +112,12 @@ nav a:hover {
   word-wrap: break-word;
 }
 
-/* Lista (apenas no primeiro bloco) */
 .step-box ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Itens da lista */
 .step-box ul li {
   font-size: 1.125rem;
   line-height: 1.6;
@@ -134,7 +132,7 @@ nav a:hover {
   padding: 0;
   margin: 0;
   list-style: none;
-  flex-wrap: wrap;      /* permite quebrar linha em telas pequenas */
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -142,9 +140,7 @@ nav a:hover {
   width: 2.5rem;
   height: auto;
   object-fit: contain;
-  /* remove margin-top antigo */
   margin: 0;
-  /* “desce” o ícone em relação ao centro */
   transform: translateY(8px);
 }
 
@@ -181,11 +177,8 @@ nav a:hover {
 .social-icons {
   display: flex;
   gap: 0.625rem;
-  /* Espaçamento entre os ícones */
   margin-right: 15.625rem;
-  /* Margem à direita dos ícones */
   justify-content: flex-end;
-  /* Garante que os ícones fiquem à direita */
   margin-left: 11.25rem;
   margin-bottom: -5vh;
 }
@@ -198,12 +191,10 @@ nav a:hover {
 
 .social-icons a:hover {
   color: #0073e6;
-  /* Cor ao passar o mouse */
 }
 
 .social-icons img {
   width: 1.875rem;
-  /* ajuste conforme necessário */
   height: 1.875rem;
 }
 
@@ -214,12 +205,10 @@ nav a:hover {
   margin-bottom: -1.3vh;
 }
 
-/* Outras seções */
 section {
   padding: 1.25rem;
 }
 
-/* Garanta que o HTML e o Body ocupem toda a altura da tela */
 html,
 body {
   overflow-x: hidden;
@@ -227,13 +216,11 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /* Isso vai garantir que os elementos se empurrem */
 }
 
 /* Container principal (componente ou div que envolve o conteúdo e footer) */
 .main-container {
   flex: 1;
-  /* Faz o conteúdo ocupar o espaço restante */
 }
 
 #contact .div-pai {
@@ -273,6 +260,7 @@ body {
   justify-content: center;
   align-items: center;
   min-width: 300px;
+  margin-top: 7em;
 }
 
 #contact .div-form {
@@ -332,14 +320,14 @@ body {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  max-width: 80%; /* Ou 100% se quiser ocupar toda a tela */
+  max-width: 80%;
   margin: 0 auto;
-  gap: 7%; /* Espaço entre os dois textos */
+  gap: 7%;
 }
 
 .quem-somos-desc-esquerda,
 .quem-somos-desc-direita {
-  width: 49%; /* Cada um ocupa metade, somando quase 100% */
+  width: 49%;
 }
 
 .quem-somos-desc-esquerda h5,
@@ -424,7 +412,7 @@ body {
 
 .equipe-imagem img {
   width: 100%;
-  max-width: 60rem; /* aumente esse valor conforme quiser */
+  max-width: 60rem;
   height: auto;
   border-radius: 10px;
   display: block;
@@ -463,7 +451,6 @@ body {
     margin-bottom: 0;
   }
 
-/* Estilos do Footer */
 .footer {
   width: 100%;
   background-color: #ececec;
@@ -471,11 +458,8 @@ body {
   text-align: center;
   z-index: 1000;
   position: relative;
-  /* Para garantir o controle da posição interna */
   padding: 2.5rem 0;
-  /* Padding geral, aumentando o espaço ao redor */
   min-height: 25rem;
-  /* Aumenta a altura mínima do footer para dar mais espaço */
 }
 
 .footer-container {
@@ -488,17 +472,11 @@ body {
 
 .footer-left {
   position: absolute;
-  /* Fixa o conteúdo no canto esquerdo do footer */
   left: 1.25rem;
-  /* Margem da borda esquerda do footer */
   bottom: 37vh;
-  /* Distância da borda inferior do footer */
   font-weight: lighter;
-  /* Fonte mais fina */
   font-size: 0.75rem;
-  /* Fonte pequena */
   letter-spacing: 0.05em;
-  /* Ajuste para espaçamento */
   margin-bottom: 13vh;
   color: #595959;
 }
@@ -507,7 +485,6 @@ body {
   display: flex;
   justify-content: space-around;
   flex-grow: 0;
-  /* Faz a seção central crescer para ocupar o espaço disponível */
   text-align: left;
 }
 
@@ -580,18 +557,14 @@ body {
 
 .footer-bottom {
   position: absolute;
-  /* Coloca o texto na parte inferior do footer */
   bottom: 0;
-  /* Fixa a posição na parte inferior */
   width: 100%;
-  /* Largura total */
   text-align: center;
   font-size: 0.875rem;
   font-weight: lighter;
   letter-spacing: 0.05em;
   color: #595959;
   padding: 0.3125rem 0em;
-  /* Ajusta o padding para não deixar o texto colado na borda */
   margin-top: 0.625rem;
 }
 
@@ -602,9 +575,7 @@ body {
 
 .active {
   color: green;
-  /* Cor verde para o link ativo */
   font-weight: bold;
-  /* Negrito para destacar */
 }
 
 
@@ -672,7 +643,6 @@ html {
 
 #services {
   scroll-margin-top: 50vh;
-  /* ajuste esse valor conforme necessário */
 }
 
 .services h1 {
@@ -757,13 +727,13 @@ section h5 {
 
 .button-enviar {
   position: relative;
-  overflow: hidden; /* esconde o ::before fora do botão */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40%;
   padding: 0.625rem 1.25rem;
-  background-color: #3f7652; /* cor base */
+  background-color: #3f7652;
   color: #fff;
   border-radius: 0.5125rem !important;
   border: none;
@@ -793,18 +763,15 @@ section h5 {
 }
 
 .button-enviar:hover {
-  background-color: #3f7652; /* mantém a cor base no hover */
+  background-color: #3f7652;
   transform: scale(1.03);
 }
  
 .button-enviar span {
   position: relative;
-  z-index: 1; /* garante que o texto fique acima do ::before */
+  z-index: 1;
 }
 
-/* FormText.css */
-
-/* Container */
 .form-text__container {
   position: absolute;
   top: -16.2vh;
@@ -818,13 +785,12 @@ section h5 {
   font-stretch: condensed;
 }
 
-/* Título */
 .form-text__title {
   font-size: 1.3125rem;
   line-height: normal;
+  margin-top: 8em;
 }
 
-/* Texto */
 .form-text__text {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
@@ -832,7 +798,6 @@ section h5 {
   color: #27331B;
 }
 
-/* Texto do telefone */
 .form-text__phone {
   font-size: 2.1875rem;
   color: #000;
@@ -841,7 +806,6 @@ section h5 {
   color: #27331B;
 }
 
-/* Link de email */
 .form-text__email-link {
   text-decoration: none;
   color: #000;
@@ -851,8 +815,6 @@ section h5 {
 }
 
 @media screen and (min-width: 1500px) and (max-width: 1570px) {
-
-  /* App.css */
 
 body {
   width: 100%;
@@ -864,7 +826,6 @@ body {
 
 .menu-toggle {
   display: none;
-  /* Esconde o botão de menu hambúrguer por padrão */
 }
 
 header {
@@ -873,14 +834,13 @@ header {
   display: flex;
   align-items: center;
   z-index: 10;
-  position: relative;
+  position: fixed;
   justify-Content: 'space-between'
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
-  /* Alinha os links para a direita */
   gap: 2rem;
   flex: 1;
 }
@@ -910,27 +870,24 @@ nav a:hover {
   padding-Left: 0;
 }
 
-/* StepsSection.css */
-
 /* Container geral: três blocos lado a lado, sem espaçamentos externos ou entre eles */
 .steps-section {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;  /* estica todos à mesma altura */
+  align-items: stretch;
   width: 100%;
   box-sizing: border-box;
-  gap: 0;                /* sem espaço entre os blocos */
-  margin: 0;             /* sem margem acima/abaixo */
-  padding: 0;            /* sem padding interno */
-  flex-wrap: nowrap;     /* nunca empilha */
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
 }
 
-/* Cada bloco ocupa 1/3 da largura, sem espaçamento externo */
 .step-box {
-  flex: 1;               /* divide igualmente em três */
-  min-width: 0;          /* permite quebra interna de texto */
+  flex: 1;
+  min-width: 0;
   box-sizing: border-box;
-  padding: 2.5rem;         /* padding interno uniforme */
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -939,7 +896,6 @@ nav a:hover {
   background-clip: padding-box;
 }
 
-/* Cores de fundo */
 .step-initial,
 .step-delivery {
   background-color: #ececec;
@@ -949,7 +905,6 @@ nav a:hover {
   background-color: #ffffff;
 }
 
-/* Títulos */
 .step-box h3 {
   font-family: 'Avenir Heavy', sans-serif;
   font-size: 1.5rem;
@@ -958,7 +913,6 @@ nav a:hover {
   margin: 0 0 1.25rem;
 }
 
-/* Parágrafos */
 .step-box p {
   font-size: 1.125rem;
   line-height: 1.6;
@@ -967,14 +921,12 @@ nav a:hover {
   word-wrap: break-word;
 }
 
-/* Lista (apenas no primeiro bloco) */
 .step-box ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Itens da lista */
 .step-box ul li {
   font-size: 1.125rem;
   line-height: 1.6;
@@ -989,7 +941,7 @@ nav a:hover {
   padding: 0;
   margin: 0;
   list-style: none;
-  flex-wrap: wrap;      /* permite quebrar linha em telas pequenas */
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -997,9 +949,7 @@ nav a:hover {
   width: 2.5rem;
   height: auto;
   object-fit: contain;
-  /* remove margin-top antigo */
   margin: 0;
-  /* “desce” o ícone em relação ao centro */
   transform: translateY(8px);
 }
 
@@ -1036,11 +986,8 @@ nav a:hover {
 .social-icons {
   display: flex;
   gap: 0.625rem;
-  /* Espaçamento entre os ícones */
   margin-right: 15.625rem;
-  /* Margem à direita dos ícones */
   justify-content: flex-end;
-  /* Garante que os ícones fiquem à direita */
   margin-left: 11.25rem;
   margin-bottom: -5vh;
 }
@@ -1053,12 +1000,10 @@ nav a:hover {
 
 .social-icons a:hover {
   color: #0073e6;
-  /* Cor ao passar o mouse */
 }
 
 .social-icons img {
   width: 1.875rem;
-  /* ajuste conforme necessário */
   height: 1.875rem;
 }
 
@@ -1068,12 +1013,10 @@ nav a:hover {
   padding: 0em 7em 0em 2em;
 }
 
-/* Outras seções */
 section {
   padding: 1.25rem;
 }
 
-/* Garanta que o HTML e o Body ocupem toda a altura da tela */
 html,
 body {
   overflow-x: hidden;
@@ -1081,13 +1024,11 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /* Isso vai garantir que os elementos se empurrem */
 }
 
 /* Container principal (componente ou div que envolve o conteúdo e footer) */
 .main-container {
   flex: 1;
-  /* Faz o conteúdo ocupar o espaço restante */
 }
 
 #contact .div-pai {
@@ -1186,14 +1127,14 @@ body {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  max-width: 80%; /* Ou 100% se quiser ocupar toda a tela */
+  max-width: 80%;
   margin: 0 auto;
-  gap: 7%; /* Espaço entre os dois textos */
+  gap: 7%;
 }
 
 .quem-somos-desc-esquerda,
 .quem-somos-desc-direita {
-  width: 49%; /* Cada um ocupa metade, somando quase 100% */
+  width: 49%;
 }
 
 .quem-somos-desc-esquerda h5,
@@ -1278,7 +1219,7 @@ body {
 
 .equipe-imagem img {
   width: 100%;
-  max-width: 60rem; /* aumente esse valor conforme quiser */
+  max-width: 60rem;
   height: auto;
   border-radius: 10px;
   display: block;
@@ -1325,11 +1266,8 @@ body {
   text-align: center;
   z-index: 1000;
   position: relative;
-  /* Para garantir o controle da posição interna */
   padding: 2.5rem 0;
-  /* Padding geral, aumentando o espaço ao redor */
   min-height: 25rem;
-  /* Aumenta a altura mínima do footer para dar mais espaço */
 }
 
 .footer-container {
@@ -1342,17 +1280,11 @@ body {
 
 .footer-left {
   position: absolute;
-  /* Fixa o conteúdo no canto esquerdo do footer */
   left: 1.25rem;
-  /* Margem da borda esquerda do footer */
   bottom: 51vh;
-  /* Distância da borda inferior do footer */
   font-weight: lighter;
-  /* Fonte mais fina */
   font-size: 0.75rem;
-  /* Fonte pequena */
   letter-spacing: 0.05em;
-  /* Ajuste para espaçamento */
   margin-bottom: 13vh;
   color: #595959;
 }
@@ -1361,7 +1293,6 @@ body {
   display: flex;
   justify-content: space-around;
   flex-grow: 0;
-  /* Faz a seção central crescer para ocupar o espaço disponível */
   text-align: left;
 }
 
@@ -1434,18 +1365,14 @@ body {
 
 .footer-bottom {
   position: absolute;
-  /* Coloca o texto na parte inferior do footer */
   bottom: 0;
-  /* Fixa a posição na parte inferior */
   width: 100%;
-  /* Largura total */
   text-align: center;
   font-size: 0.875rem;
   font-weight: lighter;
   letter-spacing: 0.05em;
   color: #595959;
   padding: 0.3125rem 0em;
-  /* Ajusta o padding para não deixar o texto colado na borda */
   margin-top: 0.625rem;
 }
 
@@ -1456,9 +1383,7 @@ body {
 
 .active {
   color: green;
-  /* Cor verde para o link ativo */
   font-weight: bold;
-  /* Negrito para destacar */
 }
 
 
@@ -1528,7 +1453,6 @@ html {
 
 #services {
   scroll-margin-top: 50vh;
-  /* ajuste esse valor conforme necessário */
 }
 
 .services h1 {
@@ -1612,13 +1536,13 @@ section h5 {
 
 .button-enviar {
   position: relative;
-  overflow: hidden; /* esconde o ::before fora do botão */
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40%;
   padding: 0.625rem 1.25rem;
-  background-color: #3f7652; /* cor base */
+  background-color: #3f7652;
   color: #fff;
   border-radius: 0.5125rem !important;
   border: none;
@@ -1648,18 +1572,15 @@ section h5 {
 }
 
 .button-enviar:hover {
-  background-color: #3f7652; /* mantém a cor base no hover */
+  background-color: #3f7652;
   transform: scale(1.03);
 }
  
 .button-enviar span {
   position: relative;
-  z-index: 1; /* garante que o texto fique acima do ::before */
+  z-index: 1;
 }
 
-/* FormText.css */
-
-/* Container */
 .form-text__container {
   position: absolute;
   top: -16.2vh;
@@ -1673,13 +1594,11 @@ section h5 {
   font-stretch: condensed;
 }
 
-/* Título */
 .form-text__title {
   font-size: 1.3125rem;
   line-height: normal;
 }
 
-/* Texto */
 .form-text__text {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
@@ -1687,7 +1606,6 @@ section h5 {
   color: #27331B;
 }
 
-/* Texto do telefone */
 .form-text__phone {
   font-size: 2.1875rem;
   color: #000;
@@ -1696,7 +1614,6 @@ section h5 {
   color: #27331B;
 }
 
-/* Link de email */
 .form-text__email-link {
   text-decoration: none;
   color: #000;
@@ -1729,7 +1646,7 @@ section h5 {
   html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* isso impede qualquer scroll lateral indesejado */
+    overflow-x: hidden;
     max-width: 100vw;
   }
 
@@ -1740,11 +1657,24 @@ section h5 {
     margin-bottom: -1.3vh;
   }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  padding: 10px 0px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
   .contato-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* Alinha ícones pela linha de texto do botão: */
   align-items: baseline;
   gap: 2rem;
   align-items: flex-end;
@@ -1754,8 +1684,8 @@ section h5 {
     width: 2.5rem;
     height: auto;
     object-fit: contain;
-    margin: 0;                  /* zera margens */
-    transform: translateY(0.5rem);  /* remove qualquer translateY */
+    margin: 0;
+    transform: translateY(0.5rem);  /* remover qualquer translateY */
   }
   
   .carrosel-button {
@@ -1763,13 +1693,21 @@ section h5 {
       text-align: center;
   }
 
+  .div-widget-facebook{
+  flex: '0 0 300px';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40%;
+}
+
   /* Formulário */
   .contact-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0;            /* remove espaçamentos extras */
+    padding: 0;
   }
 
   #contact .button-enviar{
@@ -1836,7 +1774,7 @@ section h5 {
   form {
     max-width: 100%;
     width: 100%;
-    margin: 0 auto; /* centraliza horizontalmente */
+    margin: 0 auto;
     padding: 10px;
   }
 
@@ -1879,7 +1817,7 @@ section h5 {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1rem 1 1.5em 1; /* 👈 espaçamento superior aumentado */
+    padding: 1rem 1 1.5em 1;
     box-sizing: border-box;
   }
 
@@ -1896,7 +1834,7 @@ section h5 {
 
 #home .text {
   display: block;
-  width: 100%; /* Garante que a div text ocupe toda a largura */
+  width: 100%;
   text-align: center;
   padding: 0 !important;
   box-sizing: border-box;
@@ -1936,7 +1874,7 @@ section h5 {
 #home .image {
   margin-left: 0;
   margin-right: 0;
-  margin-top: -13rem; /* ✅ Espaço adequado entre o texto e a imagem */
+  margin-top: -13rem;
   margin-bottom: 0rem;
   width: 100%;
   height: 100%;
@@ -1948,13 +1886,13 @@ section h5 {
 
   .steps-section {
     display: flex;
-    flex-wrap: wrap;         /* Permite empilhamento em telas pequenas */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: stretch;
     width: 100%;
     box-sizing: border-box;
-    gap: 1rem;               /* Pequeno espaço entre as colunas */
-    margin-top: 0rem;        /* Dá espaço entre a imagem e os blocos */
+    gap: 1rem;
+    margin-top: 0rem;
     padding: 0;
   }
 
@@ -1969,12 +1907,12 @@ section h5 {
     font-family: 'Helvetica, Arial sans-serif';
     color: #000000;
     font-weight: bold;
-    margin: 10% 0% 5% 0%;
+    margin: 40% 0% 5% 0%;
   }
 
   .quem-somos h5 {
-    margin: 0 auto;             /* Centraliza horizontalmente */
-    width: 90%;                 /* Espaço seguro lateral */
+    margin: 0 auto;
+    width: 90%;
     text-align: justify;
     font-size: 1.125rem;
     line-height: 1.6em;
@@ -1985,7 +1923,7 @@ section h5 {
 
   .quem-somos-descricao {
     flex-direction: column;
-    gap: 2em; /* Espaço vertical entre os blocos */
+    gap: 2em;
     max-width: 90%;
   }
 
@@ -2014,15 +1952,15 @@ section h5 {
   }
 
   .div-3-conjuntos h5 {
-    width: 95%;                /* Menor que 100% pra dar "respiro" lateral */
-    margin: 5% auto 10% auto;  /* Centraliza e dá espaço em cima e embaixo */
-    padding: 0 1em;            /* Espaço interno só nas laterais */
+    width: 95%;
+    margin: 5% auto 10% auto;
+    padding: 0 1em;
     text-align: justify;
     font-size: 1.125rem;
     line-height: 1.6em;
     letter-spacing: 0.05em;
     font-weight: normal;
-    box-sizing: border-box;    /* Garante que o padding não estoure o width */
+    box-sizing: border-box;
   }
 
   .div-3-conjuntos ul{
@@ -2047,14 +1985,14 @@ section h5 {
 
   .div-equipe {
     flex-direction: column;
-    padding: 1rem; /* margem interna uniforme */
-    overflow-x: hidden; /* previne qualquer vazamento horizontal */
+    padding: 1rem;
+    overflow-x: hidden;
   }
 
   .equipe-texto {
     width: 100%;
     padding: 0;
-    margin: 0; /* remove espaçamentos que podem empurrar pro lado */
+    margin: 0;
     text-align: justify;
   }
 
@@ -2065,7 +2003,7 @@ section h5 {
   }
 
   .div-equipe-span {
-    margin: 0 0 1rem 0; /* espaçamento controlado entre linhas */
+    margin: 0 0 1rem 0;
   }
 
   .equipe-imagem {
@@ -2158,10 +2096,10 @@ section h5 {
   }
 
   #contact {
-    width: 90%;            /* ocupa 90% da viewport */
-    max-width: 37.5rem;    /* limite em telas maiores */
-    margin: 0 auto;        /* centraliza horizontalmente */
-    padding: 0;            /* zera padding para não deslocar */
+    width: 90%;
+    max-width: 37.5rem;
+    margin: 0 auto;
+    padding: 0;
     box-sizing: border-box;
   }
 
@@ -2175,7 +2113,7 @@ section h5 {
     justify-content: center;
     align-items: center;
     min-width: 300px;
-    margin-top: 2em;
+    margin-top: 10em;
   }
 
   #contact .contact-section {
@@ -2183,9 +2121,9 @@ section h5 {
   }
 
   #contact .div-pai {
-    width: 100%;           /* usa 100% do #contact (90% da tela) */
-    margin: 0 auto 2.5rem; /* margem inferior e centralização */
-    padding: 1rem;         /* espaço interno */
+    width: 100%;
+    margin: 0 auto 2.5rem;
+    padding: 1rem;
     box-sizing: border-box;
   }
 
@@ -2235,11 +2173,8 @@ section h5 {
     transition: background-color 0.5s ease, transform 0.3s ease;
     display: flex;
     justify-content: center;
-    /* Centraliza o texto dentro do botão */
     align-items: center;
-    /* Centraliza verticalmente */
     margin: 0 auto 3.125rem;
-    /* Centraliza o botão dentro do container */
   }
 
   .button-enviar:hover {
@@ -2279,9 +2214,7 @@ section h5 {
   .menu-toggle {
     position: absolute;
     top: 1.25rem;
-    /* Ajuste o valor conforme necessário para a distância do topo */
     right: 1.25rem;
-    /* Ajuste o valor conforme necessário para a distância da direita */
     display: block;
     background: none;
     border: none;
@@ -2300,7 +2233,7 @@ section h5 {
 
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
     transition: height 0.3s ease;
-    /* Adiciona uma transição suave na altura */
+    /* transição suave na altura */
   }
 
   nav.open {
@@ -2323,7 +2256,7 @@ section h5 {
     /* Garante que o display seja ocultado */
   }
 
-  /* Os ícones de redes sociais voltam a aparecer em resoluções maiores */
+  /*ícones de redes sociais voltam a aparecer em resoluções maiores */
   @media screen and (min-width: 769px) {
 
     .social-icons {
@@ -2338,27 +2271,23 @@ section h5 {
     text-align: center;
     z-index: 1000;
     position: relative;
-    /* Para garantir o controle da posição interna */
     padding: 2.5rem 0;
-    /* Padding geral, aumentando o espaço ao redor */
     min-height: 25rem;
-    /* Aumenta a altura mínima do footer para dar mais espaço */
+    margin-top: 5em;
   }
 
   .footer-container {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    /* Move toda a seção para a esquerda */
     padding-left: 0;
-    /* Ajuste se precisar de espaço da borda esquerda */
   }
 
   .footer-left {
-    position: absolute;     /* Posicionamento absoluto dentro do footer */
-    top: 0;                 /* Cola no topo do footer */
-    left: 0;                /* Cola no canto esquerdo */
-    margin: 0.625rem;           /* Espaço interno controlado (ajustável) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.625rem;
     font-weight: lighter;
     font-size: 0.75rem;
     letter-spacing: 0.05em;
@@ -2368,13 +2297,9 @@ section h5 {
   .footer-center {
     display: flex;
     flex-direction: column;
-    /* Deixa os itens um abaixo do outro */
     align-items: flex-start;
-    /* Alinha os itens à esquerda */
     text-align: left;
-    /* Alinha o texto à esquerda */
     width: 100%;
-    /* Garante que ocupe toda a largura */
     padding: 0;
     margin: 0;
   }
@@ -2412,7 +2337,6 @@ section h5 {
   .footer-right {
     flex-basis: 30%;
     margin-top: 0;
-    /* Evita espaçamento excessivo */
     text-align: left;
     margin-bottom: -74vh;
     margin-left: 2.1875rem;
@@ -2424,23 +2348,18 @@ section h5 {
     margin: 0;
     display: flex;
     flex-direction: column;
-    /* Garante que os itens fiquem um abaixo do outro */
     align-items: flex-start;
-    /* Alinha os itens à esquerda */
   }
 
   .footer-right li {
     width: 20%;
     margin-bottom: 0.625rem;
-    /* Espaço entre os ícones */
   }
 
   .footer-right a {
     width: 20%;
     display: flex;
-    /* Mantém a estrutura flexível */
     align-items: center;
-    /* Alinha o ícone ao centro */
   }
 
   .footer-right img {
@@ -2454,18 +2373,14 @@ section h5 {
 
   .footer-bottom {
     position: absolute;
-    /* Coloca o texto na parte inferior do footer */
     bottom: 0;
-    /* Fixa a posição na parte inferior */
     width: 100%;
-    /* Largura total */
     text-align: center;
     font-size: 0.875rem;
     font-weight: lighter;
     letter-spacing: 0.05em;
     color: #595959;
     padding: 0.3125rem 0em;
-    /* Ajusta o padding para não deixar o texto colado na borda */
     margin-top: 0.625rem;
   }
 }

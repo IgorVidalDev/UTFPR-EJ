@@ -1,26 +1,50 @@
 import React, { useState, useEffect } from "react";
 import "./carrosel.css";
 
-const Carrosel = () => {
-  const slides = [
-    {
-      src: "/img/image1.jpg",
-      alt: "Imagem 1",
-      title: "Nossos Serviços",
-      description: "Confira abaixo os principais serviços ofertados pela UTFlorestal",
-    },
-    {
-      src: "/img/image2.jpg",
-      alt: "Imagem 2",
-      subtitle: "UTFlorestal - Planejamento e Execução",
-      title: "Consultoria Ambiental",
-      description:
-        "Desde 2014, transformando sua visão em realidade verde, juntos cultivando o futuro sustentável e maximizando seus lucros.",
-    }
-  ];
+// inicializa fora do componente para manter a mesma referência
+const initialSlides = [
+  {
+    src: "/img/image1.jpg",
+    alt: "Imagem 1",
+    title: "Nossos Serviços",
+    description:
+      "Confira abaixo os principais serviços ofertados pela UTFlorestal",
+  },
+  {
+    src: "/img/image2.jpg",
+    alt: "Imagem 2",
+    subtitle: "UTFlorestal - Planejamento e Execução",
+    title: "Consultoria Ambiental",
+    description:
+      "Desde 2014, transformando sua visão em realidade verde, juntos cultivando o futuro sustentável e maximizando seus lucros.",
+  },
+];
 
+const Carrosel = () => {
+  const [slides, setSlides] = useState(initialSlides);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showSaibaMais, setShowSaibaMais] = useState(false);
+
+  // roda só no mount e em resize, não depende de nenhuma variável recriada
+  useEffect(() => {
+    const updateSlidesForViewport = () => {
+      const isMobile = window.innerWidth <= 768;
+      setSlides(() => {
+        const copy = initialSlides.map((s) => ({ ...s }));
+        if (isMobile) {
+          copy[0].src = "/img/image1celular.jpg";
+          copy[1].src = "/img/image2celular.jpg";
+        }
+        return copy;
+      });
+    };
+
+    updateSlidesForViewport();
+    window.addEventListener("resize", updateSlidesForViewport);
+    return () => {
+      window.removeEventListener("resize", updateSlidesForViewport);
+    };
+  }, []);  // <<-- array de dependências VAZIO
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -34,74 +58,65 @@ const Carrosel = () => {
 
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
+    if (contactSection)
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // const handleMouseOver = () => {
-  //   console.log("Mouse passou por cima do botão!");
-  // };
-
   const handleSaibaMaisClick = () => {
-    // console.log("Saiba mais clicado!"); clique no Saiba Mais do Carrossel
-    window.location.href = "#services";
-    // ou
     const servicesSection = document.getElementById("services");
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.location.href = "#services";
     }
   };
-  
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 6500);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [currentSlide]);
+    return () => clearInterval(interval);
+  }, [currentSlide, slides.length]);
 
   return (
     <div>
       <div className="carrossel-container">
         <div className="carrossel">
-          {slides.map((slide, index) => (
+          {slides.map((slide, idx) => (
             <div
-              key={index}
-              className={`carrossel-slide ${index === currentSlide ? "active" : ""}`}
+              key={idx}
+              className={`carrossel-slide ${
+                idx === currentSlide ? "active" : ""
+              }`}
             >
               <img src={slide.src} alt={slide.alt} />
-              {index === currentSlide && (
+              {idx === currentSlide && (
                 <div className="carrossel-text">
                   {slide.subtitle && (
                     <p className="carrossel-subtitle">{slide.subtitle}</p>
                   )}
                   <h1 className="carrossel-title">{slide.title}</h1>
-                  <p className="carrossel-description">{slide.description}</p>
-                  {index === 0 ? (
-  <button
-    className="carrosel-button"
-    //onMouseOver={handleMouseOver} verificação do Mouse se passou por cima
-    onClick={handleSaibaMaisClick} // Adiciona a navegação ao clicar
-  >
-    Saiba Mais
-  </button>
-) : (
-  <button className="carrosel-button" onClick={scrollToContact}>
-    ENTRE EM CONTATO AGORA
-  </button>
-)}
-
+                  <p className="carrossel-description">
+                    {slide.description}
+                  </p>
+                  {idx === 0 ? (
+                    <button
+                      className="carrosel-button"
+                      onClick={handleSaibaMaisClick}
+                    >
+                      Saiba Mais
+                    </button>
+                  ) : (
+                    <button
+                      className="carrosel-button"
+                      onClick={scrollToContact}
+                    >
+                      ENTRE EM CONTATO AGORA
+                    </button>
+                  )}
                 </div>
               )}
             </div>
           ))}
         </div>
-
         <button className="prev" onClick={prevSlide}>
           &lt;
         </button>
@@ -113,11 +128,7 @@ const Carrosel = () => {
       {showSaibaMais && (
         <div
           id="services"
-          style={{
-            backgroundColor: "white",
-            padding: "20px",
-            margin: "20px 0",
-          }}
+          style={{ backgroundColor: "white", padding: "20px", margin: "20px 0" }}
         >
           {/* Conteúdo adicional */}
         </div>

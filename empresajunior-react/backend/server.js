@@ -7,12 +7,10 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5001;
 
-// Definir as origens permitidas
-const allowedOrigins = ['https://utflorestalutfpr.com'];  // URL exata do seu frontend
+const allowedOrigins = ['https://utflorestalutfpr.com'];
 
 const corsOptions = {
   origin: function (origin, callback) {
-    // Permite que qualquer origem que esteja na lista de origens permitidas faça requisição
     if (!origin || allowedOrigins.includes(origin)) {
       return callback(null, true);
     }
@@ -20,7 +18,7 @@ const corsOptions = {
   },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true,  // Permitir cookies (se necessário)
+  credentials: true,  // Permiti cookies
 };
 
 // Habilitar CORS para todas as requisições
@@ -29,7 +27,6 @@ app.use(cors(corsOptions));
 // Parse JSON
 app.use(bodyParser.json());
 
-// Tratar requisições preflight (OPTIONS) com cabeçalhos apropriados
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   if (!origin || allowedOrigins.includes(origin)) {
@@ -39,7 +36,6 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.header('Access-Control-Allow-Credentials', 'true');  // Permitir credenciais (se necessário)
 
-  // Responder à requisição OPTIONS (preflight)
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
@@ -93,5 +89,5 @@ app.post('/send-email', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
+  //console.log(`Servidor rodando na porta ${port}`);
 });

@@ -7,20 +7,18 @@ const renderFooter = () => {
     const section = document.getElementById(sectionId);
 
     if (section) {
-      // Se a seção já está visível, apenas rola até ela
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // Se a seção não estiver visível ainda, primeiro sobe para o topo
       window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      // Aguarda um pouco para garantir que a página subiu antes de tentar rolar
+      // aguarda um pouco para garantir que a página subiu antes de tentar rolar
       setTimeout(() => {
         window.location.hash = sectionId;
         const sectionAfterScroll = document.getElementById(sectionId);
         if (sectionAfterScroll) {
           sectionAfterScroll.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 300); // Reduzi o tempo para melhorar a fluidez
+      }, 300); // reduzindo mais o tempo pra ter uma melhor fluidez
     }
   };
 

@@ -2,15 +2,18 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 
-console.log('API URL:', process.env.REACT_APP_API_URL);
+//console.log('API URL:', process.env.REACT_APP_API_URL);
 function FormularioContato() {
   const activeHash = window.location.hash;
 
   const [formData, setFormData] = useState({
     nome: '',
     telefone: '',
+    municipio: '',
+    estado: '',
     assunto: '',
     email: '',
+    tamanhoArea: '',
     necessidade: ''
   });
 
@@ -64,6 +67,7 @@ function FormularioContato() {
         nome: '',
         telefone: '',
         municipio: '',
+        estado: '',
         assunto: '',
         email: '',
         tamanhoArea: '',
@@ -93,16 +97,7 @@ function FormularioContato() {
             }}
           >
             {/* Coluna Esquerda: Widget do Facebook */}
-            <div
-              style={{
-                flex: '0 0 300px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginBottom: '35px',
-                paddingBottom: '8.7vh',
-              }}
-            >
+            <div className='div-widget-facebook'>
               <div
                 className="fb-page"
                 data-href="https://www.facebook.com/utflorestal?ref=embed_page"
@@ -116,7 +111,7 @@ function FormularioContato() {
                   title="Facebook"
                   src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Futflorestal&tabs=timeline&width=300&height=780&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                   width="300"
-                  height="780"
+                  height="820"
                   style={{
                     border: 'none',
                     overflow: 'hidden',
@@ -172,7 +167,7 @@ function FormularioContato() {
                     fontFamily: 'Poppins, sans-serif',
                     fontWeight: '600',
                     textAlign: 'center',
-                    marginBottom: '0px',
+                    marginBottom: '1em',
                   }}
                 >
                   Entre em contato e solicite um(a) análise/orçamento
@@ -241,6 +236,22 @@ function FormularioContato() {
                         onChange={handleChange}
                       />
                     </div>
+                  </div>
+
+                  <div style={{ flex: 1, width: '100%' }}>
+                    <label className="label-form" htmlFor="tamanhoArea">
+                      Tamanho estimado da área (hectares ou m²) *
+                    </label>
+                    <input
+                      className="input-form"
+                      id="tamanhoArea"
+                      name="tamanhoArea"
+                      type="text"
+                      required
+                      placeholder="Ex: 50 hectares ou 5000 m²"
+                      value={formData.tamanhoArea}
+                      onChange={handleChange}
+                    />
                   </div>
 
                   <div className="div-form">
@@ -356,6 +367,52 @@ function FormularioContato() {
                 onChange={handleChange}
               />
             </div>
+          </div>
+
+          <div className="div-form">
+            <div style={{ flex: '1' }}>
+              <label className="label-form" htmlFor="municipio">Município *</label>
+              <input
+                className="input-form"
+                id="municipio"
+                type="text"
+                name="municipio"
+                required
+                placeholder="Digite o município"
+                value={formData.municipio}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div style={{ flex: '1', textAlign: 'right' }}>
+              <label className="label-form" htmlFor="estado">Estado *</label>
+              <input
+                className="input-form"
+                id="estado"
+                type="text"
+                name="estado"
+                required
+                placeholder="Digite o estado"
+                value={formData.estado}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          <div style={{ flex: 1, width: '100%' }}>
+            <label className="label-form" htmlFor="tamanhoArea">
+              Tamanho estimado da área (hectares ou m²) *
+            </label>
+            <input
+              className="input-form"
+              id="tamanhoArea"
+              name="tamanhoArea"
+              type="text"
+              required
+              placeholder="Ex: 50 hectares ou 5000 m²"
+              value={formData.tamanhoArea}
+              onChange={handleChange}
+            />
           </div>
 
           <div className="div-form">

@@ -1,12 +1,9 @@
-/* Carrossel */
 .carrossel-container {
   position: relative;
   width: 100%;
   height: 40.625rem;
-  /* Altura do carrossel */
   overflow: hidden;
   margin-top: -6.25rem;
-  /* Faz com que o header sobreponha a parte superior da imagem */
 }
 
 .carrossel {
@@ -23,16 +20,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Absolute para todas as imagens estarem sobrepostas */
   opacity: 0;
-  /* Imagens começam invisíveis */
   transition: opacity 1.5s ease;
-  /* A transição de opacidade é feita em 1 segundo */
 }
 
 .carrossel-slide.active {
   opacity: 1;
-  /* Quando a imagem é ativa, ela fica visível */
   pointer-events: auto;
   display: block !important;
 }
@@ -41,7 +34,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none; /* Impede que a imagem capture os cliques */
+  pointer-events: none;
 }
 
 .carrossel-text {
@@ -56,37 +49,34 @@
   border-radius: 0.625rem;
   width: 70%;
   max-width: 62.5rem;
-  z-index: 2; /* Garante que o texto (e o botão) fiquem acima da imagem */
+  z-index: 2;
 }
 
 .carrossel-subtitle {
-  color: #32CD32; /* Verde */
+  color: #32CD32;
   font-size: 1.375rem;
   font-weight: bold;
   margin-bottom: 0vh;
 }
 
 .carrossel-title {
-  font-size: 11vh; /* Maior destaque para o título principal */
+  font-size: 11vh;
   font-weight: bold;
   margin-bottom: 0.625rem;
   margin-top: 0;
 }
 
 .carrossel-description {
-  font-size: 1.75rem; /* Texto maior para melhor leitura */
-  white-space: pre-line; /* Mantém a quebra de linha do \n */
+  font-size: 1.75rem;
+  white-space: pre-line;
 
 }
 
-/* Estilo para as setas de navegação */
 button.prev,
 button.next {
   position: absolute;
   top: 50%;
-  /* Mantém as setas centralizadas verticalmente */
   transform: translateY(-50%);
-  /* Ajusta o deslocamento para centralizar as setas */
   background-color: transparent;
   color: rgb(255, 255, 255);
   border: none;
@@ -94,17 +84,14 @@ button.next {
   padding: 0.625rem;
   cursor: pointer;
   z-index: 20;
-  /* Garante que as setas fiquem visíveis sobre a imagem */
 }
 
 button.prev {
   left: 0.625rem;
-  /* Posição da seta anterior à esquerda */
 }
 
 button.next {
   right: 0.625rem;
-  /* Posição da seta seguinte à direita */
 }
 
 /* Efeito hover nas setas */
@@ -133,7 +120,7 @@ button.next:hover {
 }
 
 .carrosel-button:hover {
-  background-color: #66B3FF; /* Uma cor mais escura de verde para o hover */
+  background-color: #66B3FF;
 }
 
 @media screen and (max-width: 768px) {
@@ -142,14 +129,15 @@ button.next:hover {
     margin-bottom: 3em;
   }
   .carrossel-title{
-    font-size: 7vh; /* Maior destaque para o título principal */
+    font-size: 7vh;
     font-weight: bold;
     margin-bottom: 0.625rem;
     margin-top: 0;
   }
 
+
   .carrossel-subtitle {
-    color: #32CD32; /* Verde */
+    color: #32CD32;
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0vh;
