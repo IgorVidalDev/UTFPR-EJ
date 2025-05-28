@@ -20,15 +20,14 @@ function FormularioContato() {
   const [isSubmitting, setIsSubmitting] = useState(false); // Para controle do estado do envio
 
   useEffect(() => {
-    // Verifica se a URL contém o hash "#contact"
+    //Verifica se a URL contém o hash "#contact"
     if (window.location.hash === '#contact') {
       const section = document.getElementById('contact');
       if (section) {
-        // Garantir que o scroll vai para o topo da seção
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
-  }, []); // O array vazio faz com que o efeito seja executado apenas uma vez após o carregamento
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,12 +40,11 @@ function FormularioContato() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (isSubmitting) return; // Evita múltiplos envios
+    if (isSubmitting) return;
 
     setIsSubmitting(true);
 
     try {
-      // Altere a URL para o seu backend de produção
       const response = await fetch(`${process.env.REACT_APP_API_URL}/send-email`, {
         method: 'POST',
         headers: {
@@ -60,7 +58,7 @@ function FormularioContato() {
       }
 
       const result = await response.json();
-      alert(result.message); // Alerta com a resposta do servidor
+      alert(result.message);
 
       // Limpa os dados do formulário após o envio
       setFormData({
@@ -82,7 +80,7 @@ function FormularioContato() {
     }
   };
 
-  // Se o hash for "#contact", renderiza a versão com o iframe do Facebook
+  //hash for "#contact", renderiza a versão com o iframe do Facebook
   if (activeHash === "#contact") {
     return (
       <div>
@@ -311,7 +309,7 @@ function FormularioContato() {
                       borderRadius: '5px',
                       cursor: 'pointer',
                     }}
-                    disabled={isSubmitting} // Desabilita o botão durante o envio
+                    disabled={isSubmitting}
                   >
                     <span>{isSubmitting ? 'Enviando...' : 'Enviar'}</span>
                   </button>
@@ -472,7 +470,7 @@ function FormularioContato() {
               borderRadius: '5px',
               cursor: 'pointer',
             }}
-            disabled={isSubmitting} // Desabilita o botão durante o envio
+            disabled={isSubmitting}
           >
             <span>{isSubmitting ? 'Enviando...' : 'Enviar'}</span>
           </button>

@@ -8,14 +8,6 @@ import FormularioContato from './FormularioContato';
 import Chatbot from './Chatbot';
 
 function App() {
-  // Estado para os dados do formulário
-  const [formData, setFormData] = useState({
-    nome: '',
-    assunto: '',
-    telefone: '',
-    email: '',
-    necessidade: '',
-  });
 
   // Estado para armazenar o hash atual (por exemplo, "#contact")
   const [activeHash, setActiveHash] = useState(window.location.hash);
@@ -31,42 +23,6 @@ function App() {
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  // Função para tratar o envio do formulário
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('https://utfpr-ej-backend.onrender.com/send-email', {  
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-        credentials: 'include'
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Erro ao enviar o email.');
-      }
-
-      const result = await response.json();
-      alert(result.message);
-      setFormData({
-        nome: '',
-        assunto: '',
-        telefone: '',
-        email: '',
-        necessidade: '',
-      });
-    } catch (error) {
-      console.error(error);
-      alert(error.message || 'Erro ao enviar o email.');
-    }
-  };
 
   // dispara abertura do chatbot
   const handleOpenChat = () => setOpenChat(true);
@@ -311,7 +267,7 @@ function App() {
   }
 
 
-  // Se o hash for "#contact", renderiza apenas o header e a seção de contato isolada
+  //hash for "#contact", renderiza apenas o header e a seção de contato isolada
   if (activeHash === "#contact") {
     return (
       <div>
@@ -323,7 +279,7 @@ function App() {
     );
   }
 
-  // Se o hash não for "#contact", renderiza a página completa
+  //hash não for "#contact", renderiza a página completa
   return (
     <div>
       {renderHeader()}

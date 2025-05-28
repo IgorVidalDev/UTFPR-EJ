@@ -130,7 +130,7 @@ const Carrosel = () => {
           id="services"
           style={{ backgroundColor: "white", padding: "20px", margin: "20px 0" }}
         >
-          {/* Conteúdo adicional */}
+          {/* Conteúdo adicional... se precisar */}
         </div>
       )}
     </div>

@@ -1,6 +1,6 @@
 // Noticias.js
 import React from "react";
-import "./Noticias.css"; // Importa o CSS específico para as notícias
+import "./Noticias.css";
 
 // Array com os itens de notícias
 const noticias = [
