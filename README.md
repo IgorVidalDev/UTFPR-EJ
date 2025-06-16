@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Empresa Júnior UTFPR - Site Institucional
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição do Projeto
 
-## Available Scripts
+Desenvolvimento de um site institucional para uma Empresa Júnior da UTFPR, realizado entre março e maio de 2025. O frontend foi construído em React.js utilizando JavaScript puro (sem JSX), enquanto o backend foi desenvolvido em Node.js com Express.
 
-In the project directory, you can run:
+O projeto incluiu:
 
-### `npm start`
+- Criação de uma API REST para envio de e-mails utilizando Nodemailer.
+- Implementação de um chatbot básico para atendimento automático.
+- Aplicação de conceitos de renderização de componentes, controle de estado e comunicação assíncrona entre frontend e backend.
+- Utilização de imagens e conteúdos fornecidos pela própria empresa.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js (JavaScript puro)
+- Node.js
+- Express
+- Nodemailer
+- API REST
+- CSS
 
-### `npm test`
+## Link do Site
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[https://utflorestalutfpr.com](https://utflorestalutfpr.com)
 
-### `npm run build`
+## Competências Desenvolvidas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Desenvolvimento Frontend com React.js, HTML e CSS
+- Programação em JavaScript
+- Desenvolvimento Backend com Node.js e Express
+- Criação e consumo de APIs REST
+- Envio de e-mails automatizado com Nodemailer
+- Integração de chatbot básico
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Projeto desenvolvido por mim como desenvolvedor para a Empresa Júnior da UTFPR.**
 
-### `npm run eject`
+© 2025 Empresa Júnior UTFPR  
+Este projeto é de uso exclusivo da Empresa Júnior da UTFPR.  
+É proibida a cópia, redistribuição, modificação ou qualquer tipo de uso não autorizado deste código-fonte, parcial ou completo.  
+Todos os direitos reservados.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
