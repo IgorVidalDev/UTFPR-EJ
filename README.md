@@ -13,7 +13,7 @@ O projeto incluiu:
 
 ## Tecnologias Utilizadas
 
-- React.js (JavaScript puro)
+- React.j
 - Node.js
 - Express
 - Nodemailer
