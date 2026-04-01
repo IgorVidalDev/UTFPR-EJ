@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Desenvolvimento de um site institucional para uma Empresa Júnior da UTFPR, realizado entre março e maio de 2025. O frontend foi construído em React.js utilizando JavaScript puro (sem JSX), enquanto o backend foi desenvolvido em Node.js com Express.
+Desenvolvimento de um site institucional para uma Empresa Júnior da UTFPR, realizado entre março e abril de 2025. O frontend foi construído em React.js utilizando JavaScript puro (sem JSX), enquanto o backend foi desenvolvido em Node.js com Express.
 
 O projeto incluiu:
 
